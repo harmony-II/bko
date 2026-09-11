@@ -1,0 +1,20 @@
+
+/* v201 final screen-level fixes */
+.top-strip{
+  height:30px!important; min-height:30px!important; max-height:30px!important;
+  padding:0 18px!important; margin:0!important;
+  display:flex!important; align-items:center!important; justify-content:center!important;
+  background:#232323!important; color:#fff!important;
+  font-size:10px!important; line-height:30px!important; letter-spacing:.02em!important;
+  overflow:hidden!important;
+}
+.top-strip span{margin:0 8px!important;color:#aeb5ad!important;}
+@media(min-width:761px){
+  .site-header{height:128px!important;min-height:128px!important;position:relative!important;background:#fff!important;}
+  .site-header .header-inner{height:128px!important;min-height:128px!important;position:relative!important;}
+  .site-header .menu-toggle{display:none!important;}
+  .site-header .nav-direct-v191{position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;}
+  body>.site-header+main,
+  body>.site-header+section,
+  body>.site-header+div{margin-top:0!important;clear:both!important;}
+}

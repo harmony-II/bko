@@ -1,0 +1,11 @@
+/* v224: colour selection must swap the prepared door image only.
+   Never colour/tint the image box or use blend modes. */
+.range-door-colour-section .range-door-large{
+  background:#fff!important;
+}
+.range-door-colour-section .range-door-large > img{
+  background:transparent!important;
+  mix-blend-mode:normal!important;
+  filter:none!important;
+  opacity:1!important;
+}

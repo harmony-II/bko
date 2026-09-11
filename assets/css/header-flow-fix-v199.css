@@ -1,0 +1,71 @@
+
+/* v199 — header must occupy real page space on every page */
+
+.site-header{
+  position:relative !important;
+  top:auto !important;
+  left:auto !important;
+  right:auto !important;
+  z-index:50 !important;
+  width:100% !important;
+  background:#fff !important;
+}
+
+.site-header .header-inner{
+  position:relative !important;
+  overflow:visible !important;
+}
+
+/* The category row is part of the header, not an overlay */
+.site-header .nav-direct-v191{
+  position:relative !important;
+  top:auto !important;
+  left:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  z-index:auto !important;
+}
+
+/* Ensure the next page element starts AFTER the full two-row header */
+@media (min-width:761px){
+  .site-header{
+    min-height:128px !important;
+    height:128px !important;
+  }
+
+  .site-header .header-inner{
+    min-height:128px !important;
+    height:128px !important;
+  }
+
+  .site-header .nav-direct-v191{
+    position:absolute !important;
+    left:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    top:auto !important;
+    height:54px !important;
+  }
+
+  /* Don't allow negative margins to pull content beneath navigation */
+  .site-header + main,
+  .site-header + section,
+  .site-header + div{
+    margin-top:0 !important;
+  }
+}
+
+/* Mobile falls back to normal flow */
+@media(max-width:760px){
+  .site-header{
+    height:auto !important;
+    min-height:66px !important;
+  }
+  .site-header .header-inner{
+    height:auto !important;
+    min-height:66px !important;
+  }
+  .site-header .nav-direct-v191{
+    position:static !important;
+  }
+}

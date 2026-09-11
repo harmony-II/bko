@@ -1,0 +1,2563 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<!-- ========================================= -->
+<!-- META -->
+<!-- ========================================= -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   Kitchen Planner | Buy Kitchens Online
+  </title>
+<meta content="Design your kitchen online in accurate 2D and 3D with live pricing." name="description"/>
+<!-- ========================================= -->
+<!-- FONT -->
+<!-- ========================================= -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<!-- ========================================= -->
+<!-- PAGE STYLES -->
+<!-- ========================================= -->
+<style>
+   * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --ink: #232323;
+            --muted: #737373;
+            --line: #e3e3df;
+            --surface: #ffffff;
+            --surface-soft: #f5f5f2;
+            --surface-mid: #ecece8;
+            --accent: #d66121;
+            --danger: #9e2f2f;
+        }
+
+        body {
+            font-family: "Manrope", sans-serif;
+            background: var(--surface-soft);
+            color: var(--ink);
+        }
+
+        button,
+        input,
+        select {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ========================================= */
+        /* HEADER */
+        /* ========================================= */
+
+        .site-header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--line);
+            position: relative;
+            z-index: 30;
+        }
+
+        .header-inner {
+            min-height: 72px;
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 108px;
+            height: 58px;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-size: 14px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-button {
+            padding: 10px 16px;
+            border: 1px solid #d8d8d3;
+            border-radius: 8px;
+            background: #ffffff;
+        }
+
+        .header-button.primary {
+            background: #d66121;
+            color: #ffffff;
+            border-color: #d66121;
+        }
+
+        /* ========================================= */
+        /* PLANNER TOP BAR */
+        /* ========================================= */
+
+        .planner-topbar {
+            background: var(--surface);
+            border-bottom: 1px solid var(--line);
+            padding: 14px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .project-title h1 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .save-status {
+            margin-top: 4px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .view-toggle {
+            display: inline-flex;
+            gap: 4px;
+            padding: 4px;
+            background: #eeeeea;
+            border-radius: 10px;
+        }
+
+        .view-toggle button {
+            border: 0;
+            background: transparent;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .view-toggle button.active {
+            background: #ffffff;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ========================================= */
+        /* MAIN GRID */
+        /* ========================================= */
+
+        .planner-layout {
+            display: grid;
+            grid-template-columns: 310px minmax(0, 1fr) 320px;
+            height: calc(100vh - 161px);
+            min-height: 680px;
+        }
+
+        /* ========================================= */
+        /* LEFT SIDEBAR */
+        /* ========================================= */
+
+        .product-sidebar {
+            background: #ffffff;
+            border-right: 1px solid var(--line);
+            overflow-y: auto;
+        }
+
+        .sidebar-section {
+            padding: 18px;
+            border-bottom: 1px solid #eeeeeb;
+        }
+
+        .sidebar-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .search-input,
+        .dimension-input {
+            width: 100%;
+            border: 1px solid #d4d4cf;
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 10px 11px;
+            outline: none;
+        }
+
+        .room-input-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .field label {
+            display: block;
+            font-size: 11px;
+            color: var(--muted);
+            margin-bottom: 5px;
+        }
+
+        .room-note {
+            margin-top: 10px;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        .category-tabs {
+            display: flex;
+            gap: 7px;
+            flex-wrap: wrap;
+        }
+
+        .category-tab {
+            border: 1px solid #d5d5d0;
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 8px 10px;
+            font-size: 12px;
+        }
+
+        .category-tab.active {
+            background: #d66121;
+            color: #ffffff;
+            border-color: #d66121;
+        }
+
+        .product-list {
+            display: grid;
+            gap: 12px;
+            padding: 14px;
+        }
+
+        .product-card {
+            border: 1px solid #e1e1dc;
+            border-radius: 10px;
+            padding: 12px;
+            background: #ffffff;
+        }
+
+        .product-image {
+            height: 98px;
+            background: #f1f1ed;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .cabinet-preview {
+            width: 64px;
+            height: 70px;
+            border: 1px solid #aaa69e;
+            background: #ddd9d0;
+            position: relative;
+        }
+
+        .cabinet-preview::after {
+            content: "";
+            position: absolute;
+            inset: 4px;
+            border: 1px solid #aaa69e;
+        }
+
+        .product-name {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .product-meta {
+            font-size: 11px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .product-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .product-price {
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .add-product-button {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 0;
+            background: #d66121;
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        /* ========================================= */
+        /* CENTRE */
+        /* ========================================= */
+
+        .planner-centre {
+            position: relative;
+            overflow: hidden;
+            background: #e9e9e5;
+        }
+
+        .planner-toolbar {
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            z-index: 20;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tool-button {
+            border: 1px solid #d5d5d0;
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 9px 11px;
+            font-size: 12px;
+        }
+
+        .tool-button.danger {
+            color: var(--danger);
+        }
+
+        /* ========================================= */
+        /* 2D VIEW */
+        /* ========================================= */
+
+        #twoDView,
+        #threeDView {
+            width: 100%;
+            height: 100%;
+        }
+
+        #twoDView {
+            display: block;
+            padding: 76px 34px 34px;
+        }
+
+        #threeDView {
+            display: none;
+            position: relative;
+        }
+
+        .room-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        #roomCanvas {
+            position: relative;
+            background-color: #ffffff;
+            background-image:
+                linear-gradient(#ecece8 1px, transparent 1px),
+                linear-gradient(90deg, #ecece8 1px, transparent 1px);
+            background-size: 25px 25px;
+            border: 8px solid #6d6963;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+            flex: 0 0 auto;
+        }
+
+        .room-dimension {
+            position: absolute;
+            color: #636363;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .room-dimension.top {
+            top: -31px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .room-dimension.left {
+            left: -53px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+        }
+
+        .plan-unit {
+            position: absolute;
+            border: 2px solid #716d66;
+            background: #dfdbd2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 700;
+            cursor: grab;
+            user-select: none;
+        }
+
+        .plan-unit.wall {
+            background: #d8dde0;
+        }
+
+        .plan-unit.tall,
+        .plan-unit.housing {
+            background: #cbc6bc;
+        }
+
+        .plan-unit.selected {
+            /* Keep the selection highlight INSIDE the cabinet footprint.
+               This means a cabinet snapped flush to a wall still lines up
+               exactly with the wall instead of the black highlight extending
+               beyond the cabinet and overlapping the wall. */
+            outline: none;
+            box-shadow: inset 0 0 0 3px #d66121;
+        }
+
+        .unit-dim-label {
+            position: absolute;
+            font-size: 9px;
+            color: #555;
+            background: rgba(255, 255, 255, 0.82);
+            padding: 1px 3px;
+            border-radius: 3px;
+            pointer-events: none;
+        }
+
+        /* ========================================= */
+        /* 3D VIEW */
+        /* ========================================= */
+
+        #threeDCanvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .three-controls {
+            position: absolute;
+            left: 16px;
+            bottom: 16px;
+            z-index: 20;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .three-controls button {
+            border: 1px solid #d5d5d0;
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 9px 11px;
+            font-size: 12px;
+        }
+
+        .three-help {
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+            z-index: 20;
+            max-width: 250px;
+            background: rgba(255, 255, 255, 0.93);
+            border: 1px solid #deded9;
+            border-radius: 9px;
+            padding: 10px 12px;
+            font-size: 11px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* ========================================= */
+        /* RIGHT SUMMARY */
+        /* ========================================= */
+
+        .summary-sidebar {
+            background: #ffffff;
+            border-left: 1px solid var(--line);
+            overflow-y: auto;
+        }
+
+        .summary-section {
+            padding: 18px;
+            border-bottom: 1px solid #eeeeeb;
+        }
+
+        .summary-heading {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .spec-row,
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            font-size: 12px;
+            margin-bottom: 9px;
+        }
+
+        .spec-row span:first-child {
+            color: var(--muted);
+        }
+
+        .selected-empty {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.55;
+        }
+
+        .selected-product-title {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+
+        .coordinate-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 11px;
+        }
+
+        .coordinate-field label {
+            display: block;
+            font-size: 10px;
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+
+        .coordinate-field input {
+            width: 100%;
+            border: 1px solid #d5d5d0;
+            border-radius: 7px;
+            padding: 8px;
+            font-size: 12px;
+        }
+
+        .selected-actions {
+            display: flex;
+            gap: 7px;
+            margin-top: 10px;
+        }
+
+        .selected-actions button {
+            flex: 1;
+            border: 1px solid #d5d5d0;
+            background: #ffffff;
+            border-radius: 7px;
+            padding: 8px;
+            font-size: 11px;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            padding-top: 15px;
+            margin-top: 14px;
+            border-top: 1px solid #deded9;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .vat-text {
+            margin-top: 6px;
+            color: var(--muted);
+            font-size: 10px;
+        }
+
+        .summary-button {
+            width: 100%;
+            border: 0;
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 9px;
+            font-weight: 700;
+        }
+
+        .summary-button.primary {
+            background: #d66121;
+            color: #ffffff;
+        }
+
+        .summary-button.secondary {
+            background: #efefeb;
+            color: #111111;
+        }
+
+        /* ========================================= */
+        /* RESPONSIVE */
+        /* ========================================= */
+
+        @media (max-width: 1120px) {
+            .planner-layout {
+                grid-template-columns: 270px minmax(0, 1fr);
+            }
+
+            .summary-sidebar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 820px) {
+            .main-nav {
+                display: none;
+            }
+
+            .planner-layout {
+                display: block;
+                height: auto;
+            }
+
+            .planner-centre {
+                height: 620px;
+            }
+
+            .product-list {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+  
+/* Shared BKO navigation refinements */
+.planner-strip{height:28px;background:#232323;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;letter-spacing:.035em}.planner-strip span{color:#d66121;margin:0 8px}.main-nav a{font-weight:600}.main-nav a:hover{color:#d66121}.header-button.primary{display:inline-flex;gap:7px;align-items:center}.header-button.primary span{min-width:20px;height:20px;border-radius:20px;background:#fff;color:#d66121;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;padding:0 6px}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/typography-unified.css?v=78">
+<link rel="stylesheet" href="assets/css/site-brand-v142.css?v=142">
+<link rel="stylesheet" href="assets/css/global-consistency-v185.css?v=186">
+<link rel="stylesheet" href="assets/css/top-line-fix-v190.css?v=190">
+<link rel="stylesheet" href="assets/css/direct-nav-v191.css?v=191">
+<link rel="stylesheet" href="assets/css/two-row-header-v192.css?v=192">
+<link rel="stylesheet" href="assets/css/header-clean-v195.css?v=195">
+<link rel="stylesheet" href="assets/css/header-wide-v196.css?v=196">
+<link rel="stylesheet" href="assets/css/header-flow-fix-v199.css?v=199">
+<link rel="stylesheet" href="assets/css/screen-fix-v201.css?v=201">
+<link rel="stylesheet" href="assets/css/planner-final-v201.css?v=201">
+<link rel="stylesheet" href="assets/css/category-nav-v202.css?v=207">
+<link rel="stylesheet" href="assets/css/header-refinement-v209.css?v=209">
+<link rel="stylesheet" href="assets/css/units-nav-visible-v227.css?v=233">
+<link rel="stylesheet" href="assets/css/editorial-refresh-v240.css?v=268">
+</head>
+<body>
+<script>
+(function(){
+function cleanTopText(){
+ var b=document.body;if(!b)return;
+ Array.from(b.childNodes).forEach(function(n){
+   if(n.nodeType===3 && /^\s*\\n\s*$/.test(n.nodeValue||'')) n.remove();
+ });
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',cleanTopText);
+else cleanTopText();
+})();
+</script><div class="top-strip">Cabinets delivered in as little as 2 weeks <span>·</span> Nationwide delivery</div><header class="site-header">
+<div class="container header-inner">
+<a aria-label="Buy Kitchens Online home" class="brand" href="index.html">
+<img alt="Buy Kitchens Online" src="assets/images/brand/bko-logo-olive.png"/>
+</a>
+<button aria-controls="siteNav" aria-expanded="false" aria-label="Open menu" class="menu-toggle" type="button">
+<span></span><span></span><span></span>
+</button>
+<nav aria-label="Main navigation" class="nav nav-direct-v191" id="siteNav">
+<a href="ranges.html">Collections</a>
+<a href="catalogue.html">Units</a>
+<a href="doors.html">Doors</a>
+<a href="handles.html">Handles</a>
+<a href="worktops.html">Worktops</a>
+<a href="appliances.html">Appliances</a>
+<a href="sinks-taps.html">Sinks &amp; Taps</a>
+<a href="builder.html">Design your kitchen</a>
+<a href="delivery.html">Delivery</a>
+<a href="help.html">Help</a>
+</nav>
+<div class="header-actions">
+<a class="btn ghost login-link" data-login-label="" href="login.html">Login</a>
+<a class="btn primary basket-link" href="basket.html">Basket <span class="basket-pill" data-basket-count="">0</span></a>
+</div>
+</div>
+</header>
+<section class="planner-topbar planner-topbar-v201">
+  <div class="project-title">
+    <h1>My Kitchen</h1>
+    <div class="save-status" id="saveStatus">Saved automatically</div>
+  </div>
+  <div class="view-toggle">
+    <button class="active" id="twoDButton" type="button">2D Plan</button>
+    <button id="threeDButton" type="button">3D View</button>
+  </div>
+</section>
+<main class="planner-layout">
+<!-- ========================================= -->
+<!-- PRODUCT / ROOM SIDEBAR -->
+<!-- ========================================= -->
+<aside class="product-sidebar">
+<div class="sidebar-section">
+<div class="sidebar-title">
+      Room size
+     </div>
+<div class="room-input-grid">
+<div class="field">
+<label for="roomWidthInput">
+        Width (mm)
+       </label>
+<input class="dimension-input" id="roomWidthInput" max="15000" min="1000" step="10" type="number" value="4000"/>
+</div>
+<div class="field">
+<label for="roomDepthInput">
+        Depth (mm)
+       </label>
+<input class="dimension-input" id="roomDepthInput" max="15000" min="1000" step="10" type="number" value="3000"/>
+</div>
+</div>
+<div class="room-input-grid" style="margin-top: 10px;">
+<div class="field">
+<label for="roomHeightInput">
+        Ceiling (mm)
+       </label>
+<input class="dimension-input" id="roomHeightInput" max="5000" min="1800" step="10" type="number" value="2500"/>
+</div>
+</div>
+<p class="room-note">
+      Both views use these exact millimetre dimensions. Cabinets automatically align to walls and neighbouring units without overlapping.
+     </p>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-title">
+      Add to your kitchen
+     </div>
+<div style="font-size:11px;color:#777;margin-top:-6px;margin-bottom:12px;line-height:1.45;">
+      BKO rigid-built units · revised selling prices · prices shown inc VAT
+     </div>
+<input class="search-input" id="productSearch" placeholder="Search units..." type="search"/>
+</div>
+<div class="sidebar-section">
+<div class="category-tabs">
+<button class="category-tab active" data-category="all" type="button">
+       All
+      </button>
+<button class="category-tab" data-category="base" type="button">
+       Base
+      </button>
+<button class="category-tab" data-category="drawer" type="button">
+       Drawers
+      </button>
+<button class="category-tab" data-category="wall" type="button">
+       Wall
+      </button>
+<button class="category-tab" data-category="tall" type="button">
+       Tall
+      </button>
+<button class="category-tab" data-category="housing" type="button">
+       Housings
+      </button>
+</div>
+</div>
+<div class="product-list" id="productList">
+</div>
+</aside>
+<!-- ========================================= -->
+<!-- PLAN AREA -->
+<!-- ========================================= -->
+<section class="planner-centre">
+<div class="planner-toolbar">
+<button class="tool-button" id="undoButton" type="button">
+      Undo
+     </button>
+<button class="tool-button" id="rotateButton" type="button">
+      Rotate 90°
+     </button>
+<button class="tool-button" id="duplicateButton" type="button">
+      Duplicate
+     </button>
+<button class="tool-button danger" id="deleteButton" type="button">
+      Delete
+     </button>
+</div>
+<!-- 2D -->
+<div id="twoDView">
+<div class="room-wrapper" id="roomWrapper">
+<div id="roomCanvas">
+<span class="room-dimension top" id="roomWidthLabel">
+        4000 mm
+       </span>
+<span class="room-dimension left" id="roomDepthLabel">
+        3000 mm
+       </span>
+</div>
+</div>
+</div>
+<!-- 3D -->
+<div id="threeDView">
+<canvas id="threeDCanvas">
+</canvas>
+<div class="three-controls">
+<button data-camera="corner" type="button">
+       Corner View
+      </button>
+<button data-camera="front" type="button">
+       Front View
+      </button>
+<button data-camera="top" type="button">
+       Plan View
+      </button>
+<button id="fitViewButton" type="button">
+       Fit Room
+      </button>
+</div>
+<div class="three-help">
+      Click a cabinet to select it. Drag a selected cabinet across the floor to reposition it accurately. The 2D plan updates from the same millimetre coordinates.
+     </div>
+</div>
+</section>
+<!-- ========================================= -->
+<!-- SUMMARY -->
+<!-- ========================================= -->
+<aside class="summary-sidebar">
+<div class="summary-section">
+<div class="summary-heading">
+      Your kitchen
+     </div>
+<div class="spec-row">
+<span>
+       Range
+      </span>
+<strong>
+       Cartmel
+      </strong>
+</div>
+<div class="spec-row">
+<span>
+       Door colour
+      </span>
+<strong>
+       Cashmere
+      </strong>
+</div>
+<div class="spec-row">
+<span>
+       Carcase
+      </span>
+<strong>
+       Light Grey
+      </strong>
+</div>
+<div class="spec-row">
+<span>
+       Worktop
+      </span>
+<strong>
+       Quartz
+      </strong>
+</div>
+</div>
+<div class="summary-section">
+<div class="summary-heading">
+      Selected unit
+     </div>
+<div id="selectedUnit">
+<p class="selected-empty">
+       Select a cabinet in either 2D or 3D to view and edit its exact position.
+      </p>
+</div>
+</div>
+<div class="summary-section">
+<div class="summary-heading">
+      Price summary
+     </div>
+<div class="price-row">
+<span>
+       Base units
+      </span>
+<strong id="baseTotal">
+       £0.00
+      </strong>
+</div>
+<div class="price-row">
+<span>
+       Wall units
+      </span>
+<strong id="wallTotal">
+       £0.00
+      </strong>
+</div>
+<div class="price-row">
+<span>
+       Tall / housings
+      </span>
+<strong id="tallTotal">
+       £0.00
+      </strong>
+</div>
+<div class="price-row">
+<span>
+       VAT included
+      </span>
+<strong id="vatTotal">
+       £0.00
+      </strong>
+</div>
+<div class="total-row">
+<span>
+       Total
+      </span>
+<span id="grandTotal">
+       £0.00
+      </span>
+</div>
+<div class="vat-text">
+      Prices shown include VAT.
+     </div>
+<button class="summary-button secondary" type="button">
+      Save Kitchen
+     </button>
+<button class="summary-button primary" type="button">
+      Add Kitchen to Basket
+     </button>
+</div>
+</aside>
+</main>
+<!-- ========================================= -->
+<!-- THREE.JS IMPORT MAP -->
+<!-- ========================================= -->
+<script type="importmap">
+   {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+    }
+  </script>
+<!-- ========================================= -->
+<!-- PLANNER APPLICATION -->
+<!-- ========================================= -->
+<script type="module">
+   import * as THREE from "three";
+        import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+
+        /* ========================================= */
+        /* PRODUCT DATA */
+        /* Revised BKO selling prices supplied August 2026 */
+        /* Customer-facing price = Selling Price + VAT */
+        /* Dimensions/codes follow BKO Complete January 2026 catalogue */
+        /* ========================================= */
+
+        const products = [
+            {"id": "LAM001","code": "B15","name": "150 BASE UNIT","width": 150,"depth": 570,"height": 720,"category": "base","priceExVat": 67.54,"price": 81.05},
+            {"id": "LAM002","code": "B26","name": "260 BASE UNIT","width": 260,"depth": 570,"height": 720,"category": "base","priceExVat": 84.35,"price": 101.22},
+            {"id": "LAM003","code": "B30","name": "300 BASE UNIT","width": 300,"depth": 570,"height": 720,"category": "base","priceExVat": 67.54,"price": 81.05},
+            {"id": "LAM004","code": "B35","name": "350 BASE UNIT","width": 350,"depth": 570,"height": 720,"category": "base","priceExVat": 87.42,"price": 104.9},
+            {"id": "LAM005","code": "B40","name": "400 BASE UNIT","width": 400,"depth": 570,"height": 720,"category": "base","priceExVat": 70.53,"price": 84.64},
+            {"id": "LAM006","code": "B45","name": "450 BASE UNIT","width": 450,"depth": 570,"height": 720,"category": "base","priceExVat": 72.14,"price": 86.57},
+            {"id": "LAM007","code": "B50","name": "500 BASE UNIT","width": 500,"depth": 570,"height": 720,"category": "base","priceExVat": 73.46,"price": 88.15},
+            {"id": "LAM008","code": "B55","name": "550 BASE UNIT","width": 550,"depth": 570,"height": 720,"category": "base","priceExVat": 94.4,"price": 113.28},
+            {"id": "LAM009","code": "B60","name": "600 BASE UNIT","width": 600,"depth": 570,"height": 720,"category": "base","priceExVat": 77.48,"price": 92.98},
+            {"id": "LAM010","code": "B70","name": "700 BASE UNIT","width": 700,"depth": 570,"height": 720,"category": "base","priceExVat": 95.73,"price": 114.88},
+            {"id": "LAM011","code": "B80","name": "800 BASE UNIT","width": 800,"depth": 570,"height": 720,"category": "base","priceExVat": 95.73,"price": 114.88},
+            {"id": "LAM012","code": "B90","name": "900 BASE UNIT","width": 900,"depth": 570,"height": 720,"category": "base","priceExVat": 98.23,"price": 117.88},
+            {"id": "LAM013","code": "B100","name": "1000 BASE UNIT","width": 1000,"depth": 570,"height": 720,"category": "base","priceExVat": 101.23,"price": 121.48},
+            {"id": "LAM014","code": "B110","name": "1100 BASE UNIT","width": 1100,"depth": 570,"height": 720,"category": "base","priceExVat": 128.28,"price": 153.94},
+            {"id": "LAM015","code": "B120","name": "1200 BASE UNIT","width": 1200,"depth": 570,"height": 720,"category": "base","priceExVat": 111.35,"price": 133.62},
+            {"id": "LAM016","code": "CB80","name": "800 CORNER BASE UNIT","width": 800,"depth": 570,"height": 720,"category": "corner","priceExVat": 95.73,"price": 114.88},
+            {"id": "LAM017","code": "CB90","name": "900 CORNER BASE UNIT","width": 900,"depth": 570,"height": 720,"category": "corner","priceExVat": 98.23,"price": 117.88},
+            {"id": "LAM018","code": "CB100","name": "1000 CORNER BASE UNIT","width": 1000,"depth": 570,"height": 720,"category": "corner","priceExVat": 101.23,"price": 121.48},
+            {"id": "LAM019","code": "CB120","name": "1200 CORNER BASE UNIT","width": 1200,"depth": 570,"height": 720,"category": "corner","priceExVat": 111.35,"price": 133.62},
+            {"id": "LAM020","code": "BD30","name": "300 DRAWERLINE BASE UNIT","width": 300,"depth": 570,"height": 720,"category": "drawer","priceExVat": 67.54,"price": 81.05},
+            {"id": "LAM021","code": "BD40","name": "400 DRAWERLINE BASE UNIT","width": 400,"depth": 570,"height": 720,"category": "drawer","priceExVat": 70.53,"price": 84.64},
+            {"id": "LAM022","code": "BD45","name": "450 DRAWERLINE BASE UNIT","width": 450,"depth": 570,"height": 720,"category": "drawer","priceExVat": 72.14,"price": 86.57},
+            {"id": "LAM023","code": "BD50","name": "500 DRAWERLINE BASE UNIT","width": 500,"depth": 570,"height": 720,"category": "drawer","priceExVat": 73.46,"price": 88.15},
+            {"id": "LAM024","code": "BD60","name": "600 DRAWERLINE BASE UNIT","width": 600,"depth": 570,"height": 720,"category": "drawer","priceExVat": 77.48,"price": 92.98},
+            {"id": "LAM025","code": "BD80","name": "800 DRAWERLINE BASE UNIT","width": 800,"depth": 570,"height": 720,"category": "drawer","priceExVat": 95.73,"price": 114.88},
+            {"id": "LAM026","code": "BD90","name": "900 DRAWERLINE BASE UNIT","width": 900,"depth": 570,"height": 720,"category": "drawer","priceExVat": 98.23,"price": 117.88},
+            {"id": "LAM027","code": "BD100","name": "1000 DRAWERLINE BASE UNIT","width": 1000,"depth": 570,"height": 720,"category": "drawer","priceExVat": 101.23,"price": 121.48},
+            {"id": "LAM028","code": "CBD80","name": "800 DRAWERLINE CORNER BASE UNIT","width": 800,"depth": 570,"height": 720,"category": "corner","priceExVat": 95.73,"price": 114.88},
+            {"id": "LAM029","code": "CBD90","name": "900 DRAWERLINE CORNER BASE UNIT","width": 900,"depth": 570,"height": 720,"category": "corner","priceExVat": 98.23,"price": 117.88},
+            {"id": "LAM030","code": "CBD100","name": "1000 DRAWERLINE CORNER BASE UNIT","width": 1000,"depth": 570,"height": 720,"category": "corner","priceExVat": 101.23,"price": 121.48},
+            {"id": "LAM031","code": "CBD120","name": "1200 DRAWERLINE CORNER BASE UNIT","width": 1200,"depth": 570,"height": 720,"category": "corner","priceExVat": 111.35,"price": 133.62},
+            {"id": "LAM032","code": "B50D(2)","name": "2 DRAWERS","width": 500,"depth": 570,"height": 720,"category": "drawer","priceExVat": 70.87,"price": 85.04},
+            {"id": "LAM033","code": "B60D(2)","name": "2 DRAWERS","width": 600,"depth": 570,"height": 720,"category": "drawer","priceExVat": 74.28,"price": 89.14},
+            {"id": "LAM034","code": "B80D(2)","name": "2 DRAWERS","width": 800,"depth": 570,"height": 720,"category": "drawer","priceExVat": 91.46,"price": 109.75},
+            {"id": "LAM035","code": "B90D(2)","name": "2 DRAWERS","width": 900,"depth": 570,"height": 720,"category": "drawer","priceExVat": 93.39,"price": 112.07},
+            {"id": "LAM036","code": "B100D(2)","name": "2 DRAWERS","width": 1000,"depth": 570,"height": 720,"category": "drawer","priceExVat": 95.85,"price": 115.02},
+            {"id": "LAM037","code": "B50D(3)","name": "3 DRAWERS INC. CUTLERY TRAY","width": 500,"depth": 570,"height": 720,"category": "drawer","priceExVat": 70.87,"price": 85.04},
+            {"id": "LAM038","code": "B60D(3)","name": "3 DRAWERS INC. CUTLERY TRAY","width": 600,"depth": 570,"height": 720,"category": "drawer","priceExVat": 74.28,"price": 89.14},
+            {"id": "LAM039","code": "B80D(3)","name": "3 DRAWERS INC. CUTLERY TRAY","width": 800,"depth": 570,"height": 720,"category": "drawer","priceExVat": 91.46,"price": 109.75},
+            {"id": "LAM040","code": "B90D(3)","name": "3 DRAWERS INC. CUTLERY TRAY","width": 900,"depth": 570,"height": 720,"category": "drawer","priceExVat": 93.39,"price": 112.07},
+            {"id": "LAM041","code": "B100D(3)","name": "3 DRAWERS INC. CUTLERY TRAY","width": 1000,"depth": 570,"height": 720,"category": "drawer","priceExVat": 95.85,"price": 115.02},
+            {"id": "LAM042","code": "B50D(4)*","name": "4 DRAWERS (1 PAN 3 SHALLOW) INC. CUTLERY TRAY","width": 500,"depth": 570,"height": 720,"category": "drawer","priceExVat": 70.87,"price": 85.04},
+            {"id": "LAM043","code": "B60D(4)*","name": "4 DRAWERS (1 PAN 3 SHALLOW) INC. CUTLERY TRAY","width": 600,"depth": 570,"height": 720,"category": "drawer","priceExVat": 74.28,"price": 89.14},
+            {"id": "LAM044","code": "B80D(4)*","name": "4 DRAWERS (1 PAN 3 SHALLOW) INC. CUTLERY TRAY","width": 800,"depth": 570,"height": 720,"category": "drawer","priceExVat": 91.46,"price": 109.75},
+            {"id": "LAM045","code": "B90D(4)*","name": "4 DRAWERS (1 PAN 3 SHALLOW) INC. CUTLERY TRAY","width": 900,"depth": 570,"height": 720,"category": "drawer","priceExVat": 93.39,"price": 112.07},
+            {"id": "LAM046","code": "B100D(4)*","name": "4 DRAWERS (1 PAN 3 SHALLOW) INC. CUTLERY TRAY","width": 1000,"depth": 570,"height": 720,"category": "drawer","priceExVat": 95.85,"price": 115.02},
+            {"id": "LAM047","code": "B50D(4E)","name": "4 DRAWERS (EQUAL) INC. CUTLERY TRAY","width": 500,"depth": 570,"height": 720,"category": "drawer","priceExVat": 70.87,"price": 85.04},
+            {"id": "LAM048","code": "B60D(4E)","name": "4 DRAWERS (EQUAL) INC. CUTLERY TRAY","width": 600,"depth": 570,"height": 720,"category": "drawer","priceExVat": 74.28,"price": 89.14},
+            {"id": "LAM049","code": "B30D(5)","name": "5 DRAWERS","width": 300,"depth": 570,"height": 720,"category": "drawer","priceExVat": 66.09,"price": 79.31},
+            {"id": "LAM050","code": "B40D(5)","name": "5 DRAWERS","width": 400,"depth": 570,"height": 720,"category": "drawer","priceExVat": 68.46,"price": 82.15},
+            {"id": "LAM051","code": "B45D(5)","name": "5 DRAWERS","width": 450,"depth": 570,"height": 720,"category": "drawer","priceExVat": 69.83,"price": 83.8},
+            {"id": "LAM052","code": "B50D(5)","name": "5 DRAWERS INC. CUTLERY TRAY","width": 500,"depth": 570,"height": 720,"category": "drawer","priceExVat": 70.87,"price": 85.04},
+            {"id": "LAM053","code": "B60D(5)","name": "5 DRAWERS INC. CUTLERY TRAY","width": 600,"depth": 570,"height": 720,"category": "drawer","priceExVat": 74.28,"price": 89.14},
+            {"id": "LAM054","code": "B80D(5)","name": "5 DRAWERS INC. CUTLERY TRAY","width": 800,"depth": 570,"height": 720,"category": "drawer","priceExVat": 91.46,"price": 109.75},
+            {"id": "LAM055","code": "B90D(5)","name": "5 DRAWERS INC. CUTLERY TRAY","width": 900,"depth": 570,"height": 720,"category": "drawer","priceExVat": 93.39,"price": 112.07},
+            {"id": "LAM056","code": "B100D(5)","name": "5 DRAWERS INC. CUTLERY TRAY","width": 1000,"depth": 570,"height": 720,"category": "drawer","priceExVat": 95.85,"price": 115.02},
+            {"id": "LAM057","code": "CB90X90L","name": "910 X 910 L-SHAPE BASE","width": 910,"depth": 910,"height": 720,"category": "corner","priceExVat": 181.92,"price": 218.3},
+            {"id": "LAM058","code": "BU60","name": "600 BUILT UNDER OVER","width": 600,"depth": 560,"height": 720,"category": "base","priceExVat": 71.02,"price": 85.22},
+            {"id": "LAM059","code": "CBE","name": "300 X 560 CURVED BASE END","width": 300,"depth": 560,"height": 720,"category": "corner","priceExVat": 84.82,"price": 101.78},
+            {"id": "LAM060","code": "SBASE","name": "360 X 560 SPLAY BASE END","width": 360,"depth": 560,"height": 720,"category": "base","priceExVat": 111.19,"price": 133.43},
+            {"id": "LAM061","code": "W30(9)","name": "300 X 900 WALL UNIT","width": 300,"depth": 330,"height": 900,"category": "wall","priceExVat": 63.07,"price": 75.68},
+            {"id": "LAM062","code": "W35(9)","name": "350 X 900 WALL UNIT","width": 350,"depth": 330,"height": 900,"category": "wall","priceExVat": 66.78,"price": 80.14},
+            {"id": "LAM063","code": "W40(9)","name": "400 X 900 WALL UNIT","width": 400,"depth": 330,"height": 900,"category": "wall","priceExVat": 66.78,"price": 80.14},
+            {"id": "LAM064","code": "W45(9)","name": "450 X 900 WALL UNIT","width": 450,"depth": 330,"height": 900,"category": "wall","priceExVat": 69.64,"price": 83.57},
+            {"id": "LAM065","code": "W50(9)","name": "500 X 900 WALL UNIT","width": 500,"depth": 330,"height": 900,"category": "wall","priceExVat": 71.16,"price": 85.39},
+            {"id": "LAM066","code": "W55(9)","name": "550 X 900 WALL UNIT","width": 550,"depth": 330,"height": 900,"category": "wall","priceExVat": 89.08,"price": 106.9},
+            {"id": "LAM067","code": "W60(9)","name": "600 X 900 WALL UNIT","width": 600,"depth": 330,"height": 900,"category": "wall","priceExVat": 76.15,"price": 91.38},
+            {"id": "LAM068","code": "W70(9)","name": "700 X 900 WALL UNIT","width": 700,"depth": 330,"height": 900,"category": "wall","priceExVat": 93.17,"price": 111.8},
+            {"id": "LAM069","code": "W80(9)","name": "800 X 900 WALL UNIT","width": 800,"depth": 330,"height": 900,"category": "wall","priceExVat": 93.17,"price": 111.8},
+            {"id": "LAM070","code": "W90(9)","name": "900 X 900 WALL UNIT","width": 900,"depth": 330,"height": 900,"category": "wall","priceExVat": 99.97,"price": 119.96},
+            {"id": "LAM071","code": "W100(9)","name": "1000 X 900 WALL UNIT","width": 1000,"depth": 330,"height": 900,"category": "wall","priceExVat": 101.54,"price": 121.85},
+            {"id": "LAM072","code": "ACW60","name": "630 X 630 X 900 DIAGONAL CORNER WALL UNIT","width": 630,"depth": 630,"height": 900,"category": "corner","priceExVat": 147.49,"price": 176.99},
+            {"id": "LAM073","code": "SW900","name": "360 X 900 SPLAY WALL UNIT","width": 360,"depth": 330,"height": 900,"category": "wall","priceExVat": 117.72,"price": 141.26},
+            {"id": "LAM074","code": "W15","name": "150 X 720 WALL UNIT","width": 150,"depth": 330,"height": 720,"category": "wall","priceExVat": 70.33,"price": 84.4},
+            {"id": "LAM075","code": "W30","name": "300 X 720 WALL UNIT","width": 300,"depth": 330,"height": 720,"category": "wall","priceExVat": 57.42,"price": 68.9},
+            {"id": "LAM076","code": "W35","name": "350 X 720 WALL UNIT","width": 350,"depth": 330,"height": 720,"category": "wall","priceExVat": 60.75,"price": 72.9},
+            {"id": "LAM077","code": "W40","name": "400 X 720 WALL UNIT","width": 400,"depth": 330,"height": 720,"category": "wall","priceExVat": 60.75,"price": 72.9},
+            {"id": "LAM078","code": "W45","name": "450 X 720 WALL UNIT","width": 450,"depth": 330,"height": 720,"category": "wall","priceExVat": 63.25,"price": 75.9},
+            {"id": "LAM079","code": "W50","name": "500 X 720 WALL UNIT","width": 500,"depth": 330,"height": 720,"category": "wall","priceExVat": 64.64,"price": 77.57},
+            {"id": "LAM080","code": "W55","name": "550 X 720 WALL UNIT","width": 550,"depth": 330,"height": 720,"category": "wall","priceExVat": 82.11,"price": 98.53},
+            {"id": "LAM081","code": "W60","name": "600 X 720 WALL UNIT","width": 600,"depth": 330,"height": 720,"category": "wall","priceExVat": 69.2,"price": 83.04},
+            {"id": "LAM082","code": "W70","name": "700 X 720 WALL UNIT","width": 700,"depth": 330,"height": 720,"category": "wall","priceExVat": 85.17,"price": 102.2},
+            {"id": "LAM083","code": "W80","name": "800 X 720 WALL UNIT","width": 800,"depth": 330,"height": 720,"category": "wall","priceExVat": 85.31,"price": 102.37},
+            {"id": "LAM084","code": "W90","name": "900 X 720 WALL UNIT","width": 900,"depth": 330,"height": 720,"category": "wall","priceExVat": 90.29,"price": 108.35},
+            {"id": "LAM085","code": "W100","name": "1000 X 720 WALL UNIT","width": 1000,"depth": 330,"height": 720,"category": "wall","priceExVat": 92.29,"price": 110.75},
+            {"id": "LAM086","code": "W120","name": "1200 X 720 WALL UNIT","width": 1200,"depth": 330,"height": 720,"category": "wall","priceExVat": 98.52,"price": 118.22},
+            {"id": "LAM087","code": "ACW60","name": "630 x 630 X 720 DIAGONAL CORNER WALL UNIT","width": 630,"depth": 630,"height": 720,"category": "corner","priceExVat": 147.49,"price": 176.99},
+            {"id": "LAM088","code": "LCW60X60","name": "630 x 630 X 720 L CORNER WALL UNIT","width": 630,"depth": 630,"height": 720,"category": "corner","priceExVat": 135.94,"price": 163.13},
+            {"id": "LAM089","code": "SW720","name": "360 X 720 SPLAY WALL UNIT","width": 360,"depth": 330,"height": 720,"category": "wall","priceExVat": 102.4,"price": 122.88},
+            {"id": "LAM090","code": "CW720","name": "300 X 300 X 720 CURVED WALL END","width": 300,"depth": 330,"height": 720,"category": "wall","priceExVat": 69.18,"price": 83.02},
+            {"id": "LAM091","code": "W30(5)","name": "300 X 575 WALL UNIT","width": 300,"depth": 330,"height": 575,"category": "wall","priceExVat": 52.88,"price": 63.46},
+            {"id": "LAM092","code": "W35(5)","name": "350 X 575 WALL UNIT","width": 350,"depth": 330,"height": 575,"category": "wall","priceExVat": 55.3,"price": 66.36},
+            {"id": "LAM093","code": "W40(5)","name": "400 X 575 WALL UNIT","width": 400,"depth": 330,"height": 575,"category": "wall","priceExVat": 55.3,"price": 66.36},
+            {"id": "LAM094","code": "W45(5)","name": "450 X 575 WALL UNIT","width": 450,"depth": 330,"height": 575,"category": "wall","priceExVat": 59.53,"price": 71.44},
+            {"id": "LAM095","code": "W50(5)","name": "500 X 575 WALL UNIT","width": 500,"depth": 330,"height": 575,"category": "wall","priceExVat": 59.53,"price": 71.44},
+            {"id": "LAM096","code": "W55(5)","name": "550 X 575 WALL UNIT","width": 550,"depth": 330,"height": 575,"category": "wall","priceExVat": 74.66,"price": 89.59},
+            {"id": "LAM097","code": "W60(5)","name": "600 X 575 WALL UNIT","width": 600,"depth": 330,"height": 575,"category": "wall","priceExVat": 61.73,"price": 74.08},
+            {"id": "LAM098","code": "W70(5)","name": "700 X 575 WALL UNIT","width": 700,"depth": 330,"height": 575,"category": "wall","priceExVat": 79.32,"price": 95.18},
+            {"id": "LAM099","code": "W80(5)","name": "800 X 575 WALL UNIT","width": 800,"depth": 330,"height": 575,"category": "wall","priceExVat": 79.32,"price": 95.18},
+            {"id": "LAM100","code": "W90(5)","name": "900 X 575 WALL UNIT","width": 900,"depth": 330,"height": 575,"category": "wall","priceExVat": 83.78,"price": 100.54},
+            {"id": "LAM101","code": "W100(5)","name": "1000 X 575 WALL UNIT","width": 1000,"depth": 330,"height": 575,"category": "wall","priceExVat": 83.78,"price": 100.54},
+            {"id": "LAM102","code": "ACW60(5)","name": "630 X 630 X 575 DIAGONAL CORNER WALL UNIT","width": 630,"depth": 630,"height": 575,"category": "corner","priceExVat": 141.41,"price": 169.69},
+            {"id": "LAM103","code": "LCW60X60(5)","name": "630 X 630 X 575 L CORNER WALL UNIT","width": 630,"depth": 630,"height": 575,"category": "corner","priceExVat": 129.17,"price": 155.0},
+            {"id": "LAM104","code": "SW575","name": "360 X 575 SPLAY WALL UNIT","width": 360,"depth": 330,"height": 575,"category": "wall","priceExVat": 97.31,"price": 116.77},
+            {"id": "LAM105","code": "HW50(360)","name": "500 X 360 HOOD WALL","width": 500,"depth": 330,"height": 360,"category": "wall","priceExVat": 56.06,"price": 67.27},
+            {"id": "LAM106","code": "HW60(360)","name": "600 X 360 HOOD WALL","width": 600,"depth": 330,"height": 360,"category": "wall","priceExVat": 57.82,"price": 69.38},
+            {"id": "LAM107","code": "HW80(360)","name": "800 X 360 HOOD WALL","width": 800,"depth": 330,"height": 360,"category": "wall","priceExVat": 63.54,"price": 76.25},
+            {"id": "LAM108","code": "HW90(360)","name": "900 X 360 HOOD WALL","width": 900,"depth": 330,"height": 360,"category": "wall","priceExVat": 64.91,"price": 77.89},
+            {"id": "LAM109","code": "HW1000(360)","name": "1000 X 360 HOOD WALL","width": 1000,"depth": 330,"height": 360,"category": "wall","priceExVat": 65.85,"price": 79.02},
+            {"id": "LAM110","code": "HW50(290)","name": "500 X 290 HOOD WALL","width": 500,"depth": 330,"height": 290,"category": "wall","priceExVat": 54.17,"price": 65.0},
+            {"id": "LAM111","code": "HW60(290)","name": "600 X 290 HOOD WALL","width": 600,"depth": 330,"height": 290,"category": "wall","priceExVat": 55.92,"price": 67.1},
+            {"id": "LAM112","code": "HW80(290)","name": "800 X 290 HOOD WALL","width": 800,"depth": 330,"height": 290,"category": "wall","priceExVat": 61.78,"price": 74.14},
+            {"id": "LAM113","code": "HW90(290)","name": "900 X 290 HOOD WALL","width": 900,"depth": 330,"height": 290,"category": "wall","priceExVat": 63.12,"price": 75.74},
+            {"id": "LAM114","code": "HW1000(290)","name": "1000 X 290 HOOD WALL","width": 1000,"depth": 330,"height": 290,"category": "wall","priceExVat": 64.08,"price": 76.9},
+            {"id": "LAM115","code": "DR50/1210","name": "500 x 1210 DRESSER","width": 500,"depth": 330,"height": 1210,"category": "dresser","priceExVat": 104.78,"price": 125.74},
+            {"id": "LAM116","code": "DR60/1210","name": "600 x 1210 DRESSER","width": 600,"depth": 330,"height": 1210,"category": "dresser","priceExVat": 115.2,"price": 138.24},
+            {"id": "LAM117","code": "TLG30TB + IFP30TB","name": "1970 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING","width": 300,"depth": 570,"height": 1970,"category": "tall","priceExVat": 116.69,"price": 140.03},
+            {"id": "LAM118","code": "TLG30 + ILP30","name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 300,"depth": 570,"height": 1970,"category": "tall","priceExVat": 150.92,"price": 181.1},
+            {"id": "LAM119","code": "TLG30+ILP30 (STE4)","name": "1970 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER","width": 300,"depth": 570,"height": 1970,"category": "tall","priceExVat": 150.92,"price": 181.1},
+            {"id": "LAM120","code": "TLG30-2TB + IFP30TB","name": "2150 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING","width": 300,"depth": 570,"height": 2150,"category": "tall","priceExVat": 130.05,"price": 156.06},
+            {"id": "LAM121","code": "TLG30-2 + ILP30","name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 300,"depth": 570,"height": 2150,"category": "tall","priceExVat": 164.29,"price": 197.15},
+            {"id": "LAM122","code": "TLG30-2+ILP30 (HTE4)","name": "2150 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER","width": 300,"depth": 570,"height": 2150,"category": "tall","priceExVat": 164.29,"price": 197.15},
+            {"id": "LAM123","code": "TLG40TB + IFP40TB","name": "1970 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING","width": 400,"depth": 570,"height": 1970,"category": "tall","priceExVat": 122.27,"price": 146.72},
+            {"id": "LAM124","code": "TLG40 + ILP40","name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 400,"depth": 570,"height": 1970,"category": "tall","priceExVat": 158.55,"price": 190.26},
+            {"id": "LAM125","code": "TLG40+ILP40 (STE4)","name": "1970 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER","width": 400,"depth": 570,"height": 1970,"category": "tall","priceExVat": 158.55,"price": 190.26},
+            {"id": "LAM126","code": "TLG40-2TB + IFP40TB","name": "2150 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING","width": 400,"depth": 570,"height": 2150,"category": "tall","priceExVat": 133.57,"price": 160.28},
+            {"id": "LAM127","code": "TLG40-2 + ILP40","name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 400,"depth": 570,"height": 2150,"category": "tall","priceExVat": 169.83,"price": 203.8},
+            {"id": "LAM128","code": "TLG40-2+ILP40 (HTE4)","name": "2150 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER","width": 400,"depth": 570,"height": 2150,"category": "tall","priceExVat": 169.83,"price": 203.8},
+            {"id": "LAM129","code": "TLG50TB + IFP50TB","name": "1970 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING","width": 500,"depth": 570,"height": 1970,"category": "tall","priceExVat": 128.33,"price": 154.0},
+            {"id": "LAM130","code": "TLG50 + ILP50","name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 500,"depth": 570,"height": 1970,"category": "tall","priceExVat": 166.74,"price": 200.09},
+            {"id": "LAM131","code": "TLG50+ILP50 (STE4)","name": "1970 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER","width": 500,"depth": 570,"height": 1970,"category": "tall","priceExVat": 166.74,"price": 200.09},
+            {"id": "LAM132","code": "TLG50-2TB + IFP50TB","name": "2150 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING","width": 500,"depth": 570,"height": 2150,"category": "tall","priceExVat": 142.83,"price": 171.4},
+            {"id": "LAM133","code": "TLG50-2 + ILP50","name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 500,"depth": 570,"height": 2150,"category": "tall","priceExVat": 181.24,"price": 217.49},
+            {"id": "LAM134","code": "TLG50-2+ILP50 (HTE4)","name": "2150 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER","width": 500,"depth": 570,"height": 2150,"category": "tall","priceExVat": 181.24,"price": 217.49},
+            {"id": "LAM135","code": "TLG60TB + IFP60TB","name": "1970 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING","width": 600,"depth": 570,"height": 1970,"category": "tall","priceExVat": 135.55,"price": 162.66},
+            {"id": "LAM136","code": "TLG60TB + ILP60","name": "1970 HIGH, 70/30 SPLIT, UNDRILLED, INCLUDING SHELVING","width": 600,"depth": 570,"height": 1970,"category": "tall","priceExVat": 176.84,"price": 212.21},
+            {"id": "LAM137","code": "TLG60 + ILP60","name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 600,"depth": 570,"height": 1970,"category": "tall","priceExVat": 176.84,"price": 212.21},
+            {"id": "LAM138","code": "TLG60 + ILP60","name": "1970 HIGH, 50/50 SPLIT, INCLUDING SHELVING","width": 600,"depth": 570,"height": 1970,"category": "tall","priceExVat": 176.84,"price": 212.21},
+            {"id": "LAM139","code": "TLG60 + ILP60","name": "1970 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER","width": 600,"depth": 570,"height": 1970,"category": "tall","priceExVat": 176.84,"price": 212.21},
+            {"id": "LAM140","code": "TLG60 + ILP60","name": "1970 HIGH, OVEN HOUSING, 495 DOOR TOP, 570 DOOR BTM","width": 600,"depth": 570,"height": 1970,"category": "housing","priceExVat": 176.84,"price": 212.21},
+            {"id": "LAM141","code": "TLG60 + ILP60","name": "1970 HIGH, OVEN HOUSING, 495 DOOR TOP, 2 X 283 DRW BTM","width": 600,"depth": 570,"height": 1970,"category": "housing","priceExVat": 176.84,"price": 212.21},
+            {"id": "LAM142","code": "TLG60 + ILP60","name": "1970 HIGH, OVEN HOUSING, 645 DOOR TOP, 715 DOOR BTM","width": 600,"depth": 570,"height": 1970,"category": "housing","priceExVat": 176.84,"price": 212.21},
+            {"id": "LAM143","code": "TLG60 + ILP60","name": "1970 HIGH, OVEN HOUSING, 645 DOOR TOP, 2 X 355 DRW BTM","width": 600,"depth": 570,"height": 1970,"category": "housing","priceExVat": 176.84,"price": 212.21},
+            {"id": "LAM144","code": "TLG60 + ILP60","name": "1970 HIGH, OVEN HOUSING, 450 DOOR TOP, 450 DOOR BTM","width": 600,"depth": 570,"height": 1970,"category": "housing","priceExVat": 176.84,"price": 212.21},
+            {"id": "LAM145","code": "TLG60-2TB + IFP60TB","name": "2150 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING","width": 600,"depth": 570,"height": 2150,"category": "tall","priceExVat": 150.42,"price": 180.5},
+            {"id": "LAM146","code": "TLG60-2TB + ILP60","name": "2150 HIGH, 70/30 SPLIT, UNDRILLED, INCLUDING SHELVING","width": 600,"depth": 570,"height": 2150,"category": "tall","priceExVat": 191.71,"price": 230.05},
+            {"id": "LAM147","code": "TLG60-2 + ILP60","name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 600,"depth": 570,"height": 2150,"category": "tall","priceExVat": 191.71,"price": 230.05},
+            {"id": "LAM148","code": "TLG60-2+ILP60 (HTE4)","name": "2150 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER","width": 600,"depth": 570,"height": 2150,"category": "tall","priceExVat": 191.71,"price": 230.05},
+            {"id": "LAM149","code": "TOG60-2A + ILP60","name": "2150 HIGH, FRIDGE FREEZER HOUSING, 1425 DOOR TOP, 715 DOOR BTM","width": 600,"depth": 570,"height": 2150,"category": "housing","priceExVat": 191.71,"price": 230.05},
+            {"id": "LAM150","code": "TOG60-2A + ILP60","name": "2150 HIGH, FRIDGE FREEZER HOUSING, 1245 DOOR TOP, 715 DOOR BTM WITH FILLER","width": 600,"depth": 570,"height": 2150,"category": "housing","priceExVat": 191.71,"price": 230.05},
+            {"id": "LAM151","code": "TOG60-2B + ILP60","name": "2150 HIGH, OVEN HOUSING, 495 DOOR TOP, 715 DOOR BTM","width": 600,"depth": 570,"height": 1970,"category": "housing","priceExVat": 191.71,"price": 230.05},
+            {"id": "LAM152","code": "TOG60-2B + ILP60","name": "2150 HIGH, OVEN HOUSING, 495 DOOR TOP, 2 X 355 DRW BTM","width": 600,"depth": 570,"height": 1970,"category": "housing","priceExVat": 191.71,"price": 230.05},
+            {"id": "LAM153","code": "TOG60-2C + ILP60","name": "2150 HIGH, OVEN HOUSING, 715 DOOR TOP, 715 DOOR BTM","width": 600,"depth": 570,"height": 1970,"category": "housing","priceExVat": 191.71,"price": 230.05},
+            {"id": "LAM154","code": "TOG60-2C + ILP60","name": "2150 HIGH, OVEN HOUSING, 715 DOOR TOP, 2 X 355 DRW BTM","width": 600,"depth": 570,"height": 1970,"category": "housing","priceExVat": 191.71,"price": 230.05},
+            {"id": "LAM155","code": "TOG60-2D + ILP60","name": "2150 HIGH, OVEN HOUSING, 645 DOOR TOP, 495 DOOR BTM","width": 600,"depth": 570,"height": 1970,"category": "housing","priceExVat": 191.71,"price": 230.05},
+            {"id": "LAM156","code": "TOG60-2E + ILP60","name": "2150 HIGH, OVEN HOUSING, 495 DOOR TOP, 570 DOOR BTM","width": 600,"depth": 570,"height": 1970,"category": "housing","priceExVat": 191.71,"price": 230.05},
+            {"id": "LAM157","code": "TOG60-2E + ILP60","name": "2150 HIGH, OVEN HOUSING, 495 DOOR TOP, 2 X 283 DRW BTM","width": 600,"depth": 570,"height": 1970,"category": "housing","priceExVat": 191.71,"price": 230.05},
+            {"id": "LAM158","code": "TLG80 + ILP80","name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 800,"depth": 570,"height": 1970,"category": "tall","priceExVat": 266.3,"price": 319.56},
+            {"id": "LAM159","code": "TLG80+ILP80 (STE4)","name": "1970 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER","width": 800,"depth": 570,"height": 1970,"category": "tall","priceExVat": 266.3,"price": 319.56},
+            {"id": "LAM160","code": "TLG80-2 + ILP80","name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 800,"depth": 570,"height": 2150,"category": "tall","priceExVat": 286.25,"price": 343.5},
+            {"id": "LAM161","code": "TLG80-2+ILP80 (HTE4)","name": "2150 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER","width": 800,"depth": 570,"height": 2150,"category": "tall","priceExVat": 286.25,"price": 343.5},
+            {"id": "LAM162","code": "TLG90 + ILP90","name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 900,"depth": 570,"height": 1970,"category": "tall","priceExVat": 295.93,"price": 355.12},
+            {"id": "LAM163","code": "TLG90-2 + ILP90","name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 900,"depth": 570,"height": 2150,"category": "tall","priceExVat": 318.34,"price": 382.01},
+            {"id": "LAM164","code": "TLG100 + ILP100","name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 1000,"depth": 570,"height": 1970,"category": "tall","priceExVat": 325.54,"price": 390.65},
+            {"id": "LAM165","code": "TLG100+ILP100 (STE4)","name": "1970 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER","width": 1000,"depth": 570,"height": 1970,"category": "tall","priceExVat": 325.54,"price": 390.65},
+            {"id": "LAM166","code": "TLG100-2 + ILP100","name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 1000,"depth": 570,"height": 2150,"category": "tall","priceExVat": 350.45,"price": 420.54},
+            {"id": "LAM167","code": "TLG100-2+ILP100 (HTE4)","name": "2150 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER","width": 1000,"depth": 570,"height": 2150,"category": "tall","priceExVat": 350.45,"price": 420.54},
+            {"id": "LAM168","code": "TLG120 + ILP120","name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 1200,"depth": 570,"height": 1970,"category": "tall","priceExVat": 384.77,"price": 461.72},
+            {"id": "LAM169","code": "TLG120-2 + ILP120","name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING","width": 1200,"depth": 570,"height": 2150,"category": "tall","priceExVat": 414.68,"price": 497.62}
+        ];
+
+        /* ========================================= */
+        /* SINGLE SOURCE OF TRUTH: MILLIMETRES */
+        /* ========================================= */
+
+        const room = {
+            widthMm: 4000,
+            depthMm: 3000,
+            heightMm: 2500
+        };
+
+        let placedUnits = [];
+        let selectedUnitId = null;
+        let activeCategory = "all";
+        let history = [];
+        const POSITION_STEP_MM = 1;
+        const AUTO_SNAP_DISTANCE_MM = 60;
+
+        /* ========================================= */
+        /* DOM */
+        /* ========================================= */
+
+        const productList = document.getElementById("productList");
+        const productSearch = document.getElementById("productSearch");
+        const roomCanvas = document.getElementById("roomCanvas");
+        const roomWrapper = document.getElementById("roomWrapper");
+        const selectedUnitPanel = document.getElementById("selectedUnit");
+        const twoDView = document.getElementById("twoDView");
+        const threeDView = document.getElementById("threeDView");
+        const twoDButton = document.getElementById("twoDButton");
+        const threeDButton = document.getElementById("threeDButton");
+        const roomWidthInput = document.getElementById("roomWidthInput");
+        const roomDepthInput = document.getElementById("roomDepthInput");
+        const roomHeightInput = document.getElementById("roomHeightInput");
+        const roomWidthLabel = document.getElementById("roomWidthLabel");
+        const roomDepthLabel = document.getElementById("roomDepthLabel");
+        const saveStatus = document.getElementById("saveStatus");
+
+        /* ========================================= */
+        /* HELPERS */
+        /* ========================================= */
+
+        function formatMoney(value) {
+            return new Intl.NumberFormat("en-GB", {
+                style: "currency",
+                currency: "GBP"
+            }).format(value);
+        }
+
+        function snapValue(valueMm) {
+            return Math.round(valueMm / POSITION_STEP_MM) * POSITION_STEP_MM;
+        }
+
+        function getProduct(unit) {
+            return products.find(product => product.id === unit.productId) ||
+                   products.find(product => product.code === unit.productCode);
+        }
+
+        function isRotated(unit) {
+            return unit.rotation % 180 !== 0;
+        }
+
+        function getFootprintMm(unit, product) {
+            return {
+                widthMm: isRotated(unit) ? product.depth : product.width,
+                depthMm: isRotated(unit) ? product.width : product.depth
+            };
+        }
+
+        function clampUnitToRoom(unit) {
+            const product = getProduct(unit);
+            if (!product) return;
+
+            const footprint = getFootprintMm(unit, product);
+
+            unit.xMm = Math.max(0, Math.min(room.widthMm - footprint.widthMm, unit.xMm));
+            unit.zMm = Math.max(0, Math.min(room.depthMm - footprint.depthMm, unit.zMm));
+
+            unit.xMm = snapValue(unit.xMm);
+            unit.zMm = snapValue(unit.zMm);
+
+            const maxYmm = Math.max(0, room.heightMm - product.height);
+            unit.yMm = Math.max(0, Math.min(maxYmm, Number(unit.yMm ?? 0)));
+            unit.yMm = snapValue(unit.yMm);
+        }
+
+        function getUnitRect(unit) {
+            const product = getProduct(unit);
+            if (!product) return null;
+            const footprint = getFootprintMm(unit, product);
+            return {
+                left: unit.xMm,
+                right: unit.xMm + footprint.widthMm,
+                back: unit.zMm,
+                front: unit.zMm + footprint.depthMm,
+                widthMm: footprint.widthMm,
+                depthMm: footprint.depthMm
+            };
+        }
+
+        function rectsOverlap(a, b) {
+            return a.left < b.right &&
+                   a.right > b.left &&
+                   a.back < b.front &&
+                   a.front > b.back;
+        }
+
+        function getUnitVerticalRange(unit) {
+            const product = getProduct(unit);
+            if (!product) return null;
+
+            const bottom = Number(unit.yMm ?? 0);
+
+            return {
+                bottom,
+                top: bottom + product.height
+            };
+        }
+
+        function verticalRangesOverlap(a, b) {
+            return a.bottom < b.top && a.top > b.bottom;
+        }
+
+        function unitsOccupySame3DSpace(unit, other) {
+            const rect = getUnitRect(unit);
+            const otherRect = getUnitRect(other);
+            const vertical = getUnitVerticalRange(unit);
+            const otherVertical = getUnitVerticalRange(other);
+
+            if (!rect || !otherRect || !vertical || !otherVertical) {
+                return false;
+            }
+
+            /*
+                A collision only exists when the units overlap BOTH:
+                1. across the floor plan (X/Z), and
+                2. vertically (Y).
+
+                This means a wall unit can sit directly above a base unit
+                while two wall units at the same mounting height still
+                cannot overlap each other.
+            */
+            return rectsOverlap(rect, otherRect) &&
+                   verticalRangesOverlap(vertical, otherVertical);
+        }
+
+        function overlapsAnyOtherUnit(unit) {
+            return placedUnits.some(other => {
+                if (other.id === unit.id) return false;
+                return unitsOccupySame3DSpace(unit, other);
+            });
+        }
+
+        function snapUnitToRoomEdges(unit) {
+            const product = getProduct(unit);
+            if (!product) return;
+            const footprint = getFootprintMm(unit, product);
+
+            const candidatesX = [
+                { value: 0, distance: Math.abs(unit.xMm) },
+                { value: room.widthMm - footprint.widthMm, distance: Math.abs((unit.xMm + footprint.widthMm) - room.widthMm) }
+            ];
+
+            const candidatesZ = [
+                { value: 0, distance: Math.abs(unit.zMm) },
+                { value: room.depthMm - footprint.depthMm, distance: Math.abs((unit.zMm + footprint.depthMm) - room.depthMm) }
+            ];
+
+            const bestX = candidatesX.sort((a, b) => a.distance - b.distance)[0];
+            const bestZ = candidatesZ.sort((a, b) => a.distance - b.distance)[0];
+
+            if (bestX.distance <= AUTO_SNAP_DISTANCE_MM) unit.xMm = bestX.value;
+            if (bestZ.distance <= AUTO_SNAP_DISTANCE_MM) unit.zMm = bestZ.value;
+        }
+
+        function rangesOverlap(startA, endA, startB, endB, tolerance = 1) {
+            return Math.min(endA, endB) - Math.max(startA, startB) > tolerance;
+        }
+
+        function snapUnitToNeighbours(unit) {
+            const rect = getUnitRect(unit);
+            if (!rect) return;
+
+            let best = null;
+
+            placedUnits.forEach(other => {
+                if (other.id === unit.id) return;
+                const otherRect = getUnitRect(other);
+                const vertical = getUnitVerticalRange(unit);
+                const otherVertical = getUnitVerticalRange(other);
+
+                if (!otherRect || !vertical || !otherVertical) return;
+
+                /*
+                    Only snap cabinets to neighbours occupying the same
+                    vertical band. This stops a wall unit from trying to
+                    side-snap to the base unit underneath it.
+                */
+                if (!verticalRangesOverlap(vertical, otherVertical)) return;
+
+                if (rangesOverlap(rect.back, rect.front, otherRect.back, otherRect.front)) {
+                    const leftToRight = Math.abs(rect.left - otherRect.right);
+                    const rightToLeft = Math.abs(rect.right - otherRect.left);
+
+                    if (leftToRight <= AUTO_SNAP_DISTANCE_MM && (!best || leftToRight < best.distance)) {
+                        best = { axis: 'x', value: otherRect.right, distance: leftToRight };
+                    }
+
+                    if (rightToLeft <= AUTO_SNAP_DISTANCE_MM && (!best || rightToLeft < best.distance)) {
+                        best = { axis: 'x', value: otherRect.left - rect.widthMm, distance: rightToLeft };
+                    }
+                }
+
+                if (rangesOverlap(rect.left, rect.right, otherRect.left, otherRect.right)) {
+                    const backToFront = Math.abs(rect.back - otherRect.front);
+                    const frontToBack = Math.abs(rect.front - otherRect.back);
+
+                    if (backToFront <= AUTO_SNAP_DISTANCE_MM && (!best || backToFront < best.distance)) {
+                        best = { axis: 'z', value: otherRect.front, distance: backToFront };
+                    }
+
+                    if (frontToBack <= AUTO_SNAP_DISTANCE_MM && (!best || frontToBack < best.distance)) {
+                        best = { axis: 'z', value: otherRect.back - rect.depthMm, distance: frontToBack };
+                    }
+                }
+            });
+
+            if (best) {
+                if (best.axis === 'x') unit.xMm = best.value;
+                if (best.axis === 'z') unit.zMm = best.value;
+            }
+        }
+
+        function findNearestFreeAdjacentPosition(unit, desiredX, desiredZ) {
+            const originalX = unit.xMm;
+            const originalZ = unit.zMm;
+            const rect = getUnitRect(unit);
+            if (!rect) return null;
+
+            const candidates = [];
+
+            placedUnits.forEach(other => {
+                if (other.id === unit.id) return;
+                const otherRect = getUnitRect(other);
+                const vertical = getUnitVerticalRange(unit);
+                const otherVertical = getUnitVerticalRange(other);
+
+                if (!otherRect || !vertical || !otherVertical) return;
+
+                /* Only search around units that could genuinely collide. */
+                if (!verticalRangesOverlap(vertical, otherVertical)) return;
+
+                candidates.push(
+                    { x: otherRect.left - rect.widthMm, z: desiredZ },
+                    { x: otherRect.right, z: desiredZ },
+                    { x: desiredX, z: otherRect.back - rect.depthMm },
+                    { x: desiredX, z: otherRect.front }
+                );
+            });
+
+            candidates.sort((a, b) =>
+                Math.hypot(a.x - desiredX, a.z - desiredZ) -
+                Math.hypot(b.x - desiredX, b.z - desiredZ)
+            );
+
+            for (const candidate of candidates) {
+                unit.xMm = candidate.x;
+                unit.zMm = candidate.z;
+                clampUnitToRoom(unit);
+                if (!overlapsAnyOtherUnit(unit)) {
+                    return { xMm: unit.xMm, zMm: unit.zMm };
+                }
+            }
+
+            unit.xMm = originalX;
+            unit.zMm = originalZ;
+            return null;
+        }
+
+        function applyAutomaticPlacement(unit, desiredX, desiredZ, fallbackX, fallbackZ) {
+            unit.xMm = snapValue(desiredX);
+            unit.zMm = snapValue(desiredZ);
+
+            clampUnitToRoom(unit);
+            snapUnitToRoomEdges(unit);
+            clampUnitToRoom(unit);
+            snapUnitToNeighbours(unit);
+            clampUnitToRoom(unit);
+
+            if (overlapsAnyOtherUnit(unit)) {
+                const freePosition = findNearestFreeAdjacentPosition(unit, desiredX, desiredZ);
+
+                if (!freePosition) {
+                    unit.xMm = fallbackX;
+                    unit.zMm = fallbackZ;
+                    clampUnitToRoom(unit);
+                }
+            }
+        }
+
+        function saveHistory() {
+            history.push(JSON.stringify({ room, placedUnits }));
+            if (history.length > 30) history.shift();
+        }
+
+        function markSaved(message = "Saved automatically") {
+            saveStatus.textContent = message;
+            window.clearTimeout(markSaved.timer);
+            markSaved.timer = window.setTimeout(() => {
+                saveStatus.textContent = "Saved automatically";
+            }, 1200);
+        }
+
+        /* ========================================= */
+        /* LOCAL SAVE */
+        /* ========================================= */
+
+        function saveKitchenLocally() {
+            localStorage.setItem("buyKitchensOnlinePlannerMM", JSON.stringify({
+                room,
+                placedUnits
+            }));
+            markSaved();
+        }
+
+        function loadKitchenLocally() {
+            const saved = localStorage.getItem("buyKitchensOnlinePlannerMM");
+            if (!saved) return;
+
+            try {
+                const parsed = JSON.parse(saved);
+
+                if (parsed.room) {
+                    room.widthMm = Number(parsed.room.widthMm) || room.widthMm;
+                    room.depthMm = Number(parsed.room.depthMm) || room.depthMm;
+                    room.heightMm = Number(parsed.room.heightMm) || room.heightMm;
+                }
+
+                if (Array.isArray(parsed.placedUnits)) {
+                    placedUnits = parsed.placedUnits.map(unit => {
+                        const matchedProduct = products.find(product => product.id === unit.productId) ||
+                            products.find(product => product.code === unit.productCode);
+
+                        return {
+                        ...unit,
+                        productId: unit.productId || matchedProduct?.id || null,
+                        productCode: unit.productCode || matchedProduct?.code || null,
+                        xMm: Number(unit.xMm ?? unit.x ?? 0),
+                        zMm: Number(unit.zMm ?? unit.y ?? 0),
+                        rotation: Number(unit.rotation ?? 0),
+                        yMm: Number(unit.yMm ?? 0)
+                        };
+                    }).filter(unit => unit.productId || unit.productCode);
+                }
+            } catch (error) {
+                console.warn("Could not load saved planner", error);
+            }
+        }
+
+        /* ========================================= */
+        /* PRODUCT LIBRARY */
+        /* ========================================= */
+
+        function renderProducts() {
+            const query = productSearch.value.trim().toLowerCase();
+
+            const filtered = products.filter(product => {
+                const categoryMatches = activeCategory === "all" || product.category === activeCategory;
+                const searchMatches = product.name.toLowerCase().includes(query) || product.code.toLowerCase().includes(query);
+                return categoryMatches && searchMatches;
+            });
+
+            productList.innerHTML = "";
+
+            filtered.forEach(product => {
+                const card = document.createElement("article");
+                card.className = "product-card";
+
+                card.innerHTML = `
+                    <div class="product-image">
+                        <div class="cabinet-preview"></div>
+                    </div>
+                    <div class="product-name">${product.name}</div>
+                    <div class="product-meta">
+                        ${product.code}<br>
+                        H ${product.height} × W ${product.width} × D ${product.depth} mm<br>
+                        <span style="color:#8a8a8a">${formatMoney(product.priceExVat)} ex VAT</span>
+                    </div>
+                    <div class="product-bottom">
+                        <div class="product-price">${formatMoney(product.price)}</div>
+                        <button class="add-product-button" data-product-id="${product.id}" type="button" aria-label="Add ${product.name}">+</button>
+                    </div>
+                `;
+
+                productList.appendChild(card);
+            });
+
+            productList.querySelectorAll(".add-product-button").forEach(button => {
+                button.addEventListener("click", () => addUnit(button.dataset.productId));
+            });
+        }
+
+        document.querySelectorAll(".category-tab").forEach(button => {
+            button.addEventListener("click", () => {
+                document.querySelectorAll(".category-tab").forEach(tab => tab.classList.remove("active"));
+                button.classList.add("active");
+                activeCategory = button.dataset.category;
+                renderProducts();
+            });
+        });
+
+        productSearch.addEventListener("input", renderProducts);
+
+        /* ========================================= */
+        /* ADD UNIT */
+        /* ========================================= */
+
+        function addUnit(productId) {
+            const product = products.find(item => item.id === productId);
+            if (!product) return;
+
+            saveHistory();
+
+            const offset = placedUnits.length * 80;
+            const unit = {
+                id: `${Date.now()}${Math.random().toString(16).slice(2)}`,
+                productId: product.id,
+                productCode: product.code,
+                xMm: snapValue(Math.min(200 + offset, Math.max(0, room.widthMm - product.width))),
+                zMm: snapValue(Math.min(200, Math.max(0, room.depthMm - product.depth))),
+                yMm: product.category === "wall" || (product.category === "corner" && product.name.includes("WALL"))
+                    ? Math.max(0, Math.min(1400, room.heightMm - product.height))
+                    : product.category === "dresser"
+                        ? Math.max(0, Math.min(900, room.heightMm - product.height))
+                        : 0,
+                rotation: 0
+            };
+
+            clampUnitToRoom(unit);
+            placedUnits.push(unit);
+
+            if (overlapsAnyOtherUnit(unit)) {
+                let found = false;
+                const productFootprint = getFootprintMm(unit, product);
+
+                for (let z = 0; z <= room.depthMm - productFootprint.depthMm && !found; z += 50) {
+                    for (let x = 0; x <= room.widthMm - productFootprint.widthMm; x += 50) {
+                        unit.xMm = x;
+                        unit.zMm = z;
+                        snapUnitToRoomEdges(unit);
+                        snapUnitToNeighbours(unit);
+                        clampUnitToRoom(unit);
+
+                        if (!overlapsAnyOtherUnit(unit)) {
+                            found = true;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            selectedUnitId = unit.id;
+
+            renderEverything();
+            saveKitchenLocally();
+        }
+
+        /* ========================================= */
+        /* ROOM SIZE */
+        /* ========================================= */
+
+        function updateRoomFromInputs() {
+            const nextWidth = Math.max(1000, Number(roomWidthInput.value) || room.widthMm);
+            const nextDepth = Math.max(1000, Number(roomDepthInput.value) || room.depthMm);
+            const nextHeight = Math.max(1800, Number(roomHeightInput.value) || room.heightMm);
+
+            if (nextWidth === room.widthMm && nextDepth === room.depthMm && nextHeight === room.heightMm) return;
+
+            saveHistory();
+
+            room.widthMm = nextWidth;
+            room.depthMm = nextDepth;
+            room.heightMm = nextHeight;
+
+            placedUnits.forEach(clampUnitToRoom);
+
+            updateRoomCanvasSize();
+            update3DRoom();
+            fitCameraToRoom();
+            renderEverything();
+            saveKitchenLocally();
+        }
+
+        roomWidthInput.addEventListener("change", updateRoomFromInputs);
+        roomDepthInput.addEventListener("change", updateRoomFromInputs);
+        roomHeightInput.addEventListener("change", updateRoomFromInputs);
+
+        function syncRoomInputs() {
+            roomWidthInput.value = room.widthMm;
+            roomDepthInput.value = room.depthMm;
+            roomHeightInput.value = room.heightMm;
+            roomWidthLabel.textContent = `${room.widthMm} mm`;
+            roomDepthLabel.textContent = `${room.depthMm} mm`;
+        }
+
+        /* ========================================= */
+        /* 2D MM-TO-PIXEL SCALE */
+        /* ========================================= */
+
+        function updateRoomCanvasSize() {
+            const availableWidth = Math.max(300, roomWrapper.clientWidth - 90);
+            const availableHeight = Math.max(260, roomWrapper.clientHeight - 90);
+            const aspect = room.widthMm / room.depthMm;
+
+            let widthPx = availableWidth;
+            let heightPx = widthPx / aspect;
+
+            if (heightPx > availableHeight) {
+                heightPx = availableHeight;
+                widthPx = heightPx * aspect;
+            }
+
+            roomCanvas.style.width = `${Math.max(240, widthPx)}px`;
+            roomCanvas.style.height = `${Math.max(190, heightPx)}px`;
+            syncRoomInputs();
+            renderPlan();
+        }
+
+        function get2DScale() {
+            const contentWidth = roomCanvas.clientWidth;
+            const contentHeight = roomCanvas.clientHeight;
+
+            return {
+                pxPerMmX: contentWidth / room.widthMm,
+                pxPerMmZ: contentHeight / room.depthMm
+            };
+        }
+
+        /* ========================================= */
+        /* 2D PLAN */
+        /* ========================================= */
+
+        function renderPlan() {
+            roomCanvas.querySelectorAll(".plan-unit").forEach(element => element.remove());
+
+            const scale = get2DScale();
+
+            placedUnits.forEach(unit => {
+                const product = getProduct(unit);
+                if (!product) return;
+
+                const footprint = getFootprintMm(unit, product);
+                const element = document.createElement("div");
+
+                element.className = `plan-unit ${product.category}`;
+                if (unit.id === selectedUnitId) element.classList.add("selected");
+
+                element.style.left = `${unit.xMm * scale.pxPerMmX}px`;
+                element.style.top = `${unit.zMm * scale.pxPerMmZ}px`;
+                element.style.width = `${footprint.widthMm * scale.pxPerMmX}px`;
+                element.style.height = `${footprint.depthMm * scale.pxPerMmZ}px`;
+                element.textContent = product.code;
+                element.dataset.id = unit.id;
+
+                const dim = document.createElement("span");
+                dim.className = "unit-dim-label";
+                dim.textContent = `${footprint.widthMm} × ${footprint.depthMm}`;
+                dim.style.left = "3px";
+                dim.style.bottom = "3px";
+                element.appendChild(dim);
+
+                element.addEventListener("pointerdown", begin2DDrag);
+                element.addEventListener("click", event => {
+                    event.stopPropagation();
+                    selectUnit(unit.id);
+                });
+
+                roomCanvas.appendChild(element);
+            });
+
+            updateSelectedPanel();
+        }
+
+        roomCanvas.addEventListener("click", () => selectUnit(null));
+
+        let drag2D = null;
+
+        function begin2DDrag(event) {
+            if (event.button !== 0) return;
+
+            event.currentTarget.setPointerCapture?.(event.pointerId);
+            const unit = placedUnits.find(item => item.id === event.currentTarget.dataset.id);
+            if (!unit) return;
+
+            selectUnit(unit.id);
+            saveHistory();
+
+            const scale = get2DScale();
+
+            drag2D = {
+                unit,
+                pointerId: event.pointerId,
+                startClientX: event.clientX,
+                startClientY: event.clientY,
+                startXmm: unit.xMm,
+                startZmm: unit.zMm,
+                scale
+            };
+
+            document.addEventListener("pointermove", drag2DUnit);
+            document.addEventListener("pointerup", end2DDrag, { once: true });
+        }
+
+        function drag2DUnit(event) {
+            if (!drag2D) return;
+
+            const deltaXmm = (event.clientX - drag2D.startClientX) / drag2D.scale.pxPerMmX;
+            const deltaZmm = (event.clientY - drag2D.startClientY) / drag2D.scale.pxPerMmZ;
+
+            applyAutomaticPlacement(
+                drag2D.unit,
+                drag2D.startXmm + deltaXmm,
+                drag2D.startZmm + deltaZmm,
+                drag2D.startXmm,
+                drag2D.startZmm
+            );
+
+            renderPlan();
+            render3D();
+        }
+
+        function end2DDrag() {
+            if (!drag2D) return;
+            drag2D = null;
+            document.removeEventListener("pointermove", drag2DUnit);
+            saveKitchenLocally();
+            renderEverything();
+        }
+
+        /* ========================================= */
+        /* SELECT / EDIT UNIT */
+        /* ========================================= */
+
+        function selectUnit(id) {
+            selectedUnitId = id;
+            renderPlan();
+            update3DSelectionHighlight();
+            updateSelectedPanel();
+        }
+
+        function updateSelectedPanel() {
+            const unit = placedUnits.find(item => item.id === selectedUnitId);
+
+            if (!unit) {
+                selectedUnitPanel.innerHTML = `
+                    <p class="selected-empty">Select a cabinet in either 2D or 3D to view and edit its exact position.</p>
+                `;
+                return;
+            }
+
+            const product = getProduct(unit);
+            if (!product) return;
+
+            selectedUnitPanel.innerHTML = `
+                <div class="selected-product-title">${product.name}</div>
+                <div class="product-meta">
+                    ${product.code}<br>
+                    ${product.width} × ${product.depth} × ${product.height} mm<br>
+                    Rotation: ${unit.rotation}°<br>
+                    ${formatMoney(product.price)} inc VAT<br>
+                    ${formatMoney(product.priceExVat)} ex VAT
+                </div>
+
+                <div class="coordinate-grid">
+                    <div class="coordinate-field">
+                        <label for="selectedX">X from left wall (mm)</label>
+                        <input id="selectedX" type="number" step="1" value="${Math.round(unit.xMm)}">
+                    </div>
+                    <div class="coordinate-field">
+                        <label for="selectedZ">Z from back wall (mm)</label>
+                        <input id="selectedZ" type="number" step="1" value="${Math.round(unit.zMm)}">
+                    </div>
+                    <div class="coordinate-field">
+                        <label for="selectedY">Height from floor (mm)</label>
+                        <input id="selectedY" type="number" step="1" min="0" value="${Math.round(unit.yMm ?? 0)}">
+                    </div>
+                </div>
+
+                <div class="selected-actions">
+                    <button id="panelRotate" type="button">Rotate</button>
+                    <button id="panelDelete" type="button">Delete</button>
+                </div>
+            `;
+
+            document.getElementById("selectedX").addEventListener("change", event => setSelectedCoordinate("xMm", event.target.value));
+            document.getElementById("selectedZ").addEventListener("change", event => setSelectedCoordinate("zMm", event.target.value));
+            document.getElementById("selectedY").addEventListener("change", event => setSelectedCoordinate("yMm", event.target.value));
+            document.getElementById("panelRotate").addEventListener("click", rotateSelected);
+            document.getElementById("panelDelete").addEventListener("click", deleteSelected);
+        }
+
+        function setSelectedCoordinate(axis, value) {
+            const unit = placedUnits.find(item => item.id === selectedUnitId);
+            if (!unit) return;
+
+            saveHistory();
+
+            if (axis === "xMm" || axis === "zMm") {
+                const desiredX = axis === "xMm" ? Number(value) || 0 : unit.xMm;
+                const desiredZ = axis === "zMm" ? Number(value) || 0 : unit.zMm;
+                applyAutomaticPlacement(unit, desiredX, desiredZ, unit.xMm, unit.zMm);
+            } else {
+                unit[axis] = snapValue(Number(value) || 0);
+                clampUnitToRoom(unit);
+            }
+
+            renderEverything();
+            saveKitchenLocally();
+        }
+
+        function rotateSelected() {
+            const unit = placedUnits.find(item => item.id === selectedUnitId);
+            if (!unit) return;
+
+            saveHistory();
+            const previousRotation = unit.rotation;
+            const previousX = unit.xMm;
+            const previousZ = unit.zMm;
+
+            unit.rotation = (unit.rotation + 90) % 360;
+            clampUnitToRoom(unit);
+            snapUnitToRoomEdges(unit);
+            snapUnitToNeighbours(unit);
+            clampUnitToRoom(unit);
+
+            if (overlapsAnyOtherUnit(unit)) {
+                unit.rotation = previousRotation;
+                unit.xMm = previousX;
+                unit.zMm = previousZ;
+            }
+
+            renderEverything();
+            saveKitchenLocally();
+        }
+
+        function duplicateSelected() {
+            const unit = placedUnits.find(item => item.id === selectedUnitId);
+            if (!unit) return;
+
+            saveHistory();
+
+            const duplicate = {
+                ...unit,
+                id: `${Date.now()}${Math.random().toString(16).slice(2)}`,
+                xMm: unit.xMm + 100,
+                zMm: unit.zMm + 100
+            };
+
+            clampUnitToRoom(duplicate);
+            placedUnits.push(duplicate);
+            applyAutomaticPlacement(duplicate, duplicate.xMm, duplicate.zMm, unit.xMm, unit.zMm);
+
+            if (overlapsAnyOtherUnit(duplicate)) {
+                placedUnits = placedUnits.filter(item => item.id !== duplicate.id);
+                return;
+            }
+
+            selectedUnitId = duplicate.id;
+
+            renderEverything();
+            saveKitchenLocally();
+        }
+
+        function deleteSelected() {
+            if (!selectedUnitId) return;
+            saveHistory();
+            placedUnits = placedUnits.filter(item => item.id !== selectedUnitId);
+            selectedUnitId = null;
+            renderEverything();
+            saveKitchenLocally();
+        }
+
+        document.getElementById("rotateButton").addEventListener("click", rotateSelected);
+        document.getElementById("duplicateButton").addEventListener("click", duplicateSelected);
+        document.getElementById("deleteButton").addEventListener("click", deleteSelected);
+
+        document.getElementById("undoButton").addEventListener("click", () => {
+            if (!history.length) return;
+
+            const snapshot = JSON.parse(history.pop());
+            room.widthMm = snapshot.room.widthMm;
+            room.depthMm = snapshot.room.depthMm;
+            room.heightMm = snapshot.room.heightMm;
+            placedUnits = snapshot.placedUnits;
+            selectedUnitId = null;
+
+            updateRoomCanvasSize();
+            update3DRoom();
+            renderEverything();
+            saveKitchenLocally();
+        });
+
+        /* ========================================= */
+        /* PRICING */
+        /* ========================================= */
+
+        function updatePrices() {
+            let base = 0;
+            let wall = 0;
+            let tall = 0;
+
+            placedUnits.forEach(unit => {
+                const product = getProduct(unit);
+                if (!product) return;
+
+                if (product.category === "base" || product.category === "drawer" ||
+                    (product.category === "corner" && !product.name.includes("WALL"))) base += product.price;
+                if (product.category === "wall" || product.category === "dresser" ||
+                    (product.category === "corner" && product.name.includes("WALL"))) wall += product.price;
+                if (product.category === "tall" || product.category === "housing") tall += product.price;
+            });
+
+            const total = base + wall + tall;
+            const vatIncluded = total - (total / 1.2);
+
+            document.getElementById("baseTotal").textContent = formatMoney(base);
+            document.getElementById("wallTotal").textContent = formatMoney(wall);
+            document.getElementById("tallTotal").textContent = formatMoney(tall);
+            document.getElementById("vatTotal").textContent = formatMoney(vatIncluded);
+            document.getElementById("grandTotal").textContent = formatMoney(total);
+        }
+
+        /* ========================================= */
+        /* VIEW TOGGLE */
+        /* ========================================= */
+
+        twoDButton.addEventListener("click", () => {
+            twoDView.style.display = "block";
+            threeDView.style.display = "none";
+            twoDButton.classList.add("active");
+            threeDButton.classList.remove("active");
+            updateRoomCanvasSize();
+        });
+
+        threeDButton.addEventListener("click", () => {
+            twoDView.style.display = "none";
+            threeDView.style.display = "block";
+            threeDButton.classList.add("active");
+            twoDButton.classList.remove("active");
+            resizeRenderer();
+            render3D();
+        });
+
+        /* ========================================= */
+        /* THREE.JS SETUP */
+        /* ========================================= */
+
+        const canvas = document.getElementById("threeDCanvas");
+        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.shadowMap.enabled = true;
+
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0xf2f2ef);
+
+        const camera = new THREE.PerspectiveCamera(45, 1, 0.01, 100);
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+
+        const hemisphere = new THREE.HemisphereLight(0xffffff, 0x777777, 2.1);
+        scene.add(hemisphere);
+
+        const keyLight = new THREE.DirectionalLight(0xffffff, 2.0);
+        keyLight.position.set(4, 7, 5);
+        keyLight.castShadow = true;
+        scene.add(keyLight);
+
+        const roomGroup = new THREE.Group();
+        const cabinetGroup = new THREE.Group();
+        scene.add(roomGroup);
+        scene.add(cabinetGroup);
+
+        let selectionHelper = null;
+
+        /* ========================================= */
+        /* 3D ROOM */
+        /* ========================================= */
+
+        function disposeObject(object) {
+            object.traverse(child => {
+                child.geometry?.dispose?.();
+
+                if (Array.isArray(child.material)) {
+                    child.material.forEach(material => material.dispose?.());
+                } else {
+                    child.material?.dispose?.();
+                }
+            });
+        }
+
+        function clearGroup(group) {
+            while (group.children.length) {
+                const child = group.children[0];
+                group.remove(child);
+                disposeObject(child);
+            }
+        }
+
+        function update3DRoom() {
+            clearGroup(roomGroup);
+
+            const widthM = room.widthMm / 1000;
+            const depthM = room.depthMm / 1000;
+            const heightM = room.heightMm / 1000;
+            const wallThicknessM = 0.08;
+
+            const floor = new THREE.Mesh(
+                new THREE.PlaneGeometry(widthM, depthM),
+                new THREE.MeshStandardMaterial({ color: 0xd8d3c8, roughness: 0.95 })
+            );
+            floor.rotation.x = -Math.PI / 2;
+            floor.position.set(widthM / 2, 0, depthM / 2);
+            floor.receiveShadow = true;
+            floor.userData.isFloor = true;
+            roomGroup.add(floor);
+
+            const backWall = new THREE.Mesh(
+                new THREE.BoxGeometry(widthM, heightM, wallThicknessM),
+                new THREE.MeshStandardMaterial({ color: 0xf5f3ee, roughness: 0.95 })
+            );
+            backWall.position.set(widthM / 2, heightM / 2, -wallThicknessM / 2);
+            backWall.receiveShadow = true;
+            roomGroup.add(backWall);
+
+            const leftWall = new THREE.Mesh(
+                new THREE.BoxGeometry(wallThicknessM, heightM, depthM),
+                new THREE.MeshStandardMaterial({ color: 0xf5f3ee, roughness: 0.95 })
+            );
+            leftWall.position.set(-wallThicknessM / 2, heightM / 2, depthM / 2);
+            leftWall.receiveShadow = true;
+            roomGroup.add(leftWall);
+
+            const grid = new THREE.GridHelper(Math.max(widthM, depthM), Math.max(10, Math.round(Math.max(room.widthMm, room.depthMm) / 250)), 0x999999, 0xdddddd);
+            grid.position.set(widthM / 2, 0.002, depthM / 2);
+            roomGroup.add(grid);
+        }
+
+        /* ========================================= */
+        /* 3D CABINET */
+        /* ========================================= */
+
+        function createCabinet3D(product, unit) {
+            const widthM = product.width / 1000;
+            const depthM = product.depth / 1000;
+            const heightM = product.height / 1000;
+
+            const cabinet = new THREE.Group();
+            cabinet.userData.unitId = unit.id;
+
+            const bodyMaterial = new THREE.MeshStandardMaterial({
+                color: 0xd4d1c8,
+                roughness: 0.8
+            });
+
+            const doorMaterial = new THREE.MeshStandardMaterial({
+                color: 0xb9aa95,
+                roughness: 0.72
+            });
+
+            const handleMaterial = new THREE.MeshStandardMaterial({
+                color: 0xb08b57,
+                metalness: 0.7,
+                roughness: 0.35
+            });
+
+            const body = new THREE.Mesh(
+                new THREE.BoxGeometry(widthM, heightM, depthM),
+                bodyMaterial
+            );
+            body.position.y = heightM / 2;
+            body.castShadow = true;
+            body.receiveShadow = true;
+            body.userData.unitId = unit.id;
+            cabinet.add(body);
+
+            const door = new THREE.Mesh(
+                new THREE.BoxGeometry(widthM * 0.94, heightM * 0.90, 0.025),
+                doorMaterial
+            );
+            door.position.set(0, heightM / 2, depthM / 2 + 0.014);
+            door.castShadow = true;
+            door.userData.unitId = unit.id;
+            cabinet.add(door);
+
+            const handle = new THREE.Mesh(
+                new THREE.BoxGeometry(0.012, Math.min(0.18, heightM * 0.35), 0.02),
+                handleMaterial
+            );
+            handle.position.set(widthM * 0.32, heightM * 0.55, depthM / 2 + 0.04);
+            handle.userData.unitId = unit.id;
+            cabinet.add(handle);
+
+            /*
+                IMPORTANT:
+                xMm / zMm are the top-left footprint coordinates in millimetres.
+                Three.js groups rotate about their centre, so we place the group at
+                the footprint centre after accounting for rotation.
+            */
+            const footprint = getFootprintMm(unit, product);
+            const centreXmm = unit.xMm + footprint.widthMm / 2;
+            const centreZmm = unit.zMm + footprint.depthMm / 2;
+
+            cabinet.position.set(
+                centreXmm / 1000,
+                (unit.yMm ?? 0) / 1000,
+                centreZmm / 1000
+            );
+
+            cabinet.rotation.y = -THREE.MathUtils.degToRad(unit.rotation);
+
+            return cabinet;
+        }
+
+        function render3D() {
+            if (selectionHelper) {
+                scene.remove(selectionHelper);
+                selectionHelper = null;
+            }
+
+            clearGroup(cabinetGroup);
+
+            placedUnits.forEach(unit => {
+                const product = getProduct(unit);
+                if (!product) return;
+                cabinetGroup.add(createCabinet3D(product, unit));
+            });
+
+            update3DSelectionHighlight();
+        }
+
+        function update3DSelectionHighlight() {
+            if (selectionHelper) {
+                scene.remove(selectionHelper);
+                selectionHelper = null;
+            }
+
+            if (!selectedUnitId) return;
+
+            const selectedObject = cabinetGroup.children.find(child => child.userData.unitId === selectedUnitId);
+            if (!selectedObject) return;
+
+            selectionHelper = new THREE.BoxHelper(selectedObject, 0x111111);
+            scene.add(selectionHelper);
+        }
+
+        /* ========================================= */
+        /* 3D PICKING + DRAGGING */
+        /* ========================================= */
+
+        const raycaster = new THREE.Raycaster();
+        const pointer = new THREE.Vector2();
+        const dragPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
+        const dragPoint = new THREE.Vector3();
+        const dragOffset = new THREE.Vector3();
+
+        let drag3D = null;
+        let pointerDownPosition = null;
+
+        function setPointerFromEvent(event) {
+            const rect = renderer.domElement.getBoundingClientRect();
+            pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+            pointer.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+            raycaster.setFromCamera(pointer, camera);
+        }
+
+        function findUnitIdFromObject(object) {
+            let current = object;
+            while (current) {
+                if (current.userData?.unitId) return current.userData.unitId;
+                current = current.parent;
+            }
+            return null;
+        }
+
+        renderer.domElement.addEventListener("pointerdown", event => {
+            if (event.button !== 0) return;
+
+            setPointerFromEvent(event);
+            const intersections = raycaster.intersectObjects(cabinetGroup.children, true);
+
+            pointerDownPosition = { x: event.clientX, y: event.clientY };
+
+            if (!intersections.length) {
+                selectUnit(null);
+                return;
+            }
+
+            const unitId = findUnitIdFromObject(intersections[0].object);
+            const unit = placedUnits.find(item => item.id === unitId);
+            if (!unit) return;
+
+            selectUnit(unitId);
+            saveHistory();
+
+            raycaster.ray.intersectPlane(dragPlane, dragPoint);
+
+            const product = getProduct(unit);
+            const footprint = getFootprintMm(unit, product);
+            const currentCentre = new THREE.Vector3(
+                (unit.xMm + footprint.widthMm / 2) / 1000,
+                0,
+                (unit.zMm + footprint.depthMm / 2) / 1000
+            );
+
+            dragOffset.copy(currentCentre).sub(dragPoint);
+
+            drag3D = {
+                unit,
+                product,
+                pointerId: event.pointerId,
+                startXmm: unit.xMm,
+                startZmm: unit.zMm
+            };
+
+            controls.enabled = false;
+            renderer.domElement.setPointerCapture?.(event.pointerId);
+        });
+
+        renderer.domElement.addEventListener("pointermove", event => {
+            if (!drag3D) return;
+
+            setPointerFromEvent(event);
+            if (!raycaster.ray.intersectPlane(dragPlane, dragPoint)) return;
+
+            const targetCentre = dragPoint.clone().add(dragOffset);
+            const footprint = getFootprintMm(drag3D.unit, drag3D.product);
+
+            const desiredX = (targetCentre.x * 1000) - footprint.widthMm / 2;
+            const desiredZ = (targetCentre.z * 1000) - footprint.depthMm / 2;
+
+            applyAutomaticPlacement(
+                drag3D.unit,
+                desiredX,
+                desiredZ,
+                drag3D.startXmm,
+                drag3D.startZmm
+            );
+
+            renderPlan();
+            render3D();
+            updateSelectedPanel();
+        });
+
+        renderer.domElement.addEventListener("pointerup", event => {
+            if (!drag3D) return;
+
+            drag3D = null;
+            controls.enabled = true;
+            renderer.domElement.releasePointerCapture?.(event.pointerId);
+            renderEverything();
+            saveKitchenLocally();
+        });
+
+        renderer.domElement.addEventListener("pointercancel", () => {
+            drag3D = null;
+            controls.enabled = true;
+        });
+
+        /* ========================================= */
+        /* CAMERA */
+        /* ========================================= */
+
+        function fitCameraToRoom() {
+            const widthM = room.widthMm / 1000;
+            const depthM = room.depthMm / 1000;
+            const heightM = room.heightMm / 1000;
+            const largest = Math.max(widthM, depthM, heightM);
+
+            camera.position.set(
+                widthM + largest * 0.55,
+                heightM + largest * 0.55,
+                depthM + largest * 0.75
+            );
+
+            controls.target.set(widthM / 2, Math.min(1.2, heightM / 2), depthM / 2);
+            controls.update();
+        }
+
+        document.getElementById("fitViewButton").addEventListener("click", fitCameraToRoom);
+
+        document.querySelectorAll("[data-camera]").forEach(button => {
+            button.addEventListener("click", () => {
+                const widthM = room.widthMm / 1000;
+                const depthM = room.depthMm / 1000;
+                const heightM = room.heightMm / 1000;
+                const view = button.dataset.camera;
+
+                if (view === "corner") {
+                    camera.position.set(widthM * 1.35, heightM * 1.6, depthM * 1.6);
+                    controls.target.set(widthM / 2, Math.min(1.2, heightM / 2), depthM / 2);
+                }
+
+                if (view === "front") {
+                    camera.position.set(widthM / 2, heightM * 0.9, depthM * 2.2);
+                    controls.target.set(widthM / 2, heightM * 0.45, depthM / 2);
+                }
+
+                if (view === "top") {
+                    camera.position.set(widthM / 2, Math.max(widthM, depthM) * 1.5, depthM / 2);
+                    controls.target.set(widthM / 2, 0, depthM / 2);
+                }
+
+                controls.update();
+            });
+        });
+
+        /* ========================================= */
+        /* RESIZE */
+        /* ========================================= */
+
+        function resizeRenderer() {
+            const width = threeDView.clientWidth;
+            const height = threeDView.clientHeight;
+            if (!width || !height) return;
+
+            renderer.setSize(width, height, false);
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+        }
+
+        window.addEventListener("resize", () => {
+            updateRoomCanvasSize();
+            resizeRenderer();
+        });
+
+        /* ========================================= */
+        /* RENDER ALL */
+        /* ========================================= */
+
+        function renderEverything() {
+            syncRoomInputs();
+            placedUnits.forEach(clampUnitToRoom);
+            renderPlan();
+            render3D();
+            updatePrices();
+            updateSelectedPanel();
+        }
+
+        /* ========================================= */
+        /* ANIMATION */
+        /* ========================================= */
+
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        /* ========================================= */
+        /* INITIALISE */
+        /* ========================================= */
+
+        loadKitchenLocally();
+        syncRoomInputs();
+        renderProducts();
+        updateRoomCanvasSize();
+        update3DRoom();
+        renderEverything();
+        fitCameraToRoom();
+        resizeRenderer();
+        animate();
+  </script>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div class="footer-brand-block">
+<a aria-label="Buy Kitchens Online home" class="footer-brand" href="index.html">
+<img alt="Buy Kitchens Online" src="assets/images/brand/bko-logo-olive.png"/>
+</a>
+<p>Premium rigid kitchens, simple online pricing and nationwide delivery.</p>
+</div>
+<div>
+<h4>Shop</h4>
+<a href="ranges.html">Kitchen collections</a>
+<a href="doors.html">Doors</a>
+<a href="catalogue.html">Kitchen cabinets</a>
+<a href="handles.html">Handles</a>
+<a href="worktops.html">Worktops</a>
+<a href="appliances.html">Appliances</a>
+</div>
+<div>
+<h4>Customer care</h4>
+<a href="delivery.html">Delivery</a>
+<a href="help.html">Help centre</a>
+<a href="contact.html">Contact</a>
+<a href="trade.html">Trade accounts</a>
+</div>
+<div>
+<h4>Your account</h4>
+<a href="login.html">Login</a>
+<a href="register.html">Create account</a>
+<a href="dashboard.html">My kitchens</a>
+<a href="basket.html">Basket</a>
+</div>
+</div>
+<div class="container footer-bottom">© 2026 Buy Kitchens Online.</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+  var nav = header.querySelector('.nav-direct-v191');
+  var actions = header.querySelector('.header-actions');
+  if (!nav || !actions) return;
+
+  var links = Array.from(nav.querySelectorAll('a'));
+  var design = links.find(function(a){
+    var txt = (a.textContent || '').trim().toLowerCase();
+    return txt === 'design your kitchen' ||
+           (a.getAttribute('href') || '').toLowerCase().indexOf('planner') !== -1 ||
+           (a.getAttribute('href') || '').toLowerCase().indexOf('design') !== -1;
+  });
+
+  if (design) {
+    design.classList.add('design-kitchen-top-v194');
+    var login = Array.from(actions.querySelectorAll('a,button')).find(function(el){
+      return (el.textContent || '').trim().toLowerCase() === 'login';
+    });
+    if (login) actions.insertBefore(design, login);
+    else actions.insertBefore(design, actions.firstChild);
+  }
+});
+</script>
+
+
+<script>
+(function(){
+  function refitPlannerRoomV199(){
+    var wrapper = document.getElementById('roomWrapper');
+    var canvas = document.getElementById('roomCanvas');
+    var widthInput = document.getElementById('roomWidthInput');
+    var depthInput = document.getElementById('roomDepthInput');
+    if(!wrapper || !canvas || !widthInput || !depthInput) return;
+
+    var roomW = Math.max(1000, parseFloat(widthInput.value) || 4000);
+    var roomD = Math.max(1000, parseFloat(depthInput.value) || 3000);
+
+    var rect = wrapper.getBoundingClientRect();
+    var usableW = Math.max(320, rect.width - 120);
+    var usableH = Math.max(320, rect.height - 90);
+
+    var scale = Math.min(usableW / roomW, usableH / roomD);
+
+    /* Keep a sensible visible plan while still preserving exact aspect ratio. */
+    var pxW = Math.max(260, Math.floor(roomW * scale));
+    var pxH = Math.max(220, Math.floor(roomD * scale));
+
+    canvas.style.width = pxW + 'px';
+    canvas.style.height = pxH + 'px';
+
+    /* Expose scale for existing cabinet positioning code if it reads CSS variable/data. */
+    canvas.dataset.fitScale = String(scale);
+    document.documentElement.style.setProperty('--planner-fit-scale-v199', scale);
+  }
+
+  function scheduleRefit(){
+    requestAnimationFrame(function(){
+      requestAnimationFrame(refitPlannerRoomV199);
+    });
+  }
+
+  window.addEventListener('load', scheduleRefit);
+  window.addEventListener('resize', scheduleRefit);
+
+  ['roomWidthInput','roomDepthInput','roomHeightInput'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el){
+      el.addEventListener('input', scheduleRefit);
+      el.addEventListener('change', scheduleRefit);
+    }
+  });
+
+  /* Refit after view changes as well */
+  document.addEventListener('click', function(e){
+    if(e.target.closest('[data-view], .view-toggle, #fitViewButton')){
+      setTimeout(scheduleRefit, 20);
+    }
+  });
+
+  scheduleRefit();
+})();
+</script>
+
+
+<script>
+(function(){
+  function bindLiveRoomSizing(){
+    if (typeof updateRoomFromInputs !== 'function') return;
+    var ids=['roomWidthInput','roomDepthInput','roomHeightInput'];
+    var timer=null;
+    function queue(){
+      clearTimeout(timer);
+      timer=setTimeout(function(){
+        updateRoomFromInputs();
+      },80);
+    }
+    ids.forEach(function(id){
+      var el=document.getElementById(id);
+      if(el) el.addEventListener('input',queue);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',bindLiveRoomSizing);
+  else bindLiveRoomSizing();
+})();
+</script>
+
+<script src="assets/js/app.js?v=229"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+
+/* =========================================================
+   V89 — full-width range hero images, no side borders
+   ========================================================= */
+
+.range-lifestyle-hero,
+.range-lifestyle-stage{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  background:#fff !important;
+  overflow:hidden !important;
+}
+
+.range-lifestyle-stage{
+  position:relative !important;
+  height:720px !important;
+  min-height:720px !important;
+  max-height:720px !important;
+}
+
+/* Fill the full available width: no blank bars on either side */
+.range-lifestyle-stage > img[data-gallery-main]{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  min-width:100% !important;
+  min-height:100% !important;
+  max-width:none !important;
+  max-height:none !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  background:#fff !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+/* Keep gallery controls and thumbnails as before */
+.range-media-gallery{
+  padding-top:22px !important;
+  padding-bottom:34px !important;
+}
+
+.range-media-track{
+  gap:14px !important;
+}
+
+.range-media-card{
+  flex:0 0 220px !important;
+  width:220px !important;
+  min-width:220px !important;
+  border:0 !important;
+  background:transparent !important;
+}
+
+.range-media-card .range-media-image{
+  display:block !important;
+  width:100% !important;
+  aspect-ratio:16 / 10 !important;
+  overflow:hidden !important;
+  background:transparent !important;
+}
+
+.range-media-card img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center !important;
+}
+
+.range-media-card.is-active .range-media-image{
+  outline:2px solid #7e8669 !important;
+  outline-offset:2px !important;
+}
+
+.range-media-arrow{
+  width:46px !important;
+  height:46px !important;
+  font-size:20px !important;
+}
+
+@media (max-width:1100px){
+  .range-lifestyle-stage{
+    height:620px !important;
+    min-height:620px !important;
+    max-height:620px !important;
+  }
+
+  .range-media-card{
+    flex-basis:190px !important;
+    width:190px !important;
+    min-width:190px !important;
+  }
+}
+
+@media (max-width:700px){
+  .range-lifestyle-stage{
+    height:430px !important;
+    min-height:430px !important;
+    max-height:430px !important;
+  }
+
+  .range-media-card{
+    flex-basis:150px !important;
+    width:150px !important;
+    min-width:150px !important;
+  }
+}

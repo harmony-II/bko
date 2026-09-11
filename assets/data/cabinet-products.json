@@ -1,0 +1,1692 @@
+[
+  {
+    "name": "150 BASE UNIT",
+    "code": "B15",
+    "height": 720,
+    "width": 150,
+    "depth": 570,
+    "priceExVat": 67.54,
+    "price": 81.05,
+    "category": "base"
+  },
+  {
+    "name": "260 BASE UNIT",
+    "code": "B26",
+    "height": 720,
+    "width": 260,
+    "depth": 570,
+    "priceExVat": 84.35,
+    "price": 101.22,
+    "category": "base"
+  },
+  {
+    "name": "300 BASE UNIT",
+    "code": "B30",
+    "height": 720,
+    "width": 300,
+    "depth": 570,
+    "priceExVat": 67.54,
+    "price": 81.05,
+    "category": "base"
+  },
+  {
+    "name": "350 BASE UNIT",
+    "code": "B35",
+    "height": 720,
+    "width": 350,
+    "depth": 570,
+    "priceExVat": 87.42,
+    "price": 104.9,
+    "category": "base"
+  },
+  {
+    "name": "400 BASE UNIT",
+    "code": "B40",
+    "height": 720,
+    "width": 400,
+    "depth": 570,
+    "priceExVat": 70.53,
+    "price": 84.64,
+    "category": "base"
+  },
+  {
+    "name": "450 BASE UNIT",
+    "code": "B45",
+    "height": 720,
+    "width": 450,
+    "depth": 570,
+    "priceExVat": 72.14,
+    "price": 86.57,
+    "category": "base"
+  },
+  {
+    "name": "500 BASE UNIT",
+    "code": "B50",
+    "height": 720,
+    "width": 500,
+    "depth": 570,
+    "priceExVat": 73.46,
+    "price": 88.15,
+    "category": "base"
+  },
+  {
+    "name": "550 BASE UNIT",
+    "code": "B55",
+    "height": 720,
+    "width": 550,
+    "depth": 570,
+    "priceExVat": 94.4,
+    "price": 113.28,
+    "category": "base"
+  },
+  {
+    "name": "600 BASE UNIT",
+    "code": "B60",
+    "height": 720,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 77.48,
+    "price": 92.98,
+    "category": "base"
+  },
+  {
+    "name": "700 BASE UNIT",
+    "code": "B70",
+    "height": 720,
+    "width": 700,
+    "depth": 570,
+    "priceExVat": 95.73,
+    "price": 114.88,
+    "category": "base"
+  },
+  {
+    "name": "800 BASE UNIT",
+    "code": "B80",
+    "height": 720,
+    "width": 800,
+    "depth": 570,
+    "priceExVat": 95.73,
+    "price": 114.88,
+    "category": "base"
+  },
+  {
+    "name": "900 BASE UNIT",
+    "code": "B90",
+    "height": 720,
+    "width": 900,
+    "depth": 570,
+    "priceExVat": 98.23,
+    "price": 117.88,
+    "category": "base"
+  },
+  {
+    "name": "1000 BASE UNIT",
+    "code": "B100",
+    "height": 720,
+    "width": 1000,
+    "depth": 570,
+    "priceExVat": 101.23,
+    "price": 121.48,
+    "category": "base"
+  },
+  {
+    "name": "1100 BASE UNIT",
+    "code": "B110",
+    "height": 720,
+    "width": 1100,
+    "depth": 570,
+    "priceExVat": 128.28,
+    "price": 153.94,
+    "category": "base"
+  },
+  {
+    "name": "1200 BASE UNIT",
+    "code": "B120",
+    "height": 720,
+    "width": 1200,
+    "depth": 570,
+    "priceExVat": 111.35,
+    "price": 133.62,
+    "category": "base"
+  },
+  {
+    "name": "800 CORNER BASE UNIT",
+    "code": "CB80",
+    "height": 720,
+    "width": 800,
+    "depth": 570,
+    "priceExVat": 95.73,
+    "price": 114.88,
+    "category": "corner"
+  },
+  {
+    "name": "900 CORNER BASE UNIT",
+    "code": "CB90",
+    "height": 720,
+    "width": 900,
+    "depth": 570,
+    "priceExVat": 98.23,
+    "price": 117.88,
+    "category": "corner"
+  },
+  {
+    "name": "1000 CORNER BASE UNIT",
+    "code": "CB100",
+    "height": 720,
+    "width": 1000,
+    "depth": 570,
+    "priceExVat": 101.23,
+    "price": 121.48,
+    "category": "corner"
+  },
+  {
+    "name": "1200 CORNER BASE UNIT",
+    "code": "CB120",
+    "height": 720,
+    "width": 1200,
+    "depth": 570,
+    "priceExVat": 111.35,
+    "price": 133.62,
+    "category": "corner"
+  },
+  {
+    "name": "300 DRAWERLINE BASE UNIT",
+    "code": "BD30",
+    "height": 720,
+    "width": 300,
+    "depth": 570,
+    "priceExVat": 67.54,
+    "price": 81.05,
+    "category": "drawer"
+  },
+  {
+    "name": "400 DRAWERLINE BASE UNIT",
+    "code": "BD40",
+    "height": 720,
+    "width": 400,
+    "depth": 570,
+    "priceExVat": 70.53,
+    "price": 84.64,
+    "category": "drawer"
+  },
+  {
+    "name": "450 DRAWERLINE BASE UNIT",
+    "code": "BD45",
+    "height": 720,
+    "width": 450,
+    "depth": 570,
+    "priceExVat": 72.14,
+    "price": 86.57,
+    "category": "drawer"
+  },
+  {
+    "name": "500 DRAWERLINE BASE UNIT",
+    "code": "BD50",
+    "height": 720,
+    "width": 500,
+    "depth": 570,
+    "priceExVat": 73.46,
+    "price": 88.15,
+    "category": "drawer"
+  },
+  {
+    "name": "600 DRAWERLINE BASE UNIT",
+    "code": "BD60",
+    "height": 720,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 77.48,
+    "price": 92.98,
+    "category": "drawer"
+  },
+  {
+    "name": "800 DRAWERLINE BASE UNIT",
+    "code": "BD80",
+    "height": 720,
+    "width": 800,
+    "depth": 570,
+    "priceExVat": 95.73,
+    "price": 114.88,
+    "category": "drawer"
+  },
+  {
+    "name": "900 DRAWERLINE BASE UNIT",
+    "code": "BD90",
+    "height": 720,
+    "width": 900,
+    "depth": 570,
+    "priceExVat": 98.23,
+    "price": 117.88,
+    "category": "drawer"
+  },
+  {
+    "name": "1000 DRAWERLINE BASE UNIT",
+    "code": "BD100",
+    "height": 720,
+    "width": 1000,
+    "depth": 570,
+    "priceExVat": 101.23,
+    "price": 121.48,
+    "category": "drawer"
+  },
+  {
+    "name": "800 DRAWERLINE CORNER BASE UNIT",
+    "code": "CBD80",
+    "height": 720,
+    "width": 800,
+    "depth": 570,
+    "priceExVat": 95.73,
+    "price": 114.88,
+    "category": "corner"
+  },
+  {
+    "name": "900 DRAWERLINE CORNER BASE UNIT",
+    "code": "CBD90",
+    "height": 720,
+    "width": 900,
+    "depth": 570,
+    "priceExVat": 98.23,
+    "price": 117.88,
+    "category": "corner"
+  },
+  {
+    "name": "1000 DRAWERLINE CORNER BASE UNIT",
+    "code": "CBD100",
+    "height": 720,
+    "width": 1000,
+    "depth": 570,
+    "priceExVat": 101.23,
+    "price": 121.48,
+    "category": "corner"
+  },
+  {
+    "name": "1200 DRAWERLINE CORNER BASE UNIT",
+    "code": "CBD120",
+    "height": 720,
+    "width": 1200,
+    "depth": 570,
+    "priceExVat": 111.35,
+    "price": 133.62,
+    "category": "corner"
+  },
+  {
+    "name": "2 DRAWERS",
+    "code": "B50D(2)",
+    "height": 720,
+    "width": 500,
+    "depth": 570,
+    "priceExVat": 70.87,
+    "price": 85.04,
+    "category": "drawer"
+  },
+  {
+    "name": "2 DRAWERS",
+    "code": "B60D(2)",
+    "height": 720,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 74.28,
+    "price": 89.14,
+    "category": "drawer"
+  },
+  {
+    "name": "2 DRAWERS",
+    "code": "B80D(2)",
+    "height": 720,
+    "width": 800,
+    "depth": 570,
+    "priceExVat": 91.46,
+    "price": 109.75,
+    "category": "drawer"
+  },
+  {
+    "name": "2 DRAWERS",
+    "code": "B90D(2)",
+    "height": 720,
+    "width": 900,
+    "depth": 570,
+    "priceExVat": 93.39,
+    "price": 112.07,
+    "category": "drawer"
+  },
+  {
+    "name": "2 DRAWERS",
+    "code": "B100D(2)",
+    "height": 720,
+    "width": 1000,
+    "depth": 570,
+    "priceExVat": 95.85,
+    "price": 115.02,
+    "category": "drawer"
+  },
+  {
+    "name": "3 DRAWERS",
+    "code": "B50D(3)",
+    "height": 720,
+    "width": 500,
+    "depth": 570,
+    "priceExVat": 70.87,
+    "price": 85.04,
+    "category": "drawer"
+  },
+  {
+    "name": "3 DRAWERS",
+    "code": "B60D(3)",
+    "height": 720,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 74.28,
+    "price": 89.14,
+    "category": "drawer"
+  },
+  {
+    "name": "3 DRAWERS",
+    "code": "B80D(3)",
+    "height": 720,
+    "width": 800,
+    "depth": 570,
+    "priceExVat": 91.46,
+    "price": 109.75,
+    "category": "drawer"
+  },
+  {
+    "name": "3 DRAWERS",
+    "code": "B90D(3)",
+    "height": 720,
+    "width": 900,
+    "depth": 570,
+    "priceExVat": 93.39,
+    "price": 112.07,
+    "category": "drawer"
+  },
+  {
+    "name": "3 DRAWERS",
+    "code": "B100D(3)",
+    "height": 720,
+    "width": 1000,
+    "depth": 570,
+    "priceExVat": 95.85,
+    "price": 115.02,
+    "category": "drawer"
+  },
+  {
+    "name": "4 DRAWERS (1 PAN 3 SHALLOW)",
+    "code": "B50D(4)*",
+    "height": 720,
+    "width": 500,
+    "depth": 570,
+    "priceExVat": 70.87,
+    "price": 85.04,
+    "category": "drawer"
+  },
+  {
+    "name": "4 DRAWERS (1 PAN 3 SHALLOW)",
+    "code": "B60D(4)*",
+    "height": 720,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 74.28,
+    "price": 89.14,
+    "category": "drawer"
+  },
+  {
+    "name": "4 DRAWERS (1 PAN 3 SHALLOW)",
+    "code": "B80D(4)*",
+    "height": 720,
+    "width": 800,
+    "depth": 570,
+    "priceExVat": 91.46,
+    "price": 109.75,
+    "category": "drawer"
+  },
+  {
+    "name": "4 DRAWERS (1 PAN 3 SHALLOW)",
+    "code": "B90D(4)*",
+    "height": 720,
+    "width": 900,
+    "depth": 570,
+    "priceExVat": 93.39,
+    "price": 112.07,
+    "category": "drawer"
+  },
+  {
+    "name": "4 DRAWERS (1 PAN 3 SHALLOW)",
+    "code": "B100D(4)*",
+    "height": 720,
+    "width": 1000,
+    "depth": 570,
+    "priceExVat": 95.85,
+    "price": 115.02,
+    "category": "drawer"
+  },
+  {
+    "name": "4 DRAWERS (EQUAL)",
+    "code": "B50D(4E)",
+    "height": 720,
+    "width": 500,
+    "depth": 570,
+    "priceExVat": 70.87,
+    "price": 85.04,
+    "category": "drawer"
+  },
+  {
+    "name": "4 DRAWERS (EQUAL)",
+    "code": "B60D(4E)",
+    "height": 720,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 74.28,
+    "price": 89.14,
+    "category": "drawer"
+  },
+  {
+    "name": "5 DRAWERS",
+    "code": "B30D(5)",
+    "height": 720,
+    "width": 300,
+    "depth": 570,
+    "priceExVat": 66.09,
+    "price": 79.31,
+    "category": "drawer"
+  },
+  {
+    "name": "5 DRAWERS",
+    "code": "B40D(5)",
+    "height": 720,
+    "width": 400,
+    "depth": 570,
+    "priceExVat": 68.46,
+    "price": 82.15,
+    "category": "drawer"
+  },
+  {
+    "name": "5 DRAWERS",
+    "code": "B45D(5)",
+    "height": 720,
+    "width": 450,
+    "depth": 570,
+    "priceExVat": 69.83,
+    "price": 83.8,
+    "category": "drawer"
+  },
+  {
+    "name": "5 DRAWERS",
+    "code": "B50D(5)",
+    "height": 720,
+    "width": 500,
+    "depth": 570,
+    "priceExVat": 70.87,
+    "price": 85.04,
+    "category": "drawer"
+  },
+  {
+    "name": "5 DRAWERS",
+    "code": "B60D(5)",
+    "height": 720,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 74.28,
+    "price": 89.14,
+    "category": "drawer"
+  },
+  {
+    "name": "5 DRAWERS",
+    "code": "B80D(5)",
+    "height": 720,
+    "width": 800,
+    "depth": 570,
+    "priceExVat": 91.46,
+    "price": 109.75,
+    "category": "drawer"
+  },
+  {
+    "name": "5 DRAWERS",
+    "code": "B90D(5)",
+    "height": 720,
+    "width": 900,
+    "depth": 570,
+    "priceExVat": 93.39,
+    "price": 112.07,
+    "category": "drawer"
+  },
+  {
+    "name": "5 DRAWERS",
+    "code": "B100D(5)",
+    "height": 720,
+    "width": 1000,
+    "depth": 570,
+    "priceExVat": 95.85,
+    "price": 115.02,
+    "category": "drawer"
+  },
+  {
+    "name": "910 X 910 L-SHAPE BASE",
+    "code": "CB90X90L",
+    "height": 720,
+    "width": 910,
+    "depth": 910,
+    "priceExVat": 181.92,
+    "price": 218.3,
+    "category": "corner"
+  },
+  {
+    "name": "600 BUILT UNDER OVER",
+    "code": "BU60",
+    "height": 720,
+    "width": 600,
+    "depth": 560,
+    "priceExVat": 71.02,
+    "price": 85.22,
+    "category": "base"
+  },
+  {
+    "name": "300 X 560 CURVED BASE END",
+    "code": "CBE",
+    "height": 720,
+    "width": 300,
+    "depth": 560,
+    "priceExVat": 84.82,
+    "price": 101.78,
+    "category": "corner"
+  },
+  {
+    "name": "360 X 560 SPLAY BASE END",
+    "code": "SBASE",
+    "height": 720,
+    "width": 360,
+    "depth": 560,
+    "priceExVat": 111.19,
+    "price": 133.43,
+    "category": "base"
+  },
+  {
+    "name": "300 X 900 WALL UNIT",
+    "code": "W30(9)",
+    "height": 900,
+    "width": 300,
+    "depth": 330,
+    "priceExVat": 63.07,
+    "price": 75.68,
+    "category": "wall"
+  },
+  {
+    "name": "350 X 900 WALL UNIT",
+    "code": "W35(9)",
+    "height": 900,
+    "width": 350,
+    "depth": 330,
+    "priceExVat": 66.78,
+    "price": 80.14,
+    "category": "wall"
+  },
+  {
+    "name": "400 X 900 WALL UNIT",
+    "code": "W40(9)",
+    "height": 900,
+    "width": 400,
+    "depth": 330,
+    "priceExVat": 66.78,
+    "price": 80.14,
+    "category": "wall"
+  },
+  {
+    "name": "450 X 900 WALL UNIT",
+    "code": "W45(9)",
+    "height": 900,
+    "width": 450,
+    "depth": 330,
+    "priceExVat": 69.64,
+    "price": 83.57,
+    "category": "wall"
+  },
+  {
+    "name": "500 X 900 WALL UNIT",
+    "code": "W50(9)",
+    "height": 900,
+    "width": 500,
+    "depth": 330,
+    "priceExVat": 71.16,
+    "price": 85.39,
+    "category": "wall"
+  },
+  {
+    "name": "550 X 900 WALL UNIT",
+    "code": "W55(9)",
+    "height": 900,
+    "width": 550,
+    "depth": 330,
+    "priceExVat": 89.08,
+    "price": 106.9,
+    "category": "wall"
+  },
+  {
+    "name": "600 X 900 WALL UNIT",
+    "code": "W60(9)",
+    "height": 900,
+    "width": 600,
+    "depth": 330,
+    "priceExVat": 76.15,
+    "price": 91.38,
+    "category": "wall"
+  },
+  {
+    "name": "700 X 900 WALL UNIT",
+    "code": "W70(9)",
+    "height": 900,
+    "width": 700,
+    "depth": 330,
+    "priceExVat": 93.17,
+    "price": 111.8,
+    "category": "wall"
+  },
+  {
+    "name": "800 X 900 WALL UNIT",
+    "code": "W80(9)",
+    "height": 900,
+    "width": 800,
+    "depth": 330,
+    "priceExVat": 93.17,
+    "price": 111.8,
+    "category": "wall"
+  },
+  {
+    "name": "900 X 900 WALL UNIT",
+    "code": "W90(9)",
+    "height": 900,
+    "width": 900,
+    "depth": 330,
+    "priceExVat": 99.97,
+    "price": 119.96,
+    "category": "wall"
+  },
+  {
+    "name": "1000 X 900 WALL UNIT",
+    "code": "W100(9)",
+    "height": 900,
+    "width": 1000,
+    "depth": 330,
+    "priceExVat": 101.54,
+    "price": 121.85,
+    "category": "wall"
+  },
+  {
+    "name": "630 X 630 X 900 DIAGONAL CORNER WALL UNIT",
+    "code": "ACW60",
+    "height": 900,
+    "width": 630,
+    "depth": 630,
+    "priceExVat": 147.49,
+    "price": 176.99,
+    "category": "corner"
+  },
+  {
+    "name": "360 X 900 SPLAY WALL UNIT",
+    "code": "SW900",
+    "height": 900,
+    "width": 360,
+    "depth": 330,
+    "priceExVat": 117.72,
+    "price": 141.26,
+    "category": "wall"
+  },
+  {
+    "name": "150 X 720 WALL UNIT",
+    "code": "W15",
+    "height": 720,
+    "width": 150,
+    "depth": 330,
+    "priceExVat": 70.33,
+    "price": 84.4,
+    "category": "wall"
+  },
+  {
+    "name": "300 X 720 WALL UNIT",
+    "code": "W30",
+    "height": 720,
+    "width": 300,
+    "depth": 330,
+    "priceExVat": 57.42,
+    "price": 68.9,
+    "category": "wall"
+  },
+  {
+    "name": "350 X 720 WALL UNIT",
+    "code": "W35",
+    "height": 720,
+    "width": 350,
+    "depth": 330,
+    "priceExVat": 60.75,
+    "price": 72.9,
+    "category": "wall"
+  },
+  {
+    "name": "400 X 720 WALL UNIT",
+    "code": "W40",
+    "height": 720,
+    "width": 400,
+    "depth": 330,
+    "priceExVat": 60.75,
+    "price": 72.9,
+    "category": "wall"
+  },
+  {
+    "name": "450 X 720 WALL UNIT",
+    "code": "W45",
+    "height": 720,
+    "width": 450,
+    "depth": 330,
+    "priceExVat": 63.25,
+    "price": 75.9,
+    "category": "wall"
+  },
+  {
+    "name": "500 X 720 WALL UNIT",
+    "code": "W50",
+    "height": 720,
+    "width": 500,
+    "depth": 330,
+    "priceExVat": 64.64,
+    "price": 77.57,
+    "category": "wall"
+  },
+  {
+    "name": "550 X 720 WALL UNIT",
+    "code": "W55",
+    "height": 720,
+    "width": 550,
+    "depth": 330,
+    "priceExVat": 82.11,
+    "price": 98.53,
+    "category": "wall"
+  },
+  {
+    "name": "600 X 720 WALL UNIT",
+    "code": "W60",
+    "height": 720,
+    "width": 600,
+    "depth": 330,
+    "priceExVat": 69.2,
+    "price": 83.04,
+    "category": "wall"
+  },
+  {
+    "name": "700 X 720 WALL UNIT",
+    "code": "W70",
+    "height": 720,
+    "width": 700,
+    "depth": 330,
+    "priceExVat": 85.17,
+    "price": 102.2,
+    "category": "wall"
+  },
+  {
+    "name": "800 X 720 WALL UNIT",
+    "code": "W80",
+    "height": 720,
+    "width": 800,
+    "depth": 330,
+    "priceExVat": 85.31,
+    "price": 102.37,
+    "category": "wall"
+  },
+  {
+    "name": "900 X 720 WALL UNIT",
+    "code": "W90",
+    "height": 720,
+    "width": 900,
+    "depth": 330,
+    "priceExVat": 90.29,
+    "price": 108.35,
+    "category": "wall"
+  },
+  {
+    "name": "1000 X 720 WALL UNIT",
+    "code": "W100",
+    "height": 720,
+    "width": 1000,
+    "depth": 330,
+    "priceExVat": 92.29,
+    "price": 110.75,
+    "category": "wall"
+  },
+  {
+    "name": "1200 X 720 WALL UNIT",
+    "code": "W120",
+    "height": 720,
+    "width": 1200,
+    "depth": 330,
+    "priceExVat": 98.52,
+    "price": 118.22,
+    "category": "wall"
+  },
+  {
+    "name": "630 x 630 X 720 DIAGONAL CORNER WALL UNIT",
+    "code": "ACW60",
+    "height": 720,
+    "width": 630,
+    "depth": 630,
+    "priceExVat": 147.49,
+    "price": 176.99,
+    "category": "corner"
+  },
+  {
+    "name": "630 x 630 X 720 L CORNER WALL UNIT",
+    "code": "LCW60X60",
+    "height": 720,
+    "width": 630,
+    "depth": 630,
+    "priceExVat": 135.94,
+    "price": 163.13,
+    "category": "corner"
+  },
+  {
+    "name": "360 X 720 SPLAY WALL UNIT",
+    "code": "SW720",
+    "height": 720,
+    "width": 360,
+    "depth": 330,
+    "priceExVat": 102.4,
+    "price": 122.88,
+    "category": "wall"
+  },
+  {
+    "name": "300 X 300 X 720 CURVED WALL END",
+    "code": "CW720",
+    "height": 720,
+    "width": 300,
+    "depth": 330,
+    "priceExVat": 69.18,
+    "price": 83.02,
+    "category": "wall"
+  },
+  {
+    "name": "300 X 575 WALL UNIT",
+    "code": "W30(5)",
+    "height": 575,
+    "width": 300,
+    "depth": 330,
+    "priceExVat": 52.88,
+    "price": 63.46,
+    "category": "wall"
+  },
+  {
+    "name": "350 X 575 WALL UNIT",
+    "code": "W35(5)",
+    "height": 575,
+    "width": 350,
+    "depth": 330,
+    "priceExVat": 55.3,
+    "price": 66.36,
+    "category": "wall"
+  },
+  {
+    "name": "400 X 575 WALL UNIT",
+    "code": "W40(5)",
+    "height": 575,
+    "width": 400,
+    "depth": 330,
+    "priceExVat": 55.3,
+    "price": 66.36,
+    "category": "wall"
+  },
+  {
+    "name": "450 X 575 WALL UNIT",
+    "code": "W45(5)",
+    "height": 575,
+    "width": 450,
+    "depth": 330,
+    "priceExVat": 59.53,
+    "price": 71.44,
+    "category": "wall"
+  },
+  {
+    "name": "500 X 575 WALL UNIT",
+    "code": "W50(5)",
+    "height": 575,
+    "width": 500,
+    "depth": 330,
+    "priceExVat": 59.53,
+    "price": 71.44,
+    "category": "wall"
+  },
+  {
+    "name": "550 X 575 WALL UNIT",
+    "code": "W55(5)",
+    "height": 575,
+    "width": 550,
+    "depth": 330,
+    "priceExVat": 74.66,
+    "price": 89.59,
+    "category": "wall"
+  },
+  {
+    "name": "600 X 575 WALL UNIT",
+    "code": "W60(5)",
+    "height": 575,
+    "width": 600,
+    "depth": 330,
+    "priceExVat": 61.73,
+    "price": 74.08,
+    "category": "wall"
+  },
+  {
+    "name": "700 X 575 WALL UNIT",
+    "code": "W70(5)",
+    "height": 575,
+    "width": 700,
+    "depth": 330,
+    "priceExVat": 79.32,
+    "price": 95.18,
+    "category": "wall"
+  },
+  {
+    "name": "800 X 575 WALL UNIT",
+    "code": "W80(5)",
+    "height": 575,
+    "width": 800,
+    "depth": 330,
+    "priceExVat": 79.32,
+    "price": 95.18,
+    "category": "wall"
+  },
+  {
+    "name": "900 X 575 WALL UNIT",
+    "code": "W90(5)",
+    "height": 575,
+    "width": 900,
+    "depth": 330,
+    "priceExVat": 83.78,
+    "price": 100.54,
+    "category": "wall"
+  },
+  {
+    "name": "1000 X 575 WALL UNIT",
+    "code": "W100(5)",
+    "height": 575,
+    "width": 1000,
+    "depth": 330,
+    "priceExVat": 83.78,
+    "price": 100.54,
+    "category": "wall"
+  },
+  {
+    "name": "630 X 630 X 575 DIAGONAL CORNER WALL UNIT",
+    "code": "ACW60(5)",
+    "height": 575,
+    "width": 630,
+    "depth": 630,
+    "priceExVat": 141.41,
+    "price": 169.69,
+    "category": "corner"
+  },
+  {
+    "name": "630 X 630 X 575 L CORNER WALL UNIT",
+    "code": "LCW60X60(5)",
+    "height": 575,
+    "width": 630,
+    "depth": 630,
+    "priceExVat": 129.17,
+    "price": 155.0,
+    "category": "corner"
+  },
+  {
+    "name": "360 X 575 SPLAY WALL UNIT",
+    "code": "SW575",
+    "height": 575,
+    "width": 360,
+    "depth": 330,
+    "priceExVat": 97.31,
+    "price": 116.77,
+    "category": "wall"
+  },
+  {
+    "name": "500 X 360 HOOD WALL",
+    "code": "HW50(360)",
+    "height": 360,
+    "width": 500,
+    "depth": 330,
+    "priceExVat": 56.06,
+    "price": 67.27,
+    "category": "wall"
+  },
+  {
+    "name": "600 X 360 HOOD WALL",
+    "code": "HW60(360)",
+    "height": 360,
+    "width": 600,
+    "depth": 330,
+    "priceExVat": 57.82,
+    "price": 69.38,
+    "category": "wall"
+  },
+  {
+    "name": "800 X 360 HOOD WALL",
+    "code": "HW80(360)",
+    "height": 360,
+    "width": 800,
+    "depth": 330,
+    "priceExVat": 63.54,
+    "price": 76.25,
+    "category": "wall"
+  },
+  {
+    "name": "900 X 360 HOOD WALL",
+    "code": "HW90(360)",
+    "height": 360,
+    "width": 900,
+    "depth": 330,
+    "priceExVat": 64.91,
+    "price": 77.89,
+    "category": "wall"
+  },
+  {
+    "name": "1000 X 360 HOOD WALL",
+    "code": "HW1000(360)",
+    "height": 360,
+    "width": 1000,
+    "depth": 330,
+    "priceExVat": 65.85,
+    "price": 79.02,
+    "category": "wall"
+  },
+  {
+    "name": "500 X 290 HOOD WALL",
+    "code": "HW50(290)",
+    "height": 290,
+    "width": 500,
+    "depth": 330,
+    "priceExVat": 54.17,
+    "price": 65.0,
+    "category": "wall"
+  },
+  {
+    "name": "600 X 290 HOOD WALL",
+    "code": "HW60(290)",
+    "height": 290,
+    "width": 600,
+    "depth": 330,
+    "priceExVat": 55.92,
+    "price": 67.1,
+    "category": "wall"
+  },
+  {
+    "name": "800 X 290 HOOD WALL",
+    "code": "HW80(290)",
+    "height": 290,
+    "width": 800,
+    "depth": 330,
+    "priceExVat": 61.78,
+    "price": 74.14,
+    "category": "wall"
+  },
+  {
+    "name": "900 X 290 HOOD WALL",
+    "code": "HW90(290)",
+    "height": 290,
+    "width": 900,
+    "depth": 330,
+    "priceExVat": 63.12,
+    "price": 75.74,
+    "category": "wall"
+  },
+  {
+    "name": "1000 X 290 HOOD WALL",
+    "code": "HW1000(290)",
+    "height": 290,
+    "width": 1000,
+    "depth": 330,
+    "priceExVat": 64.08,
+    "price": 76.9,
+    "category": "wall"
+  },
+  {
+    "name": "500 x 1210 DRESSER",
+    "code": "DR50/1210",
+    "height": 1210,
+    "width": 500,
+    "depth": 330,
+    "priceExVat": 104.78,
+    "price": 125.74,
+    "category": "dresser"
+  },
+  {
+    "name": "600 x 1210 DRESSER",
+    "code": "DR60/1210",
+    "height": 1210,
+    "width": 600,
+    "depth": 330,
+    "priceExVat": 115.2,
+    "price": 138.24,
+    "category": "dresser"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING",
+    "code": "TLG30TB + IFP30TB",
+    "height": 1970,
+    "width": 300,
+    "depth": 570,
+    "priceExVat": 116.69,
+    "price": 140.03,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG30 + ILP30",
+    "height": 1970,
+    "width": 300,
+    "depth": 570,
+    "priceExVat": 150.92,
+    "price": 181.1,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER",
+    "code": "TLG30+ILP30 (STE4)",
+    "height": 1970,
+    "width": 300,
+    "depth": 570,
+    "priceExVat": 150.92,
+    "price": 181.1,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING",
+    "code": "TLG30-2TB + IFP30TB",
+    "height": 2150,
+    "width": 300,
+    "depth": 570,
+    "priceExVat": 130.05,
+    "price": 156.06,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG30-2 + ILP30",
+    "height": 2150,
+    "width": 300,
+    "depth": 570,
+    "priceExVat": 164.29,
+    "price": 197.15,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER",
+    "code": "TLG30-2+ILP30 (HTE4)",
+    "height": 2150,
+    "width": 300,
+    "depth": 570,
+    "priceExVat": 164.29,
+    "price": 197.15,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING",
+    "code": "TLG40TB + IFP40TB",
+    "height": 1970,
+    "width": 400,
+    "depth": 570,
+    "priceExVat": 122.27,
+    "price": 146.72,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG40 + ILP40",
+    "height": 1970,
+    "width": 400,
+    "depth": 570,
+    "priceExVat": 158.55,
+    "price": 190.26,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER",
+    "code": "TLG40+ILP40 (STE4)",
+    "height": 1970,
+    "width": 400,
+    "depth": 570,
+    "priceExVat": 158.55,
+    "price": 190.26,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING",
+    "code": "TLG40-2TB + IFP40TB",
+    "height": 2150,
+    "width": 400,
+    "depth": 570,
+    "priceExVat": 133.57,
+    "price": 160.28,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG40-2 + ILP40",
+    "height": 2150,
+    "width": 400,
+    "depth": 570,
+    "priceExVat": 169.83,
+    "price": 203.8,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER",
+    "code": "TLG40-2+ILP40 (HTE4)",
+    "height": 2150,
+    "width": 400,
+    "depth": 570,
+    "priceExVat": 169.83,
+    "price": 203.8,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING",
+    "code": "TLG50TB + IFP50TB",
+    "height": 1970,
+    "width": 500,
+    "depth": 570,
+    "priceExVat": 128.33,
+    "price": 154.0,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG50 + ILP50",
+    "height": 1970,
+    "width": 500,
+    "depth": 570,
+    "priceExVat": 166.74,
+    "price": 200.09,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER",
+    "code": "TLG50+ILP50 (STE4)",
+    "height": 1970,
+    "width": 500,
+    "depth": 570,
+    "priceExVat": 166.74,
+    "price": 200.09,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING",
+    "code": "TLG50-2TB + IFP50TB",
+    "height": 2150,
+    "width": 500,
+    "depth": 570,
+    "priceExVat": 142.83,
+    "price": 171.4,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG50-2 + ILP50",
+    "height": 2150,
+    "width": 500,
+    "depth": 570,
+    "priceExVat": 181.24,
+    "price": 217.49,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER",
+    "code": "TLG50-2+ILP50 (HTE4)",
+    "height": 2150,
+    "width": 500,
+    "depth": 570,
+    "priceExVat": 181.24,
+    "price": 217.49,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING",
+    "code": "TLG60TB + IFP60TB",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 135.55,
+    "price": 162.66,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, UNDRILLED, INCLUDING SHELVING",
+    "code": "TLG60TB + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 176.84,
+    "price": 212.21,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG60 + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 176.84,
+    "price": 212.21,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 50/50 SPLIT, INCLUDING SHELVING",
+    "code": "TLG60 + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 176.84,
+    "price": 212.21,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER",
+    "code": "TLG60 + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 176.84,
+    "price": 212.21,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, OVEN HOUSING, 495 DOOR TOP, 570 DOOR BTM",
+    "code": "TLG60 + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 176.84,
+    "price": 212.21,
+    "category": "housing"
+  },
+  {
+    "name": "1970 HIGH, OVEN HOUSING, 495 DOOR TOP, 2 X 283 DRW BTM",
+    "code": "TLG60 + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 176.84,
+    "price": 212.21,
+    "category": "housing"
+  },
+  {
+    "name": "1970 HIGH, OVEN HOUSING, 645 DOOR TOP, 715 DOOR BTM",
+    "code": "TLG60 + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 176.84,
+    "price": 212.21,
+    "category": "housing"
+  },
+  {
+    "name": "1970 HIGH, OVEN HOUSING, 645 DOOR TOP, 2 X 355 DRW BTM",
+    "code": "TLG60 + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 176.84,
+    "price": 212.21,
+    "category": "housing"
+  },
+  {
+    "name": "1970 HIGH, OVEN HOUSING, 450 DOOR TOP, 450 DOOR BTM",
+    "code": "TLG60 + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 176.84,
+    "price": 212.21,
+    "category": "housing"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, UNDRILLED, NO SHELVING",
+    "code": "TLG60-2TB + IFP60TB",
+    "height": 2150,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 150.42,
+    "price": 180.5,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, UNDRILLED, INCLUDING SHELVING",
+    "code": "TLG60-2TB + ILP60",
+    "height": 2150,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 191.71,
+    "price": 230.05,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG60-2 + ILP60",
+    "height": 2150,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 191.71,
+    "price": 230.05,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER",
+    "code": "TLG60-2+ILP60 (HTE4)",
+    "height": 2150,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 191.71,
+    "price": 230.05,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, FRIDGE FREEZER HOUSING, 1425 DOOR TOP, 715 DOOR BTM",
+    "code": "TOG60-2A + ILP60",
+    "height": 2150,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 191.71,
+    "price": 230.05,
+    "category": "housing"
+  },
+  {
+    "name": "2150 HIGH, FRIDGE FREEZER HOUSING, 1245 DOOR TOP, 715 DOOR BTM WITH FILLER",
+    "code": "TOG60-2A + ILP60",
+    "height": 2150,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 191.71,
+    "price": 230.05,
+    "category": "housing"
+  },
+  {
+    "name": "2150 HIGH, OVEN HOUSING, 495 DOOR TOP, 715 DOOR BTM",
+    "code": "TOG60-2B + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 191.71,
+    "price": 230.05,
+    "category": "housing"
+  },
+  {
+    "name": "2150 HIGH, OVEN HOUSING, 495 DOOR TOP, 2 X 355 DRW BTM",
+    "code": "TOG60-2B + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 191.71,
+    "price": 230.05,
+    "category": "housing"
+  },
+  {
+    "name": "2150 HIGH, OVEN HOUSING, 715 DOOR TOP, 715 DOOR BTM",
+    "code": "TOG60-2C + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 191.71,
+    "price": 230.05,
+    "category": "housing"
+  },
+  {
+    "name": "2150 HIGH, OVEN HOUSING, 715 DOOR TOP, 2 X 355 DRW BTM",
+    "code": "TOG60-2C + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 191.71,
+    "price": 230.05,
+    "category": "housing"
+  },
+  {
+    "name": "2150 HIGH, OVEN HOUSING, 645 DOOR TOP, 495 DOOR BTM",
+    "code": "TOG60-2D + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 191.71,
+    "price": 230.05,
+    "category": "housing"
+  },
+  {
+    "name": "2150 HIGH, OVEN HOUSING, 495 DOOR TOP, 570 DOOR BTM",
+    "code": "TOG60-2E + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 191.71,
+    "price": 230.05,
+    "category": "housing"
+  },
+  {
+    "name": "2150 HIGH, OVEN HOUSING, 495 DOOR TOP, 2 X 283 DRW BTM",
+    "code": "TOG60-2E + ILP60",
+    "height": 1970,
+    "width": 600,
+    "depth": 570,
+    "priceExVat": 191.71,
+    "price": 230.05,
+    "category": "housing"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG80 + ILP80",
+    "height": 1970,
+    "width": 800,
+    "depth": 570,
+    "priceExVat": 266.3,
+    "price": 319.56,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER",
+    "code": "TLG80+ILP80 (STE4)",
+    "height": 1970,
+    "width": 800,
+    "depth": 570,
+    "priceExVat": 266.3,
+    "price": 319.56,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG80-2 + ILP80",
+    "height": 2150,
+    "width": 800,
+    "depth": 570,
+    "priceExVat": 286.25,
+    "price": 343.5,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER",
+    "code": "TLG80-2+ILP80 (HTE4)",
+    "height": 2150,
+    "width": 800,
+    "depth": 570,
+    "priceExVat": 286.25,
+    "price": 343.5,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG90 + ILP90",
+    "height": 1970,
+    "width": 900,
+    "depth": 570,
+    "priceExVat": 295.93,
+    "price": 355.12,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG90-2 + ILP90",
+    "height": 2150,
+    "width": 900,
+    "depth": 570,
+    "priceExVat": 318.34,
+    "price": 382.01,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG100 + ILP100",
+    "height": 1970,
+    "width": 1000,
+    "depth": 570,
+    "priceExVat": 325.54,
+    "price": 390.65,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER",
+    "code": "TLG100+ILP100 (STE4)",
+    "height": 1970,
+    "width": 1000,
+    "depth": 570,
+    "priceExVat": 325.54,
+    "price": 390.65,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG100-2 + ILP100",
+    "height": 2150,
+    "width": 1000,
+    "depth": 570,
+    "priceExVat": 350.45,
+    "price": 420.54,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, INTERNAL SPACE TOWER",
+    "code": "TLG100-2+ILP100 (HTE4)",
+    "height": 2150,
+    "width": 1000,
+    "depth": 570,
+    "priceExVat": 350.45,
+    "price": 420.54,
+    "category": "tall"
+  },
+  {
+    "name": "1970 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG120 + ILP120",
+    "height": 1970,
+    "width": 1200,
+    "depth": 570,
+    "priceExVat": 384.77,
+    "price": 461.72,
+    "category": "tall"
+  },
+  {
+    "name": "2150 HIGH, 70/30 SPLIT, INCLUDING SHELVING",
+    "code": "TLG120-2 + ILP120",
+    "height": 2150,
+    "width": 1200,
+    "depth": 570,
+    "priceExVat": 414.68,
+    "price": 497.62,
+    "category": "tall"
+  }
+]

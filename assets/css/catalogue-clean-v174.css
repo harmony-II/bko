@@ -1,0 +1,278 @@
+
+/* v174 — cleaner, more compact Shop Cabinets catalogue */
+
+.catalogue-page .units-search{width:min(360px,100%)}
+.catalogue-page .units-search input{width:100%;height:46px;padding:0 15px;border:1px solid #d8d8d3;background:#fff;font:inherit;font-size:13px;color:#171717}
+.catalogue-page .units-search input:focus{outline:2px solid var(--orange);outline-offset:2px}
+.catalogue-page .catalogue-search-row{display:flex;justify-content:flex-end;margin:8px 0 28px}
+
+@media(max-width:720px){
+  .catalogue-page .units-search{width:100%}
+  .catalogue-page .catalogue-search-row{margin:0 0 24px}
+}
+
+.catalogue-page .product-grid,
+.catalogue-page .catalogue-grid,
+.catalogue-page .cabinet-grid,
+.catalogue-page [class*="product-grid"],
+.catalogue-page [class*="catalogue-grid"]{
+  display:grid !important;
+  width:100%;
+  min-width:0;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:28px 22px !important;
+  align-items:stretch !important;
+}
+
+/* Product cards */
+.catalogue-page .product-card,
+.catalogue-page .catalogue-card,
+.catalogue-page .cabinet-card,
+.catalogue-page [class*="product-card"],
+.catalogue-page [class*="catalogue-card"]{
+  background:#fff !important;
+  min-height:0 !important;
+  height:100%;
+  min-width:0;
+  box-sizing:border-box;
+  padding:0 !important;
+  border:1px solid #ecece8 !important;
+}
+
+/* Image area — deliberately much smaller */
+.catalogue-page .product-card img,
+.catalogue-page .catalogue-card img,
+.catalogue-page .cabinet-card img,
+.catalogue-page [class*="product-card"] img,
+.catalogue-page [class*="catalogue-card"] img{
+  display:block !important;
+  width:100% !important;
+  height:180px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  padding:18px 20px !important;
+  background:#fafaf7 !important;
+  box-sizing:border-box !important;
+  transform:none !important;
+}
+
+.catalogue-page .product-card .image,
+.catalogue-page .product-card .image img{
+  background:#fff !important;
+}
+.catalogue-page .product-card .body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  min-height:230px;
+  align-items:stretch;
+  text-align:left;
+  min-width:0;
+}
+.catalogue-page .product-card h3{min-height:44px;display:flex;align-items:flex-start}
+.catalogue-page .product-card .price{margin-top:auto !important}
+.catalogue-page .product-card .btn{margin-top:14px}
+.catalogue-page .cabinet-accessory-detail{display:grid;gap:4px;margin-top:8px;padding:10px 12px;background:#f7f7f4;color:#737872;font-size:11px;line-height:1.45}
+.catalogue-page .cabinet-accessory-detail strong{color:#34483c;font-weight:500}
+.catalogue-page .cabinet-accessory-detail small{color:#9a6b55}
+
+.catalogue-page .configured-product-card .image,
+.catalogue-page .configured-product-card .image img{
+  background:#fff !important;
+}
+
+/* If there is a dedicated media/image wrapper, keep that compact too */
+.catalogue-page .product-image,
+.catalogue-page .product-media,
+.catalogue-page .catalogue-image,
+.catalogue-page .cabinet-image,
+.catalogue-page [class*="product-image"],
+.catalogue-page [class*="product-media"]{
+  height:180px !important;
+  min-height:180px !important;
+  max-height:180px !important;
+  overflow:hidden !important;
+  background:#fafaf7 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+/* Text area */
+.catalogue-page .product-card > :not(img),
+.catalogue-page .catalogue-card > :not(img),
+.catalogue-page .cabinet-card > :not(img){
+  box-sizing:border-box;
+}
+
+.catalogue-page .product-card h3,
+.catalogue-page .catalogue-card h3,
+.catalogue-page .cabinet-card h3,
+.catalogue-page [class*="product-card"] h3{
+  margin:14px 16px 6px !important;
+  font-size:18px !important;
+  line-height:1.2 !important;
+  font-weight:400 !important;
+}
+
+.catalogue-page .product-card p,
+.catalogue-page .catalogue-card p,
+.catalogue-page .cabinet-card p,
+.catalogue-page [class*="product-card"] p{
+  margin:0 16px 12px !important;
+  font-size:12px !important;
+  line-height:1.45 !important;
+  color:#777a75 !important;
+}
+.catalogue-page .configured-with{min-height:58px}
+.catalogue-page .auto-components{min-height:112px}
+
+/* Price / code rows */
+.catalogue-page .price,
+.catalogue-page .product-price,
+.catalogue-page .product-code,
+.catalogue-page [class*="price"],
+.catalogue-page [class*="code"]{
+  margin-left:16px !important;
+  margin-right:16px !important;
+}
+
+/* Buttons stay compact */
+.catalogue-page .product-card .btn,
+.catalogue-page .catalogue-card .btn,
+.catalogue-page .cabinet-card .btn{
+  min-height:38px !important;
+  padding:0 14px !important;
+  font-size:11px !important;
+}
+
+/* Reduce excessive whitespace above/below catalogue grids */
+.catalogue-page .section,
+.catalogue-page section{
+  padding-top:34px !important;
+  padding-bottom:34px !important;
+}
+
+/* Responsive */
+@media(max-width:1100px){
+  .catalogue-page .product-grid,
+  .catalogue-page .catalogue-grid,
+  .catalogue-page .cabinet-grid,
+  .catalogue-page [class*="product-grid"],
+  .catalogue-page [class*="catalogue-grid"]{
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  }
+}
+
+@media(max-width:760px){
+  .catalogue-page .product-grid,
+  .catalogue-page .catalogue-grid,
+  .catalogue-page .cabinet-grid,
+  .catalogue-page [class*="product-grid"],
+  .catalogue-page [class*="catalogue-grid"]{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:18px 14px !important;
+  }
+
+  .catalogue-page .product-card img,
+  .catalogue-page .catalogue-card img,
+  .catalogue-page .cabinet-card img,
+  .catalogue-page [class*="product-card"] img,
+  .catalogue-page [class*="catalogue-card"] img,
+  .catalogue-page .product-image,
+  .catalogue-page .product-media,
+  .catalogue-page .catalogue-image,
+  .catalogue-page .cabinet-image{
+    height:150px !important;
+    min-height:150px !important;
+    max-height:150px !important;
+  }
+}
+
+@media(max-width:520px){
+  .catalogue-page .product-grid,
+  .catalogue-page .catalogue-grid,
+  .catalogue-page .cabinet-grid,
+  .catalogue-page [class*="product-grid"],
+  .catalogue-page [class*="catalogue-grid"]{
+    grid-template-columns:1fr !important;
+  }
+}
+
+
+/* v175 — Step 3: Choose carcase finish
+   Keep finish swatches compact; do not let their source images dictate tile size. */
+.catalogue-page .config-carcase-grid{
+  display:grid !important;
+  grid-template-columns:repeat(8,minmax(0,1fr)) !important;
+  grid-auto-rows:92px;
+  gap:10px !important;
+}
+
+.catalogue-page .config-carcase-grid .config-choice,
+.catalogue-page .config-carcase-grid button,
+.catalogue-page .config-carcase-grid [role="button"]{
+  display:grid !important;
+  grid-template-columns:1fr;
+  grid-template-rows:44px auto;
+  justify-items:center;
+  align-content:center;
+  gap:10px;
+  min-height:92px !important;
+  height:92px !important;
+  padding:7px 6px !important;
+  overflow:hidden !important;
+}
+
+/* Override the broad catalogue image rule specifically inside Step 3 */
+.catalogue-page .config-carcase-grid img{
+  width:46px !important;
+  height:46px !important;
+  min-width:46px !important;
+  max-width:46px !important;
+  min-height:46px !important;
+  max-height:46px !important;
+  padding:0 !important;
+  margin:0 !important;
+  object-fit:cover !important;
+  object-position:center !important;
+  background:transparent !important;
+  flex:0 0 46px !important;
+}
+
+/* Common swatch wrappers */
+.catalogue-page .config-carcase-grid .config-swatch,
+.catalogue-page .config-carcase-grid [class*="swatch"],
+.catalogue-page .config-carcase-grid [class*="image"]{
+  width:46px !important;
+  height:46px !important;
+  min-width:46px !important;
+  min-height:46px !important;
+  max-width:46px !important;
+  max-height:46px !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  flex:0 0 46px !important;
+}
+
+.catalogue-page .config-carcase-choice-meta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:0;
+  padding:0;
+  text-align:center;
+  line-height:1.3;
+}
+
+@media(max-width:1050px){
+  .catalogue-page .config-carcase-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  }
+}
+
+@media(max-width:760px){
+  .catalogue-page .config-carcase-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}

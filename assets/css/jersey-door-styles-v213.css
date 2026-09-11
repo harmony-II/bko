@@ -1,0 +1,43 @@
+
+/* v213 — Jersey alternative doors use the same Abbotsbury horizontal card style */
+body[data-range-slug="jersey"] .abbotsbury-door-style-list{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:22px !important;
+  align-items:start !important;
+}
+body[data-range-slug="jersey"] .abbotsbury-door-style-item{
+  width:auto !important;
+  min-width:0 !important;
+  text-align:center !important;
+}
+body[data-range-slug="jersey"] .abbotsbury-door-style-image{
+  height:235px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  background:#fff !important;
+}
+body[data-range-slug="jersey"] .abbotsbury-door-style-image img{
+  width:100% !important;
+  height:100% !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  background:#fff !important;
+}
+body[data-range-slug="jersey"] .abbotsbury-door-style-item span{
+  display:block !important;
+  margin-top:6px !important;
+}
+@media(max-width:1000px){
+  body[data-range-slug="jersey"] .abbotsbury-door-style-list{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+@media(max-width:600px){
+  body[data-range-slug="jersey"] .abbotsbury-door-style-list{
+    grid-template-columns:1fr !important;
+  }
+}

@@ -1,0 +1,233 @@
+[
+  {
+    "slug": "abbotsbury",
+    "name": "Abbotsbury",
+    "style": "Slim Shaker",
+    "finish": "Painted ash",
+    "colours": [
+      "Sanded",
+      "Porcelain",
+      "Taupe Grey",
+      "Stone",
+      "Light Grey",
+      "Graphite",
+      "Marine",
+      "Reed Green",
+      "Heritage Green"
+    ],
+    "image": "assets/images/doors/covers/abbotsbury-default.png",
+    "tier": "collection"
+  },
+  {
+    "slug": "Chatsworth",
+    "name": "Chatsworth",
+    "style": "Narrow Shaker",
+    "finish": "Painted",
+    "colours": [
+      "Primed",
+      "Porcelain",
+      "Light Grey",
+      "Marine",
+      "Heritage Green"
+    ],
+    "image": "assets/images/doors/covers/Chatsworth-default.png",
+    "tier": "collection"
+  },
+  {
+    "slug": "Delamere",
+    "name": "Delamere",
+    "style": "Narrow Shaker",
+    "finish": "Smooth painted",
+    "colours": [
+      "Porcelain",
+      "Light Grey",
+      "Dust Grey",
+      "Graphite",
+      "Indigo"
+    ],
+    "image": "assets/images/doors/covers/Delamere-default.png",
+    "tier": "collection"
+  },
+  {
+    "slug": "Jersey",
+    "name": "Jersey",
+    "style": "Shaker",
+    "finish": "Painted timber",
+    "colours": [
+      "Sanded",
+      "Light Oak",
+      "Ivory"
+    ],
+    "image": "assets/images/doors/covers/Jersey-default.png",
+    "tier": "collection"
+  },
+  {
+    "slug": "kensington",
+    "name": "Kensington",
+    "style": "Shaker",
+    "finish": "Grained",
+    "colours": [
+      "Porcelain",
+      "Ivory",
+      "Taupe Grey",
+      "Mussel",
+      "Light Grey",
+      "Dust Grey",
+      "Graphite",
+      "Indigo",
+      "Reed Green",
+      "Heritage Green",
+      "Cashmere"
+    ],
+    "image": "assets/images/doors/covers/kensington-default.png",
+    "tier": "collection"
+  },
+  {
+    "slug": "Matlock",
+    "name": "Matlock",
+    "style": "Shaker",
+    "finish": "Painted timber",
+    "colours": [
+      "Sanded",
+      "Light Oak",
+      "Porcelain",
+      "Ivory",
+      "Stone",
+      "Light Grey",
+      "Marine",
+      "Sage Green"
+    ],
+    "image": "assets/images/doors/covers/Matlock-default.png",
+    "tier": "collection"
+  },
+  {
+    "slug": "Norwood",
+    "name": "Norwood",
+    "style": "Slab",
+    "finish": "Textured",
+    "colours": [
+      "Porcelain",
+      "Taupe Grey",
+      "Light Grey",
+      "Indigo",
+      "Reed Green"
+    ],
+    "image": "assets/images/doors/covers/Norwood-default.png",
+    "tier": "collection"
+  },
+  {
+    "slug": "oxford",
+    "name": "Oxford",
+    "style": "Shaker",
+    "finish": "Smooth matt",
+    "colours": [
+      "White",
+      "Ivory",
+      "Light Grey",
+      "Indigo",
+      "Anthracite"
+    ],
+    "image": "assets/images/doors/covers/oxford-default.png",
+    "tier": "collection"
+  },
+  {
+    "slug": "Papplewick",
+    "name": "Papplewick",
+    "style": "Shaker",
+    "finish": "Painted",
+    "colours": [
+      "Porcelain",
+      "Taupe Grey",
+      "Light Grey",
+      "Indigo",
+      "Reed Green"
+    ],
+    "image": "assets/images/doors/covers/Papplewick-default.png",
+    "tier": "collection"
+  },
+  {
+    "slug": "sherwood-gloss",
+    "name": "Sherwood Gloss",
+    "style": "Slab",
+    "finish": "Gloss",
+    "colours": [
+      "White",
+      "Porcelain",
+      "Light Grey",
+      "Dust Grey",
+      "Graphite",
+      "Cashmere"
+    ],
+    "image": "assets/images/doors/covers/sherwood-gloss-default.png",
+    "tier": "collection"
+  },
+  {
+    "slug": "sherwood-matte",
+    "name": "Sherwood Matte",
+    "style": "Slab",
+    "finish": "Matt",
+    "colours": [
+      "Primed",
+      "White",
+      "Light Grey",
+      "Graphite",
+      "Marine",
+      "Cashmere"
+    ],
+    "image": "assets/images/doors/covers/sherwood-matte-default.png",
+    "tier": "collection"
+  },
+  {
+    "slug": "vivo-matt",
+    "name": "Vivo Matt",
+    "style": "Slab",
+    "finish": "Smooth matt",
+    "colours": [
+      "White",
+      "Cashmere",
+      "Light Grey",
+      "Dust Grey",
+      "Indigo",
+      "Anthracite"
+    ],
+    "image": "assets/images/doors/covers/vivo-matt-default.png",
+    "tier": "collection"
+  },
+  {
+    "slug": "Wensley",
+    "name": "Wensley",
+    "style": "Shaker",
+    "finish": "Painted timber",
+    "colours": [
+      "Sanded",
+      "Light Oak",
+      "Porcelain",
+      "Ivory",
+      "Taupe Grey",
+      "Mussel",
+      "Stone",
+      "Light Grey",
+      "Marine",
+      "Sage Green",
+      "Reed Green"
+    ],
+    "image": "assets/images/doors/covers/Wensley-default.png",
+    "tier": "collection"
+  },
+  {
+    "slug": "oakham-gloss",
+    "name": "Oakham Gloss",
+    "style": "Slab",
+    "finish": "Gloss",
+    "colours": [
+      "White",
+      "Porcelain",
+      "Light Grey",
+      "Dust Grey",
+      "Graphite",
+      "Cashmere"
+    ],
+    "image": "assets/images/doors/covers/oakham-gloss-default.png",
+    "tier": "collection"
+  }
+]

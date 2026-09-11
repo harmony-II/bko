@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>
+   Kitchen ranges | Buy Kitchens Online
+  </title>
+<meta content="Explore the complete kitchen door collection by style, finish and colour." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="assets/css/site.css" rel="stylesheet"/>
+
+<style>
+/* V43 — collection card colour previews */
+.range-card{
+  position:relative;
+}
+
+.range-card .range-card-image,
+.range-card .range-card-media{
+  position:relative;
+  overflow:hidden;
+}
+
+.range-card .range-card-image img,
+.range-card .range-card-media img{
+  transition:opacity .28s ease, transform .45s ease;
+}
+
+.range-card .collection-preview-next{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:opacity .28s ease;
+  z-index:2;
+  pointer-events:none;
+}
+
+.range-card .collection-preview-next.is-visible{
+  opacity:1;
+}
+
+.range-card .swatches{
+  position:relative;
+  z-index:3;
+}
+
+.range-card .swatches > *{
+  cursor:pointer;
+  transition:transform .16s ease, box-shadow .16s ease;
+}
+
+.range-card .swatches > *:hover{
+  transform:translateY(-1px);
+}
+
+.range-card .swatches > *.is-active{
+  box-shadow:0 0 0 1px #1d1d1b, 0 0 0 3px #fff;
+}
+
+.range-card .collection-preview-label{
+  margin-top:8px;
+  min-height:16px;
+  font-size:11px;
+  font-weight:400;
+  color:#6e6e69;
+  letter-spacing:.02em;
+}
+</style>
+
+
+<style>
+/* V44 — reliable Abbotsbury colour preview on Collections */
+.range-card[data-range-slug="abbotsbury"]{
+  position:relative;
+  overflow:hidden;
+}
+.range-card[data-range-slug="abbotsbury"] > img{
+  position:relative;
+  z-index:1;
+}
+.range-card[data-range-slug="abbotsbury"] .info{
+  position:relative;
+  z-index:3;
+  background:#fff;
+}
+.range-card[data-range-slug="abbotsbury"] .swatch{
+  cursor:pointer;
+}
+.range-card[data-range-slug="abbotsbury"] .swatch.is-active{
+  box-shadow:0 0 0 1px #1d1d1b,0 0 0 3px #fff;
+}
+</style>
+
+
+<style>
+/* V69 — larger, more premium Collections cards */
+body:has(#rangeGrid) .container{
+  max-width:1240px !important;
+  width:calc(100% - 64px) !important;
+}
+
+#rangeGrid{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:20px !important;
+  width:100% !important;
+}
+
+#rangeGrid .range-card{
+  width:100% !important;
+  max-width:none !important;
+  border:1px solid var(--editorial-line) !important;
+  border-radius:2px !important;
+  overflow:hidden !important;
+  background:var(--editorial-wash) !important;
+  box-shadow:none !important;
+  transition:transform .2s ease,box-shadow .2s ease !important;
+}
+
+#rangeGrid .range-card:hover{
+  transform:translateY(-3px) !important;
+  box-shadow:0 12px 24px rgba(38,51,44,.1) !important;
+}
+
+#rangeGrid .range-card > img{
+  width:100% !important;
+  height:240px !important;
+  aspect-ratio:auto !important;
+  object-fit:cover !important;
+  display:block !important;
+}
+
+#rangeGrid .range-card .info{
+  padding:17px 18px 18px !important;
+  background:var(--editorial-wash) !important;
+}
+
+#rangeGrid .range-card h3{
+  font-size:22px !important;
+  line-height:1.1 !important;
+  letter-spacing:-.035em !important;
+  margin:6px 0 14px !important;
+}
+
+#rangeGrid .range-card .meta{
+  font-size:10px !important;
+  color:var(--editorial-muted) !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+
+#rangeGrid .range-card .swatches{
+  gap:7px !important;
+  margin:0 0 14px !important;
+}
+
+#rangeGrid .range-card .swatch{
+  width:21px !important;
+  height:21px !important;
+  border:1px solid rgba(38,51,44,.16) !important;
+  box-shadow:none !important;
+}
+
+#rangeGrid .range-card .swatch:hover{
+  box-shadow:0 0 0 2px var(--editorial-wash),0 0 0 3px var(--editorial-olive) !important;
+}
+
+@media(max-width:1050px){
+  #rangeGrid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+
+@media(max-width:650px){
+  body:has(#rangeGrid) .container{
+    width:calc(100% - 28px) !important;
+  }
+
+  #rangeGrid{
+    grid-template-columns:1fr !important;
+    gap:20px !important;
+  }
+
+  #rangeGrid .range-card > img{height:220px !important}
+}
+</style>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/typography-unified.css?v=78">
+<link rel="stylesheet" href="assets/css/site-brand-v142.css?v=142">
+<link rel="stylesheet" href="assets/css/global-consistency-v185.css?v=185">
+<link rel="stylesheet" href="assets/css/top-line-fix-v190.css?v=190">
+<link rel="stylesheet" href="assets/css/direct-nav-v191.css?v=191">
+<link rel="stylesheet" href="assets/css/two-row-header-v192.css?v=192">
+<link rel="stylesheet" href="assets/css/header-clean-v195.css?v=195">
+<link rel="stylesheet" href="assets/css/header-wide-v196.css?v=196">
+<link rel="stylesheet" href="assets/css/site-cleanup-v197.css?v=197">
+<link rel="stylesheet" href="assets/css/header-flow-fix-v199.css?v=199">
+<link rel="stylesheet" href="assets/css/screen-fix-v201.css?v=201">
+<link rel="stylesheet" href="assets/css/category-nav-v202.css?v=207">
+<link rel="stylesheet" href="assets/css/header-refinement-v209.css?v=209">
+<link rel="stylesheet" href="assets/css/units-nav-visible-v227.css?v=233">
+<link rel="stylesheet" href="assets/css/editorial-refresh-v240.css?v=268">
+</head>
+<body>
+<script>
+(function(){
+function cleanTopText(){
+ var b=document.body;if(!b)return;
+ Array.from(b.childNodes).forEach(function(n){
+   if(n.nodeType===3 && /^\s*\\n\s*$/.test(n.nodeValue||'')) n.remove();
+ });
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',cleanTopText);
+else cleanTopText();
+})();
+</script>
+
+<div class="top-strip">Cabinets delivered in as little as 2 weeks <span>·</span> Nationwide delivery</div><header class="site-header">
+<div class="container header-inner">
+<a aria-label="Buy Kitchens Online home" class="brand" href="index.html">
+<img alt="Buy Kitchens Online" src="assets/images/brand/bko-logo-olive.png"/>
+</a>
+<button aria-controls="siteNav" aria-expanded="false" aria-label="Open menu" class="menu-toggle" type="button">
+<span></span><span></span><span></span>
+</button>
+<nav aria-label="Main navigation" class="nav nav-direct-v191" id="siteNav">
+<a href="ranges.html">Collections</a>
+<a href="catalogue.html">Units</a>
+<a href="doors.html">Doors</a>
+<a href="handles.html">Handles</a>
+<a href="worktops.html">Worktops</a>
+<a href="appliances.html">Appliances</a>
+<a href="sinks-taps.html">Sinks &amp; Taps</a>
+<a href="builder.html">Design your kitchen</a>
+<a href="delivery.html">Delivery</a>
+<a href="help.html">Help</a>
+</nav>
+<div class="header-actions">
+<a class="btn ghost login-link" data-login-label="" href="login.html">Login</a>
+<a class="btn primary basket-link" href="basket.html">Basket <span class="basket-pill" data-basket-count="">0</span></a>
+</div>
+</div>
+</header>
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumbs"><a href="index.html">Home</a> / Kitchen collections</div>
+    <div class="eyebrow">Kitchen collections</div>
+    <h1>Our Kitchen Collections</h1>
+    <p>Discover carefully selected kitchen styles, from timeless shaker designs to clean contemporary finishes. Choose a collection to explore the door style, available colours and inspiration for your kitchen.</p>
+  </div>
+</section>
+<main>
+<section class="section">
+<div class="container">
+<div class="range-grid" id="rangeGrid">
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div class="footer-brand-block">
+<a aria-label="Buy Kitchens Online home" class="footer-brand" href="index.html">
+<img alt="Buy Kitchens Online" src="assets/images/brand/bko-logo-olive.png"/>
+</a>
+<p>Premium rigid kitchens, simple online pricing and nationwide delivery.</p>
+</div>
+<div>
+<h4>Shop</h4>
+<a href="ranges.html">Kitchen collections</a>
+<a href="doors.html">Doors</a>
+<a href="catalogue.html">Kitchen cabinets</a>
+<a href="handles.html">Handles</a>
+<a href="worktops.html">Worktops</a>
+<a href="appliances.html">Appliances</a>
+</div>
+<div>
+<h4>Customer care</h4>
+<a href="delivery.html">Delivery</a>
+<a href="help.html">Help centre</a>
+<a href="contact.html">Contact</a>
+<a href="trade.html">Trade accounts</a>
+</div>
+<div>
+<h4>Your account</h4>
+<a href="login.html">Login</a>
+<a href="register.html">Create account</a>
+<a href="dashboard.html">My kitchens</a>
+<a href="basket.html">Basket</a>
+</div>
+</div>
+<div class="container footer-bottom">© 2026 Buy Kitchens Online.</div>
+</footer>
+<script src="assets/js/app.js?v=229">
+</script>
+<script src="assets/js/ranges.js?v=243">
+</script>
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+  var nav = header.querySelector('.nav-direct-v191');
+  var actions = header.querySelector('.header-actions');
+  if (!nav || !actions) return;
+
+  var links = Array.from(nav.querySelectorAll('a'));
+  var design = links.find(function(a){
+    var txt = (a.textContent || '').trim().toLowerCase();
+    return txt === 'design your kitchen' ||
+           (a.getAttribute('href') || '').toLowerCase().indexOf('planner') !== -1 ||
+           (a.getAttribute('href') || '').toLowerCase().indexOf('design') !== -1;
+  });
+
+  if (design) {
+    design.classList.add('design-kitchen-top-v194');
+    var login = Array.from(actions.querySelectorAll('a,button')).find(function(el){
+      return (el.textContent || '').trim().toLowerCase() === 'login';
+    });
+    if (login) actions.insertBefore(design, login);
+    else actions.insertBefore(design, actions.firstChild);
+  }
+});
+</script>
+
+</body>
+</html>

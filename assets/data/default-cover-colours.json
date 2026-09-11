@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "abbotsbury",
+    "firstColour": "Sanded",
+    "hex": "#d8d2c8",
+    "cover": "assets/images/doors/covers/abbotsbury-default.png"
+  },
+  {
+    "slug": "Chatsworth",
+    "firstColour": "Primed",
+    "hex": "#ece9e2",
+    "cover": "assets/images/doors/covers/Chatsworth-default.png"
+  },
+  {
+    "slug": "Delamere",
+    "firstColour": "Porcelain",
+    "hex": "#eee9df",
+    "cover": "assets/images/doors/covers/Delamere-default.png"
+  },
+  {
+    "slug": "Jersey",
+    "firstColour": "Sanded",
+    "hex": "#d8d2c8",
+    "cover": "assets/images/doors/covers/Jersey-default.png"
+  },
+  {
+    "slug": "kensington",
+    "firstColour": "Porcelain",
+    "hex": "#eee9df",
+    "cover": "assets/images/doors/covers/kensington-default.png"
+  },
+  {
+    "slug": "Matlock",
+    "firstColour": "Sanded",
+    "hex": "#d8d2c8",
+    "cover": "assets/images/doors/covers/Matlock-default.png"
+  },
+  {
+    "slug": "Norwood",
+    "firstColour": "Porcelain",
+    "hex": "#eee9df",
+    "cover": "assets/images/doors/covers/Norwood-default.png"
+  },
+  {
+    "slug": "oxford",
+    "firstColour": "White",
+    "hex": "#f7f7f5",
+    "cover": "assets/images/doors/covers/oxford-default.png"
+  },
+  {
+    "slug": "Papplewick",
+    "firstColour": "Porcelain",
+    "hex": "#eee9df",
+    "cover": "assets/images/doors/covers/Papplewick-default.png"
+  },
+  {
+    "slug": "sherwood-gloss",
+    "firstColour": "White",
+    "hex": "#f7f7f5",
+    "cover": "assets/images/doors/covers/sherwood-gloss-default.png"
+  },
+  {
+    "slug": "sherwood-matte",
+    "firstColour": "Primed",
+    "hex": "#ece9e2",
+    "cover": "assets/images/doors/covers/sherwood-matte-default.png"
+  },
+  {
+    "slug": "vivo-matt",
+    "firstColour": "White",
+    "hex": "#f7f7f5",
+    "cover": "assets/images/doors/covers/vivo-matt-default.png"
+  },
+  {
+    "slug": "Wensley",
+    "firstColour": "Sanded",
+    "hex": "#d8d2c8",
+    "cover": "assets/images/doors/covers/Wensley-default.png"
+  },
+  {
+    "slug": "oakham-gloss",
+    "firstColour": "White",
+    "hex": "#f7f7f5",
+    "cover": "assets/images/doors/covers/oakham-gloss-default.png"
+  }
+]

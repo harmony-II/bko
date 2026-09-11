@@ -1,0 +1,133 @@
+
+/* v144 — Abbotsbury is the visual template for every range page */
+
+/* Overall intro rhythm */
+.range-intro-strip{
+  padding-top:38px !important;
+  padding-bottom:34px !important;
+}
+.range-intro-strip .eyebrow{margin-bottom:12px !important;}
+.range-intro-strip h2{margin:0 0 12px !important;}
+.range-intro-copy p{
+  margin:0 !important;
+  max-width:980px;
+  line-height:1.55 !important;
+}
+
+/* Main door + finish area */
+.range-door-colour-section{
+  padding-top:42px !important;
+  padding-bottom:28px !important;
+}
+.range-door-colour-grid,
+.range-main-grid{
+  align-items:start !important;
+}
+.range-door-visual,
+.range-door-image-wrap,
+.range-door-image-panel{
+  min-height:0 !important;
+}
+
+/* Keep all primary door cutouts presented like Abbotsbury */
+.range-door-visual img,
+.range-door-image-wrap img,
+.range-door-image-panel img,
+.range-main-door-image{
+  display:block;
+  width:auto !important;
+  max-width:72% !important;
+  max-height:520px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  object-fit:contain !important;
+}
+
+/* Right-hand copy */
+.range-product-panel .eyebrow{margin-bottom:10px !important;}
+.range-product-panel h2{margin:0 0 12px !important;}
+.range-product-panel > p,
+.range-product-panel .range-description{
+  margin:0 0 22px !important;
+  line-height:1.5 !important;
+}
+.range-selected-finish-clean{
+  margin-top:14px !important;
+  margin-bottom:28px !important;
+}
+.range-colour-group-head{
+  margin-top:0 !important;
+  margin-bottom:18px !important;
+}
+.range-colour-group-head .eyebrow{margin-bottom:8px !important;}
+.range-colour-group-head h3{margin:0 !important;}
+
+/* Colour swatches use the same scale and spacing */
+.range-colour-grid,
+.colour-grid,
+.finish-grid{
+  gap:12px !important;
+}
+.colour-option{
+  min-height:118px;
+}
+
+/* Any alternative-door section should follow Abbotsbury's section rhythm */
+.abbotsbury-door-style-strip,
+.alternative-door-styles,
+.range-door-styles{
+  margin-top:28px !important;
+  padding-top:26px !important;
+  padding-bottom:22px !important;
+  border-bottom:0 !important;
+}
+.abbotsbury-door-style-strip .eyebrow,
+.alternative-door-styles .eyebrow,
+.range-door-styles .eyebrow{
+  margin-bottom:8px !important;
+}
+.abbotsbury-door-style-strip h3,
+.alternative-door-styles h3,
+.range-door-styles h3{
+  margin:0 0 18px !important;
+}
+
+/* Technical specification mirrors Abbotsbury */
+.door-specification{
+  border-top:0 !important;
+  margin-top:0 !important;
+  padding-top:34px !important;
+}
+.door-specification .eyebrow{margin-bottom:8px !important;}
+.door-specification h2{margin:0 0 24px !important;}
+
+/* Actions and cabinet section */
+.range-action-row-clean{
+  margin-top:24px !important;
+  margin-bottom:34px !important;
+}
+.range-shop-section{
+  padding-top:48px !important;
+}
+
+/* Responsive consistency */
+@media(max-width:900px){
+  .range-door-visual img,
+  .range-door-image-wrap img,
+  .range-door-image-panel img,
+  .range-main-door-image{
+    max-width:68% !important;
+    max-height:440px !important;
+  }
+}
+@media(max-width:640px){
+  .range-intro-strip{padding-top:28px !important;padding-bottom:26px !important;}
+  .range-door-colour-section{padding-top:30px !important;}
+  .range-door-visual img,
+  .range-door-image-wrap img,
+  .range-door-image-panel img,
+  .range-main-door-image{
+    max-width:78% !important;
+    max-height:390px !important;
+  }
+}

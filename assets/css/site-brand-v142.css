@@ -1,0 +1,185 @@
+
+/* =========================================================
+   v142 — site-wide BKO colour direction
+   Deep forest + muted sage + warm stone.
+   No orange, no added boxes, no added decorative lines.
+   ========================================================= */
+
+:root{
+  --bko-forest:#34473c;
+  --bko-forest-dark:#28372f;
+  --bko-sage:#7d8978;
+  --bko-soft-sage:#a7afa1;
+  --bko-stone:#8a8177;
+  --bko-charcoal:#242723;
+  --bko-muted:#6f746d;
+}
+
+/* Global typography */
+body{
+  color:var(--bko-charcoal);
+}
+
+h1,h2,h3,h4,h5,h6{
+  color:var(--bko-charcoal);
+}
+
+.eyebrow,
+.kicker,
+.overline,
+.section-label{
+  color:var(--bko-sage) !important;
+}
+
+/* Navigation + header */
+header a:hover,
+.site-header a:hover,
+nav a:hover,
+.header a:hover{
+  color:var(--bko-forest) !important;
+}
+
+nav a[aria-current="page"],
+nav a.active,
+.site-header a.active{
+  color:var(--bko-forest) !important;
+}
+
+/* Main headings across home, collections, shop and range pages */
+.hero h1,
+.hero h2,
+.home-hero h1,
+.collections-hero h1,
+.range-intro-strip h2,
+.section-head h2,
+.range-shop-section .section-head h2{
+  color:var(--bko-forest) !important;
+}
+
+/* Supporting copy */
+.hero p,
+.section-head p,
+.range-intro-copy p,
+.range-description,
+.product-copy p{
+  color:var(--bko-muted) !important;
+}
+
+/* Buttons: preserve every existing shape/layout, change colour only */
+.btn.red,
+.btn.primary,
+button.primary,
+a.primary,
+.cta-primary,
+.range-action-row-clean .btn.red,
+.range-intro-actions .btn.red{
+  background:var(--bko-forest) !important;
+  border-color:var(--bko-forest) !important;
+  color:#fff !important;
+}
+
+.btn.red:hover,
+.btn.primary:hover,
+button.primary:hover,
+a.primary:hover,
+.cta-primary:hover,
+.range-action-row-clean .btn.red:hover,
+.range-intro-actions .btn.red:hover{
+  background:var(--bko-forest-dark) !important;
+  border-color:var(--bko-forest-dark) !important;
+}
+
+/* Secondary buttons retain white backgrounds but use the brand colour */
+.btn:not(.red):not(.primary),
+.btn.ghost,
+button.secondary{
+  border-color:var(--bko-forest) !important;
+  color:var(--bko-forest) !important;
+}
+
+/* General links */
+main a:not(.btn):not(.primary):hover{
+  color:var(--bko-forest) !important;
+}
+
+/* Collection/range cards */
+.range-card h3,
+.collection-card h3,
+.product-card h3,
+.card h3{
+  color:var(--bko-forest) !important;
+}
+
+/* Range page */
+.range-product-panel .eyebrow,
+.range-colour-group-head .eyebrow,
+.door-specification .eyebrow,
+.abbotsbury-door-style-strip .eyebrow{
+  color:var(--bko-sage) !important;
+}
+
+.range-product-panel h2,
+.abbotsbury-door-style-strip h3,
+.door-specification h2{
+  color:var(--bko-forest) !important;
+}
+
+.range-selected-finish-clean span{
+  color:var(--bko-sage) !important;
+}
+
+.range-selected-finish-clean strong{
+  color:var(--bko-forest) !important;
+}
+
+/* Existing selected states only — no new boxes or borders */
+.colour-option.selected,
+.colour-option.is-selected,
+.colour-option[aria-pressed="true"]{
+  border-color:var(--bko-forest) !important;
+}
+
+.colour-option.selected b,
+.colour-option.selected strong,
+.colour-option.is-selected b,
+.colour-option.is-selected strong{
+  color:var(--bko-forest) !important;
+}
+
+/* Product prices / useful emphasis */
+.price,
+.product-price,
+.total-price,
+[data-price]{
+  color:var(--bko-forest) !important;
+}
+
+/* Form focus and existing controls */
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:var(--bko-sage) !important;
+  outline-color:var(--bko-sage) !important;
+}
+
+/* Footer */
+footer h2,
+footer h3,
+footer h4,
+.site-footer h2,
+.site-footer h3,
+.site-footer h4{
+  color:var(--bko-soft-sage) !important;
+}
+
+footer a:hover,
+.site-footer a:hover{
+  color:var(--bko-soft-sage) !important;
+}
+
+/* Small existing icons / text accents */
+.icon-accent,
+.accent-text,
+.text-accent{
+  color:var(--bko-sage) !important;
+}

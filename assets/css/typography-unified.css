@@ -1,0 +1,201 @@
+
+/* =========================================================
+   V78 — unified BKO typography across every page
+   ========================================================= */
+
+:root{
+  --bko-font:"Montserrat","Helvetica Neue",Arial,sans-serif;
+}
+
+/* Everything inherits one font family */
+html,
+body,
+button,
+input,
+select,
+textarea,
+optgroup,
+option{
+  font-family:var(--bko-font) !important;
+}
+
+body{
+  font-weight:300 !important;
+  letter-spacing:0 !important;
+}
+
+/* Body copy */
+p,
+li,
+dd,
+dt,
+td,
+th,
+label,
+small,
+.meta,
+.description,
+.product-description,
+.range-description,
+.help-text,
+.note,
+.notice{
+  font-family:var(--bko-font) !important;
+  font-weight:300 !important;
+}
+
+/* Large editorial headings — thin, clean TKC-style appearance */
+h1,
+.h1{
+  font-family:var(--bko-font) !important;
+  font-weight:300 !important;
+  letter-spacing:-0.035em !important;
+  line-height:1.06 !important;
+}
+
+h2,
+.h2{
+  font-family:var(--bko-font) !important;
+  font-weight:300 !important;
+  letter-spacing:-0.025em !important;
+  line-height:1.12 !important;
+}
+
+h3,
+.h3{
+  font-family:var(--bko-font) !important;
+  font-weight:400 !important;
+  letter-spacing:-0.015em !important;
+  line-height:1.2 !important;
+}
+
+h4,
+h5,
+h6{
+  font-family:var(--bko-font) !important;
+  font-weight:400 !important;
+  letter-spacing:-0.01em !important;
+}
+
+/* Navigation */
+.site-header,
+.site-header a,
+.site-nav,
+.site-nav a,
+nav,
+nav a,
+.header-actions,
+.header-actions a,
+.top-strip,
+.menu-toggle{
+  font-family:var(--bko-font) !important;
+  font-weight:400 !important;
+  letter-spacing:0 !important;
+}
+
+/* Buttons / interactive controls */
+.btn,
+button,
+.button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.cta,
+.basket-button{
+  font-family:var(--bko-font) !important;
+  font-weight:500 !important;
+  letter-spacing:.045em !important;
+}
+
+/* Editorial eyebrow / category labels */
+.eyebrow,
+.kicker,
+.overline,
+.section-label,
+.category-label{
+  font-family:var(--bko-font) !important;
+  font-weight:500 !important;
+  letter-spacing:.16em !important;
+  text-transform:uppercase;
+}
+
+/* Product/range cards */
+.range-card,
+.range-card .meta,
+.range-card h3,
+.product-card,
+.product-card h3,
+.configured-product-card,
+.category-tile{
+  font-family:var(--bko-font) !important;
+}
+
+.range-card h3,
+.product-card h3{
+  font-weight:400 !important;
+}
+
+/* Range pages */
+.range-hero-title-block h1,
+.range-product-panel h2,
+.range-colour-head-clean h3,
+.door-spec-header h2{
+  font-family:var(--bko-font) !important;
+  font-weight:300 !important;
+}
+
+.range-selected-finish-clean strong,
+.colour-option,
+.colour-option *,
+.door-spec-row strong,
+.door-spec-row span{
+  font-family:var(--bko-font) !important;
+}
+
+/* Catalogue / configurator */
+.catalogue-page,
+.catalogue-page *,
+.configurator,
+.configurator *,
+.cabinet-modal,
+.cabinet-modal *,
+.basket-page,
+.basket-page *{
+  font-family:var(--bko-font) !important;
+}
+
+/* Forms/accounts */
+form,
+form *,
+.account-page,
+.account-page *,
+.login-page,
+.login-page *,
+.register-page,
+.register-page *{
+  font-family:var(--bko-font) !important;
+}
+
+/* Footer */
+.site-footer,
+.site-footer *{
+  font-family:var(--bko-font) !important;
+}
+
+/* Keep bold text restrained rather than overly heavy */
+strong,
+b{
+  font-family:var(--bko-font) !important;
+  font-weight:500 !important;
+}
+
+/* Prices need a little more presence */
+.price,
+.product-price,
+.cabinet-price,
+.total,
+.subtotal{
+  font-family:var(--bko-font) !important;
+  font-weight:500 !important;
+  letter-spacing:-.01em !important;
+}

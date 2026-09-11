@@ -1,0 +1,75 @@
+
+/* v189 - clean vertical doors shop */
+body .doors-page .doors-page-grid > .doors-range-card{
+  min-height:260px !important;
+}
+
+body .doors-page .doors-range-card > .doors-range-image{
+  width:280px !important;
+  height:260px !important;
+  min-width:280px !important;
+  min-height:260px !important;
+  max-width:280px !important;
+  max-height:260px !important;
+  padding:22px 34px !important;
+  background:#fff !important;
+  border-right:1px solid #eeeeea !important;
+}
+
+/* Let cut-outs visually merge into the page rather than sitting in an image tile */
+body .doors-page .doors-range-card > .doors-range-image img{
+  max-width:185px !important;
+  max-height:218px !important;
+  background:transparent !important;
+  mix-blend-mode:multiply;
+  object-fit:contain !important;
+  box-shadow:none !important;
+  border:0 !important;
+}
+
+body .doors-page .doors-range-card > .doors-range-copy{
+  padding:34px 48px !important;
+}
+
+body .doors-page .doors-range-meta{
+  margin-bottom:12px !important;
+}
+
+body .doors-page .doors-range-count{
+  font-size:10px !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+  color:#7b817b !important;
+}
+
+body .doors-page .doors-range-description{
+  max-width:700px !important;
+  margin-bottom:15px !important;
+}
+
+@media(max-width:850px){
+  body .doors-page .doors-range-card > .doors-range-image{
+    width:210px !important;
+    min-width:210px !important;
+    max-width:210px !important;
+    height:235px !important;
+    min-height:235px !important;
+    max-height:235px !important;
+  }
+}
+
+@media(max-width:600px){
+  body .doors-page .doors-range-card > .doors-range-image{
+    width:125px !important;
+    min-width:125px !important;
+    max-width:125px !important;
+    height:210px !important;
+    min-height:210px !important;
+    max-height:210px !important;
+    padding:18px 12px !important;
+  }
+  body .doors-page .doors-range-card > .doors-range-image img{
+    max-width:96px !important;
+    max-height:172px !important;
+  }
+}

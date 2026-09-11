@@ -1,0 +1,110 @@
+
+/* v143: tighter range pages + remove line beneath alternative door styles */
+
+/* Remove the divider directly beneath the alternative door styles */
+.abbotsbury-door-style-strip,
+.abbotsbury-door-style-grid,
+.abbotsbury-door-style-section {
+  border-bottom: 0 !important;
+}
+
+/* The divider may be attached to the following specification section */
+.door-specification {
+  border-top: 0 !important;
+}
+
+/* Tighten the collection introduction */
+.range-intro-strip {
+  padding-top: 38px !important;
+  padding-bottom: 34px !important;
+}
+.range-intro-strip .eyebrow {
+  margin-bottom: 12px !important;
+}
+.range-intro-strip h2 {
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+.range-intro-copy p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.55 !important;
+}
+
+/* Reduce the large blank gap before the main door/finish content */
+.range-door-colour-section {
+  padding-top: 42px !important;
+}
+.range-product-panel .eyebrow {
+  margin-bottom: 10px !important;
+}
+.range-product-panel h2 {
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+.range-product-panel > p,
+.range-product-panel .range-description {
+  margin-top: 0 !important;
+  margin-bottom: 22px !important;
+  line-height: 1.5 !important;
+}
+.range-selected-finish-clean {
+  margin-top: 14px !important;
+  margin-bottom: 28px !important;
+}
+
+/* Finish heading and colour choices closer together */
+.range-colour-group-head {
+  margin-top: 0 !important;
+  margin-bottom: 18px !important;
+}
+.range-colour-group-head .eyebrow {
+  margin-bottom: 8px !important;
+}
+.range-colour-group-head h3 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Alternative doors: reduce vertical whitespace */
+.abbotsbury-door-style-strip {
+  margin-top: 28px !important;
+  padding-top: 26px !important;
+  padding-bottom: 22px !important;
+}
+.abbotsbury-door-style-strip .eyebrow {
+  margin-bottom: 8px !important;
+}
+.abbotsbury-door-style-strip h3 {
+  margin-top: 0 !important;
+  margin-bottom: 18px !important;
+}
+.abbotsbury-door-style-grid {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.abbotsbury-door-style-item {
+  margin-bottom: 0 !important;
+}
+
+/* Specification follows the doors more naturally */
+.door-specification {
+  margin-top: 0 !important;
+  padding-top: 34px !important;
+}
+.door-specification .eyebrow {
+  margin-bottom: 8px !important;
+}
+.door-specification h2 {
+  margin-top: 0 !important;
+  margin-bottom: 24px !important;
+}
+
+/* Reduce oversized gaps between subsequent sections */
+.range-action-row-clean {
+  margin-top: 24px !important;
+  margin-bottom: 34px !important;
+}
+.range-shop-section {
+  padding-top: 48px !important;
+}

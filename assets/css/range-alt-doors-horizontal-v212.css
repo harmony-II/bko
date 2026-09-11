@@ -1,0 +1,129 @@
+
+/* v212 — make every range's Alternative door styles match Abbotsbury exactly */
+
+body .abbotsbury-door-style-strip{
+  margin-top:34px !important;
+  padding-top:28px !important;
+  border-top:1px solid #e5e5df !important;
+  width:100% !important;
+}
+
+body .abbotsbury-door-style-strip-head{
+  display:flex !important;
+  align-items:flex-end !important;
+  justify-content:space-between !important;
+  gap:28px !important;
+  margin-bottom:22px !important;
+}
+
+body .abbotsbury-door-style-strip-head h3{
+  margin:5px 0 0 !important;
+  font-size:25px !important;
+  font-weight:300 !important;
+}
+
+body .abbotsbury-door-style-strip-head p{
+  max-width:420px !important;
+  margin:0 !important;
+  font-size:13px !important;
+  line-height:1.5 !important;
+  color:#77786f !important;
+  text-align:right !important;
+}
+
+/* Critical fix: always horizontal, with the exact same 5-column geometry as Abbotsbury */
+body .abbotsbury-door-style-list{
+  display:grid !important;
+  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+  grid-auto-flow:row !important;
+  gap:24px !important;
+  align-items:start !important;
+  width:100% !important;
+}
+
+body .abbotsbury-door-style-item{
+  display:block !important;
+  min-width:0 !important;
+  width:auto !important;
+  text-align:center !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+body .abbotsbury-door-style-image{
+  width:100% !important;
+  height:230px !important;
+  min-height:230px !important;
+  max-height:230px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:10px 6px !important;
+  margin:0 !important;
+  background:#fafaf8 !important;
+  box-sizing:border-box !important;
+}
+
+body .abbotsbury-door-style-image img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  margin:0 !important;
+  padding:0 !important;
+  mix-blend-mode:normal !important;
+  filter:none !important;
+  transform:none !important;
+}
+
+body .abbotsbury-door-style-item span{
+  display:block !important;
+  margin-top:11px !important;
+  padding:0 !important;
+  font-size:12px !important;
+  line-height:1.3 !important;
+  color:#555 !important;
+  text-align:center !important;
+}
+
+/* Neutralise older generic scripts/styles that were stacking some ranges vertically */
+body .v167-door-options .abbotsbury-door-style-list,
+body .bko-clean-alt-doors .abbotsbury-door-style-list{
+  display:grid !important;
+  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+}
+body .v167-door-option-item,
+body .bko-clean-alt-doors .abbotsbury-door-style-item{
+  width:auto !important;
+  display:block !important;
+}
+
+/* Preserve Abbotsbury's existing responsive behaviour */
+@media(max-width:900px){
+  body .abbotsbury-door-style-strip-head{
+    align-items:flex-start !important;
+    flex-direction:column !important;
+    gap:8px !important;
+  }
+  body .abbotsbury-door-style-strip-head p{
+    text-align:left !important;
+  }
+  body .abbotsbury-door-style-list{
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  }
+}
+
+@media(max-width:600px){
+  body .abbotsbury-door-style-list{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:18px !important;
+  }
+  body .abbotsbury-door-style-image{
+    height:190px !important;
+    min-height:190px !important;
+    max-height:190px !important;
+  }
+}

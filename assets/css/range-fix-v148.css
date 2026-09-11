@@ -1,0 +1,104 @@
+
+/* v148 — fix broken intro positioning and stray header block */
+
+/* ---------- Header safety ---------- */
+/* Prevent accidental oversized pseudo-elements / positioned blocks in header */
+.site-header,
+header,
+.main-header,
+.top-header,
+.navbar,
+.header-inner{
+  overflow:visible !important;
+}
+
+.site-header::before,
+.site-header::after,
+header::before,
+header::after,
+.main-header::before,
+.main-header::after{
+  display:none !important;
+  content:none !important;
+}
+
+/* Keep header children in normal flow and stop stray white overlay blocks */
+.site-header > *,
+header > *,
+.main-header > *{
+  position:relative;
+  z-index:auto;
+}
+
+/* ---------- Range intro ---------- */
+.range-intro-strip{
+  padding:30px 0 28px !important;
+  margin:0 !important;
+}
+
+.range-intro-grid{
+  display:grid !important;
+  grid-template-columns:minmax(260px,.78fr) minmax(0,1.22fr) !important;
+  gap:56px !important;
+  align-items:end !important;
+}
+
+/* Keep label + range name together */
+.range-intro-copy{
+  display:grid !important;
+  grid-template-columns:minmax(260px,.78fr) minmax(0,1.22fr) !important;
+  gap:56px !important;
+  grid-column:1 / -1 !important;
+  align-items:end !important;
+}
+
+.range-intro-copy .eyebrow{
+  grid-column:1 !important;
+  margin:0 0 8px !important;
+}
+
+.range-intro-copy h2{
+  grid-column:1 !important;
+  margin:0 !important;
+  line-height:1.02 !important;
+}
+
+.range-intro-copy p{
+  grid-column:2 !important;
+  grid-row:1 / span 2 !important;
+  align-self:end !important;
+  margin:0 !important;
+  max-width:none !important;
+  line-height:1.55 !important;
+  padding:0 0 2px !important;
+}
+
+/* Keep next section compact */
+.range-door-colour-section{
+  padding-top:34px !important;
+  margin-top:0 !important;
+}
+
+/* Responsive */
+@media(max-width:760px){
+  .range-intro-grid,
+  .range-intro-copy{
+    grid-template-columns:1fr !important;
+    gap:12px !important;
+  }
+
+  .range-intro-copy .eyebrow,
+  .range-intro-copy h2,
+  .range-intro-copy p{
+    grid-column:1 !important;
+    grid-row:auto !important;
+  }
+
+  .range-intro-strip{
+    padding:24px 0 22px !important;
+  }
+
+  .range-door-colour-section{
+    padding-top:28px !important;
+  }
+}

@@ -1,0 +1,70 @@
+.site-header #siteNav.nav-direct-v191 > a[href="catalogue.html"]{display:flex!important;visibility:visible!important;opacity:1!important}
+
+@media(min-width:761px){
+	.site-header,
+	.site-header .header-inner{
+		height:128px!important;
+		min-height:128px!important;
+	}
+	.site-header .header-inner{
+		display:grid!important;
+		width:calc(100% - 80px)!important;
+		max-width:1600px!important;
+		margin-left:auto!important;
+		margin-right:auto!important;
+		grid-template-columns:1fr auto 1fr!important;
+		grid-template-rows:74px 54px!important;
+	}
+	.site-header .header-inner .brand{
+		grid-column:2!important;
+		grid-row:1!important;
+		position:relative!important;
+		left:auto!important;
+		right:auto!important;
+		transform:none!important;
+	}
+	.site-header .header-inner .nav-direct-v191{
+		position:static!important;
+		grid-column:1 / -1!important;
+		grid-row:2!important;
+		left:auto!important;
+		right:auto!important;
+		width:calc(100vw - 80px)!important;
+		margin-left:calc((100vw - 100%) / -2 + 40px)!important;
+		margin-right:0!important;
+		transform:none!important;
+	}
+	.site-header .nav-direct-v191 > a{
+		flex:1 1 0!important;
+		height:54px!important;
+		min-height:54px!important;
+		text-align:center!important;
+	}
+}
+
+.page-hero > .container,
+.home-hero-copy,
+.range-hero-title-block,
+.range-intro-copy,
+.doors-page-hero,
+.doors-page-heading,
+.planner-topbar .project-title{
+	text-align:center!important;
+}
+
+.page-hero p,
+.home-hero-copy > p,
+.range-intro-copy > p,
+.doors-page-heading > p{
+	margin-left:auto!important;
+	margin-right:auto!important;
+}
+
+.page-hero h1,
+.home-hero-copy h1,
+.range-hero-title-block h1,
+.doors-page-hero h1,
+.doors-page-heading h2,
+.planner-topbar h1{
+	text-align:center!important;
+}

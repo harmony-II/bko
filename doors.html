@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Kitchen Doors | Buy Kitchens Online</title>
+<meta content="Shop BKO kitchen cabinets by type, width and product code using the latest revised VAT-inclusive selling prices." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="assets/css/site.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/typography-unified.css?v=78" rel="stylesheet"/>
+<link href="assets/css/site-brand-v142.css?v=142" rel="stylesheet"/>
+<link href="assets/css/shop-doors-page-v153.css?v=181" rel="stylesheet"/>
+<style>
+[data-collection-href]{cursor:pointer}
+</style>
+<link href="assets/css/global-consistency-v185.css?v=186" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/doors-vertical-shop-v188.css?v=188">
+<link rel="stylesheet" href="assets/css/doors-clean-v189.css?v=189">
+<link rel="stylesheet" href="assets/css/top-line-fix-v190.css?v=190">
+<link rel="stylesheet" href="assets/css/direct-nav-v191.css?v=191">
+<link rel="stylesheet" href="assets/css/two-row-header-v192.css?v=192">
+<link rel="stylesheet" href="assets/css/header-clean-v195.css?v=195">
+<link rel="stylesheet" href="assets/css/header-wide-v196.css?v=196">
+<link rel="stylesheet" href="assets/css/site-cleanup-v197.css?v=197">
+<link rel="stylesheet" href="assets/css/header-flow-fix-v199.css?v=199">
+<link rel="stylesheet" href="assets/css/screen-fix-v201.css?v=201">
+<link rel="stylesheet" href="assets/css/category-nav-v202.css?v=207">
+<link rel="stylesheet" href="assets/css/doors-configurator-v208.css?v=209">
+<link rel="stylesheet" href="assets/css/header-refinement-v209.css?v=209">
+<link rel="stylesheet" href="assets/css/units-nav-visible-v227.css?v=233">
+<link rel="stylesheet" href="assets/css/editorial-refresh-v240.css?v=268">
+</head>
+<body>
+<script>
+(function(){
+function cleanTopText(){
+ var b=document.body;if(!b)return;
+ Array.from(b.childNodes).forEach(function(n){
+   if(n.nodeType===3 && /^\s*\\n\s*$/.test(n.nodeValue||'')) n.remove();
+ });
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',cleanTopText);
+else cleanTopText();
+})();
+</script><div class="top-strip">Cabinets delivered in as little as 2 weeks <span>·</span> Nationwide delivery</div><header class="site-header">
+<div class="container header-inner">
+<a aria-label="Buy Kitchens Online home" class="brand" href="index.html">
+<img alt="Buy Kitchens Online" src="assets/images/brand/bko-logo-olive.png"/>
+</a>
+<button aria-controls="siteNav" aria-expanded="false" aria-label="Open menu" class="menu-toggle" type="button">
+<span></span><span></span><span></span>
+</button>
+<nav aria-label="Main navigation" class="nav nav-direct-v191" id="siteNav">
+<a href="ranges.html">Collections</a>
+<a href="catalogue.html">Units</a>
+<a href="doors.html">Doors</a>
+<a href="handles.html">Handles</a>
+<a href="worktops.html">Worktops</a>
+<a href="appliances.html">Appliances</a>
+<a href="sinks-taps.html">Sinks &amp; Taps</a>
+<a href="builder.html">Design your kitchen</a>
+<a href="delivery.html">Delivery</a>
+<a href="help.html">Help</a>
+</nav>
+<div class="header-actions">
+<a class="btn ghost login-link" data-login-label="" href="login.html">Login</a>
+<a class="btn primary basket-link" href="basket.html">Basket <span class="basket-pill" data-basket-count="">0</span></a>
+</div>
+</div>
+</header><main class="doors-page">
+<section class="doors-page-hero">
+<div class="container doors-page-hero-inner">
+<div class="breadcrumbs"><a href="index.html">Home</a> / Kitchen doors</div>
+<div class="eyebrow">SHOP</div>
+<h1>Kitchen doors</h1>
+<p>Choose a collection below or configure a door directly by colour, style and size.</p>
+</div>
+</section>
+
+<section class="doors-configurator-v208" id="doorConfiguratorV208">
+  <div class="container">
+    <div class="doors-config-head-v208">
+      <div>
+        <div class="eyebrow">CONFIGURE &amp; BUY</div>
+        <h2>Configure your kitchen door</h2>
+        <p>Select a collection, finish, door style and size. Product codes and final prices can be added when available.</p>
+      </div>
+      <div class="doors-config-selected-v208">
+        <span>Selected collection</span>
+        <strong id="doorConfigSelectedRangeV208">Abbotsbury</strong>
+      </div>
+    </div>
+
+    <div class="doors-config-body-v208">
+      <div class="doors-config-preview-v208">
+        <img id="doorConfigPreviewV208" alt="Selected kitchen door">
+      </div>
+
+      <div class="doors-config-fields-v208">
+        <label>
+          <span>Collection</span>
+          <select id="doorConfigRangeV208"></select>
+        </label>
+        <label>
+          <span>Colour</span>
+          <select id="doorConfigColourV208"></select>
+        </label>
+        <label>
+          <span>Door type</span>
+          <select id="doorConfigTypeV208"></select>
+        </label>
+        <label>
+          <span>Door size</span>
+          <select id="doorConfigSizeV208"></select>
+        </label>
+        <label>
+          <span>Quantity</span>
+          <input id="doorConfigQtyV208" type="number" min="1" step="1" value="1">
+        </label>
+      </div>
+
+      <div class="doors-config-price-v208">
+        <span>Placeholder price</span>
+        <strong id="doorConfigPriceV208">£49.00</strong>
+        <small>Temporary price only. Product codes and final prices will be added later.</small>
+        <button class="btn primary" type="button" id="doorConfigAddV208">Add door to basket</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="doors-page-grid-wrap">
+<div class="doors-page-heading">
+<div>
+<div class="eyebrow">OUR RANGES</div>
+<h2>Browse kitchen doors by collection</h2>
+</div>
+<p>13 ranges</p>
+</div>
+<div class="doors-page-grid">
+<a class="doors-range-card" href="range-abbotsbury.html">
+<div class="doors-range-image">
+<img alt="Abbotsbury door" src="assets/images/normalised-door-cutouts-v118/abbotsbury-cutout-porcelain.png"/>
+</div>
+<div class="doors-range-copy" data-collection-href="range-abbotsbury.html">
+<div class="doors-shop-topline">
+<span class="doors-range-kicker">Slim shaker</span>
+<span class="doors-range-count">Ex-stock colours</span>
+</div>
+<h2>Abbotsbury</h2>
+<div class="doors-range-meta">
+<span>Painted woodgrain</span>
+<span>Made for kitchens</span>
+</div>
+<p class="doors-range-description">A narrow-frame shaker with an authentic painted woodgrain finish. A versatile choice for both contemporary and traditional kitchens.</p>
+<span class="doors-range-link">Explore Abbotsbury <span aria-hidden="true">→</span></span>
+</div>
+</a>
+<a class="doors-range-card" href="range-chatsworth.html">
+<div class="doors-range-image">
+<img alt="Chatsworth door" src="assets/images/normalised-door-cutouts-v118/chatsworth-cutout-porcelain-1.png"/>
+</div>
+<div class="doors-range-copy" data-collection-href="range-chatsworth.html">
+<div class="doors-shop-topline">
+<span class="doors-range-kicker">Slim shaker</span>
+<span class="doors-range-count">Ex-stock colours</span>
+</div>
+<h2>Chatsworth</h2>
+<div class="doors-range-meta">
+<span>Smooth painted</span>
+<span>Made for kitchens</span>
+</div>
+<p class="doors-range-description">A refined slim-frame shaker with a smooth painted finish, giving the classic shaker look a cleaner, more contemporary feel.</p>
+<span class="doors-range-link">Explore Chatsworth <span aria-hidden="true">→</span></span>
+</div>
+</a>
+<a class="doors-range-card" href="range-delamere.html">
+<div class="doors-range-image">
+<img alt="Delamere door" src="assets/images/normalised-door-cutouts-v118/delamere-standard-door-kitchen-uform.png"/>
+</div>
+<div class="doors-range-copy" data-collection-href="range-delamere.html">
+<div class="doors-shop-topline">
+<span class="doors-range-kicker">Shaker</span>
+<span class="doors-range-count">Ex-stock colours</span>
+</div>
+<h2>Delamere</h2>
+<div class="doors-range-meta">
+<span>Painted finish</span>
+<span>Made for kitchens</span>
+</div>
+<p class="doors-range-description">A balanced shaker design with simple proportions and a timeless look that works comfortably across classic and modern schemes.</p>
+<span class="doors-range-link">Explore Delamere <span aria-hidden="true">→</span></span>
+</div>
+</a>
+<a class="doors-range-card" href="range-jersey.html">
+<div class="doors-range-image">
+<img alt="Jersey door" src="assets/images/normalised-door-cutouts-v118/jersey-light-oak.png"/>
+</div>
+<div class="doors-range-copy" data-collection-href="range-jersey.html">
+<div class="doors-shop-topline">
+<span class="doors-range-kicker">Shaker</span>
+<span class="doors-range-count">Ex-stock colours</span>
+</div>
+<h2>Jersey</h2>
+<div class="doors-range-meta">
+<span>Woodgrain finish</span>
+<span>Made for kitchens</span>
+</div>
+<p class="doors-range-description">A warm, characterful shaker door with a natural-looking woodgrain finish, ideal for relaxed and traditional kitchen designs.</p>
+<span class="doors-range-link">Explore Jersey <span aria-hidden="true">→</span></span>
+</div>
+</a>
+<a class="doors-range-card" href="range-matlock.html">
+<div class="doors-range-image">
+<img alt="Matlock door" src="assets/images/normalised-door-cutouts-v118/matlock-standard-door-kitchen-uform.png"/>
+</div>
+<div class="doors-range-copy" data-collection-href="range-matlock.html">
+<div class="doors-shop-topline">
+<span class="doors-range-kicker">Shaker</span>
+<span class="doors-range-count">Ex-stock colours</span>
+</div>
+<h2>Matlock</h2>
+<div class="doors-range-meta">
+<span>Painted finish</span>
+<span>Made for kitchens</span>
+</div>
+<p class="doors-range-description">A clean shaker door with understated detailing, designed to work across a broad mix of colours, worktops and handle styles.</p>
+<span class="doors-range-link">Explore Matlock <span aria-hidden="true">→</span></span>
+</div>
+</a>
+<a class="doors-range-card" href="range-norwood.html">
+<div class="doors-range-image">
+<img alt="Norwood door" src="assets/images/normalised-door-cutouts-v118/uform-norwood-standard-door.png"/>
+</div>
+<div class="doors-range-copy" data-collection-href="range-norwood.html">
+<div class="doors-shop-topline">
+<span class="doors-range-kicker">Contemporary shaker</span>
+<span class="doors-range-count">Ex-stock colours</span>
+</div>
+<h2>Norwood</h2>
+<div class="doors-range-meta">
+<span>Painted finish</span>
+<span>Made for kitchens</span>
+</div>
+<p class="doors-range-description">A modern interpretation of the shaker door with crisp detailing and a versatile painted finish for streamlined kitchen schemes.</p>
+<span class="doors-range-link">Explore Norwood <span aria-hidden="true">→</span></span>
+</div>
+</a>
+<a class="doors-range-card" href="range-papplewick.html">
+<div class="doors-range-image">
+<img alt="Papplewick door" src="assets/images/normalised-door-cutouts-v118/papplewick-standard-door-rgb.png"/>
+</div>
+<div class="doors-range-copy" data-collection-href="range-papplewick.html">
+<div class="doors-shop-topline">
+<span class="doors-range-kicker">Shaker</span>
+<span class="doors-range-count">Ex-stock colours</span>
+</div>
+<h2>Papplewick</h2>
+<div class="doors-range-meta">
+<span>Painted finish</span>
+<span>Made for kitchens</span>
+</div>
+<p class="doors-range-description">A classic shaker-inspired door with carefully proportioned rails and stiles for a smart, enduring kitchen style.</p>
+<span class="doors-range-link">Explore Papplewick <span aria-hidden="true">→</span></span>
+</div>
+</a>
+<a class="doors-range-card" href="range-sherwood-gloss.html">
+<div class="doors-range-image">
+<img alt="Sherwood Gloss door" src="assets/images/normalised-door-cutouts-v118/sherwood-gloss-standard-base-door-kitchen-uform.png"/>
+</div>
+<div class="doors-range-copy" data-collection-href="range-sherwood-gloss.html">
+<div class="doors-shop-topline">
+<span class="doors-range-kicker">Slab</span>
+<span class="doors-range-count">Ex-stock colours</span>
+</div>
+<h2>Sherwood Gloss</h2>
+<div class="doors-range-meta">
+<span>High gloss</span>
+<span>Made for kitchens</span>
+</div>
+<p class="doors-range-description">A sleek flat-fronted door with a reflective gloss finish, suited to clean contemporary kitchens and minimalist layouts.</p>
+<span class="doors-range-link">Explore Sherwood Gloss <span aria-hidden="true">→</span></span>
+</div>
+</a>
+<a class="doors-range-card" href="range-sherwood-matte.html">
+<div class="doors-range-image">
+<img alt="Sherwood Matte door" src="assets/images/normalised-door-cutouts-v118/sherwood-matte-standard-base-door-kitchen-uform.png"/>
+</div>
+<div class="doors-range-copy">
+<div class="doors-shop-topline">
+<span class="doors-range-kicker">Slab</span>
+<span class="doors-range-count">Ex-stock colours</span>
+</div>
+<h2>Sherwood Matte</h2>
+<div class="doors-range-meta">
+<span>Matte finish</span>
+<span>Made for kitchens</span>
+</div>
+<p class="doors-range-description">A simple flat slab door with a soft matte appearance for a calm, modern and handleless-friendly kitchen aesthetic.</p>
+<span class="doors-range-link">Explore Sherwood Matte <span aria-hidden="true">→</span></span>
+</div>
+</a>
+<a class="doors-range-card" href="range-wensley.html">
+<div class="doors-range-image">
+<img alt="Wensley door" src="assets/images/normalised-door-cutouts-v118/wensley-standard-door-kitchen-uform.png"/>
+</div>
+<div class="doors-range-copy" data-collection-href="range-wensley.html">
+<div class="doors-shop-topline">
+<span class="doors-range-kicker">Shaker</span>
+<span class="doors-range-count">Ex-stock colours</span>
+</div>
+<h2>Wensley</h2>
+<div class="doors-range-meta">
+<span>Painted finish</span>
+<span>Made for kitchens</span>
+</div>
+<p class="doors-range-description">A versatile shaker collection with a broad colour choice, making it easy to create anything from subtle neutral schemes to bolder kitchens.</p>
+<span class="doors-range-link">Explore Wensley <span aria-hidden="true">→</span></span>
+</div>
+</a>
+<a class="doors-range-card" href="range-oakham-gloss.html">
+<div class="doors-range-image">
+<img alt="Oakham Gloss door" src="assets/images/normalised-door-cutouts-v118/oakham-gloss-standard-door-kitchen-uform.png"/>
+</div>
+<div class="doors-range-copy">
+<div class="doors-shop-topline">
+<span class="doors-range-kicker">Slab</span>
+<span class="doors-range-count">Ex-stock colours</span>
+</div>
+<h2>Oakham Gloss</h2>
+<div class="doors-range-meta">
+<span>High gloss</span>
+<span>Made for kitchens</span>
+</div>
+<p class="doors-range-description">A contemporary flat door with a polished gloss surface, designed for simple lines and a bright, streamlined kitchen finish.</p>
+<span class="doors-range-link">Explore Oakham Gloss <span aria-hidden="true">→</span></span>
+</div>
+</a>
+<a class="doors-range-card" href="range-oakham-soft-matte.html">
+<div class="doors-range-image">
+<img alt="Oakham Soft Matte door" src="assets/images/normalised-door-cutouts-v118/oakham-soft-matte-white-swatch.png"/>
+</div>
+<div class="doors-range-copy">
+<div class="doors-shop-topline">
+<span class="doors-range-kicker">Slab</span>
+<span class="doors-range-count">Ex-stock colours</span>
+</div>
+<h2>Oakham Soft Matte</h2>
+<div class="doors-range-meta">
+<span>Soft matte</span>
+<span>Made for kitchens</span>
+</div>
+<p class="doors-range-description">A refined slab door with a soft matte surface for a clean, understated look with a premium contemporary feel.</p>
+<span class="doors-range-link">Explore Oakham Soft Matte <span aria-hidden="true">→</span></span>
+</div>
+</a>
+
+<a class="doors-range-card" href="range-knightsbridge.html">
+<div class="doors-range-image">
+<img alt="Knightsbridge door" src="assets/images/normalised-door-cutouts-v118/knightsbridge-cutout.png"/>
+</div>
+<div class="doors-range-copy" data-collection-href="range-knightsbridge.html">
+<div class="doors-shop-topline">
+<span class="doors-range-kicker">Shaker</span>
+<span class="doors-range-count">Ex-stock colours</span>
+</div>
+<h2>Knightsbridge</h2>
+<div class="doors-range-meta">
+<span>Painted woodgrain</span><span>Made for kitchens</span>
+</div>
+<p class="doors-range-description">A classic shaker with a painted woodgrain finish and a versatile palette suited to both traditional and contemporary kitchens.</p>
+<span class="doors-range-link">Explore Knightsbridge <span aria-hidden="true">→</span></span>
+</div>
+</a>
+</div>
+</section>
+</main>
+<script src="assets/js/range-data.js?v=241"></script>
+<script src="assets/js/doors-configurator-v208.js?v=208"></script>
+<script>
+document.addEventListener('click', function(e){
+  const card = e.target.closest('[data-collection-href]');
+  if (!card) return;
+  if (e.target.closest('a,button')) return;
+  window.location.href = card.getAttribute('data-collection-href');
+});
+</script>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div class="footer-brand-block">
+<a aria-label="Buy Kitchens Online home" class="footer-brand" href="index.html">
+<img alt="Buy Kitchens Online" src="assets/images/brand/bko-logo-olive.png"/>
+</a>
+<p>Premium rigid kitchens, simple online pricing and nationwide delivery.</p>
+</div>
+<div>
+<h4>Shop</h4>
+<a href="ranges.html">Kitchen collections</a>
+<a href="doors.html">Doors</a>
+<a href="catalogue.html">Kitchen cabinets</a>
+<a href="handles.html">Handles</a>
+<a href="worktops.html">Worktops</a>
+<a href="appliances.html">Appliances</a>
+</div>
+<div>
+<h4>Customer care</h4>
+<a href="delivery.html">Delivery</a>
+<a href="help.html">Help centre</a>
+<a href="contact.html">Contact</a>
+<a href="trade.html">Trade accounts</a>
+</div>
+<div>
+<h4>Your account</h4>
+<a href="login.html">Login</a>
+<a href="register.html">Create account</a>
+<a href="dashboard.html">My kitchens</a>
+<a href="basket.html">Basket</a>
+</div>
+</div>
+<div class="container footer-bottom">© 2026 Buy Kitchens Online.</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+  var nav = header.querySelector('.nav-direct-v191');
+  var actions = header.querySelector('.header-actions');
+  if (!nav || !actions) return;
+
+  var links = Array.from(nav.querySelectorAll('a'));
+  var design = links.find(function(a){
+    var txt = (a.textContent || '').trim().toLowerCase();
+    return txt === 'design your kitchen' ||
+           (a.getAttribute('href') || '').toLowerCase().indexOf('planner') !== -1 ||
+           (a.getAttribute('href') || '').toLowerCase().indexOf('design') !== -1;
+  });
+
+  if (design) {
+    design.classList.add('design-kitchen-top-v194');
+    var login = Array.from(actions.querySelectorAll('a,button')).find(function(el){
+      return (el.textContent || '').trim().toLowerCase() === 'login';
+    });
+    if (login) actions.insertBefore(design, login);
+    else actions.insertBefore(design, actions.firstChild);
+  }
+});
+</script>
+
+<script src="assets/js/app.js?v=229"></script>
+</body>
+</html>

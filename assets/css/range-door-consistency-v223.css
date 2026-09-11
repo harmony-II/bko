@@ -1,0 +1,35 @@
+/* Consistent full-door presentation across every kitchen range. */
+.range-door-colour-section .range-door-left-column{
+  min-width:0!important;
+}
+.range-door-colour-section .range-door-large{
+  box-sizing:border-box!important;
+  width:100%!important;
+  height:620px!important;
+  min-height:0!important;
+  padding:28px!important;
+  overflow:hidden!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  background:#fff!important;
+}
+.range-door-colour-section .range-door-large > img{
+  display:block!important;
+  width:auto!important;
+  height:auto!important;
+  max-width:100%!important;
+  max-height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  margin:auto!important;
+  background:transparent!important;
+  mix-blend-mode:normal!important;
+  filter:none!important;
+}
+@media (max-width:900px){
+  .range-door-colour-section .range-door-large{height:500px!important;padding:22px!important}
+}
+@media (max-width:600px){
+  .range-door-colour-section .range-door-large{height:400px!important;padding:18px!important}
+}

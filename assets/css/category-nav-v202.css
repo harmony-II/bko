@@ -1,0 +1,222 @@
+
+/* v202 — full-width coloured category navigation */
+
+:root{
+  --bko-nav-band:#405449;
+  --bko-nav-band-hover:#33453c;
+  --bko-nav-band-active:#2d3f36;
+  --bko-nav-text:#ffffff;
+}
+
+/* Desktop */
+@media (min-width:761px){
+
+  .site-header{
+    background:#fff !important;
+  }
+
+  /* Lower category row becomes a strong full-width band */
+  .site-header .nav-direct-v191{
+    background:var(--bko-nav-band) !important;
+    border-top:0 !important;
+    border-bottom:0 !important;
+    height:56px !important;
+    min-height:56px !important;
+    width:100% !important;
+    gap:0 !important;
+    padding:0 !important;
+    display:flex !important;
+    align-items:stretch !important;
+    justify-content:center !important;
+    overflow:hidden !important;
+  }
+
+  .site-header .nav-direct-v191 > a{
+    flex:1 1 0 !important;
+    height:56px !important;
+    min-height:56px !important;
+    padding:0 14px !important;
+    margin:0 !important;
+    border:0 !important;
+    border-right:1px solid rgba(255,255,255,.12) !important;
+    background:transparent !important;
+    color:var(--bko-nav-text) !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    font-size:12px !important;
+    line-height:1 !important;
+    font-weight:500 !important;
+    letter-spacing:.015em !important;
+    text-decoration:none !important;
+    white-space:nowrap !important;
+    box-sizing:border-box !important;
+  }
+
+  .site-header .nav-direct-v191 > a:first-child{
+    border-left:1px solid rgba(255,255,255,.12) !important;
+  }
+
+  .site-header .nav-direct-v191 > a::before{
+    display:none !important;
+    content:none !important;
+  }
+
+  .site-header .nav-direct-v191 > a:hover{
+    background:var(--bko-nav-band-hover) !important;
+    color:#fff !important;
+  }
+
+  .site-header .nav-direct-v191 > a[aria-current="page"]{
+    background:var(--bko-nav-band-active) !important;
+    color:#fff !important;
+  }
+
+  /* Slightly larger top row to balance the stronger navigation below */
+  .site-header .header-inner{
+    grid-template-rows:76px 56px !important;
+    min-height:132px !important;
+    height:132px !important;
+  }
+
+  .site-header{
+    min-height:132px !important;
+    height:132px !important;
+  }
+
+  .site-header .brand img{
+    height:40px !important;
+    max-height:40px !important;
+  }
+
+  .site-header .header-actions .btn,
+  .site-header .header-actions .design-kitchen-top-v194{
+    height:42px !important;
+    min-height:42px !important;
+    font-size:11px !important;
+  }
+}
+
+/* Large desktop — let the text breathe */
+@media (min-width:1400px){
+  .site-header .nav-direct-v191 > a{
+    font-size:12.5px !important;
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+}
+
+/* Laptop widths */
+@media (max-width:1180px) and (min-width:761px){
+  .site-header .nav-direct-v191 > a{
+    font-size:10.5px !important;
+    padding-left:9px !important;
+    padding-right:9px !important;
+  }
+}
+
+/* Mobile menu uses same colour family */
+@media (max-width:760px){
+  .site-header .nav-direct-v191.open,
+  .site-header .nav-direct-v191.is-open,
+  .site-header .nav-direct-v191[data-open="true"]{
+    background:var(--bko-nav-band) !important;
+  }
+
+  .site-header .nav-direct-v191 > a{
+    color:#fff !important;
+    border-bottom:1px solid rgba(255,255,255,.12) !important;
+    background:transparent !important;
+  }
+
+  .site-header .nav-direct-v191 > a:hover{
+    background:var(--bko-nav-band-hover) !important;
+  }
+}
+
+/* v204 — polished edge-to-edge category band */
+@media (min-width:761px){
+  .site-header .nav-direct-v191{
+    width:100vw !important;
+    max-width:none !important;
+    margin-left:calc(50% - 50vw) !important;
+    margin-right:calc(50% - 50vw) !important;
+    left:auto !important;
+    right:auto !important;
+    padding-left:clamp(18px,4vw,72px) !important;
+    padding-right:clamp(18px,4vw,72px) !important;
+    box-sizing:border-box !important;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.06), inset 0 -1px 0 rgba(0,0,0,.08) !important;
+  }
+  .site-header .nav-direct-v191 > a{
+    border-right:1px solid rgba(255,255,255,.10) !important;
+    transition:background-color .18s ease !important;
+  }
+  .site-header .nav-direct-v191 > a:first-child{
+    border-left:1px solid rgba(255,255,255,.10) !important;
+  }
+}
+
+/* v205 — unboxed Design your kitchen action, pixel-consistent globally */
+@media (min-width:761px){
+  .site-header .header-actions .design-kitchen-top-v194{
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    color:var(--bko-nav-band) !important;
+    padding:0 14px !important;
+    height:42px !important;
+    min-height:42px !important;
+    font-size:11px !important;
+    font-weight:600 !important;
+    line-height:42px !important;
+    text-decoration:none !important;
+  }
+  .site-header .header-actions .design-kitchen-top-v194:hover{
+    background:transparent !important;
+    color:var(--bko-nav-band-hover) !important;
+    text-decoration:underline !important;
+    text-underline-offset:4px !important;
+  }
+}
+
+/* v206 — centre the BKO logo precisely in the upper header row */
+@media (min-width:761px){
+  .site-header .header-inner{
+    grid-template-columns:1fr auto 1fr !important;
+  }
+  .site-header .brand{
+    grid-column:2 !important;
+    grid-row:1 !important;
+    justify-self:center !important;
+    align-self:center !important;
+    position:relative !important;
+    left:auto !important;
+    right:auto !important;
+    margin:0 !important;
+    z-index:2 !important;
+  }
+  .site-header .header-actions{
+    grid-column:3 !important;
+    grid-row:1 !important;
+    justify-self:end !important;
+  }
+}
+
+/* v207 — full horizontal BKO brand mark centred in the upper header */
+@media (min-width:761px){
+  .site-header .brand img{
+    width:auto !important;
+    height:46px !important;
+    max-height:46px !important;
+    object-fit:contain !important;
+  }
+}
+@media (max-width:760px){
+  .site-header .brand img{
+    width:auto !important;
+    height:34px !important;
+    max-height:34px !important;
+    object-fit:contain !important;
+  }
+}

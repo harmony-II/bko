@@ -1,0 +1,38 @@
+
+/* Cleaner, more premium colour/delivery layout */
+.selected-delivery-status{
+ display:flex;justify-content:space-between;align-items:baseline;gap:24px;
+ padding:16px 0 4px;border:0!important;font-size:13px
+}
+.selected-delivery-status span{
+ text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:500;color:#7e8669
+}
+.selected-delivery-status strong{font-weight:400!important;text-align:right}
+.range-colour-group{margin-top:30px;padding-top:0!important;border-top:0!important}
+.range-colour-group-head{
+ display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:18px
+}
+.range-colour-group-head h3{margin:4px 0 0;font-size:28px;font-weight:300}
+.range-colour-group-head p{
+ margin:0;max-width:360px;text-align:right;font-size:13px;line-height:1.5;color:#77786f
+}
+/* Keep only one divider between Ex-stock and Paint to Order */
+.paint-to-order-group{
+ margin-top:32px;padding-top:28px!important;border-top:1px solid #e6e6e1!important
+}
+/* Remove box around Paint to Order message */
+.paint-to-order-placeholder{
+ display:flex;flex-direction:column;gap:7px;padding:4px 0 0!important;
+ border:0!important;background:transparent!important
+}
+.paint-to-order-placeholder strong{font-size:15px;font-weight:500!important}
+.paint-to-order-placeholder span{
+ color:#74756e;font-size:13px;line-height:1.55;max-width:560px
+}
+.range-colour-head-clean,.ex-stock-group{border:0!important}
+@media(max-width:700px){
+ .range-colour-group-head{align-items:flex-start;flex-direction:column;gap:8px}
+ .range-colour-group-head p{text-align:left}
+ .selected-delivery-status{align-items:flex-start;flex-direction:column;gap:5px}
+ .selected-delivery-status strong{text-align:left}
+}

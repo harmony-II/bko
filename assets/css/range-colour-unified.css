@@ -1,0 +1,166 @@
+
+/* =========================================================
+   V75 — one consistent colour selector across every range
+   ========================================================= */
+
+/* Main colour area beside the door cut-out */
+.range-product-panel .colour-grid,
+.range-door-copy .colour-grid,
+.range-door-colour-section .colour-grid,
+.colour-grid {
+  display:flex !important;
+  flex-direction:row !important;
+  flex-wrap:wrap !important;
+  align-items:flex-start !important;
+  justify-content:flex-start !important;
+  gap:14px 20px !important;
+  width:100% !important;
+  max-width:none !important;
+  grid-template-columns:none !important;
+  grid-auto-flow:unset !important;
+}
+
+/* Remove the large box treatment completely */
+.range-product-panel .colour-option,
+.range-door-copy .colour-option,
+.range-door-colour-section .colour-option,
+.colour-grid > .colour-option {
+  display:inline-flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  gap:10px !important;
+  width:auto !important;
+  min-width:0 !important;
+  max-width:none !important;
+  min-height:0 !important;
+  height:auto !important;
+  padding:5px 0 !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  outline:none !important;
+  grid-column:auto !important;
+  float:none !important;
+  position:relative !important;
+  color:#222 !important;
+  font-size:14px !important;
+  line-height:1.25 !important;
+  white-space:nowrap !important;
+  cursor:pointer !important;
+}
+
+/* Perfectly circular swatches */
+.range-product-panel .colour-chip,
+.range-door-copy .colour-chip,
+.range-door-colour-section .colour-chip,
+.colour-option .colour-chip,
+.colour-chip {
+  display:block !important;
+  width:34px !important;
+  height:34px !important;
+  min-width:34px !important;
+  min-height:34px !important;
+  max-width:34px !important;
+  max-height:34px !important;
+  flex:0 0 34px !important;
+  aspect-ratio:1 / 1 !important;
+  border-radius:50% !important;
+  border:1px solid rgba(0,0,0,.14) !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+
+/* Selected state: no box, just a subtle ring around the swatch */
+.range-product-panel .colour-option.selected,
+.range-product-panel .colour-option.is-selected,
+.range-door-copy .colour-option.selected,
+.range-door-copy .colour-option.is-selected,
+.range-door-colour-section .colour-option.selected,
+.range-door-colour-section .colour-option.is-selected {
+  border:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+}
+
+.range-product-panel .colour-option.selected .colour-chip,
+.range-product-panel .colour-option.is-selected .colour-chip,
+.range-door-copy .colour-option.selected .colour-chip,
+.range-door-copy .colour-option.is-selected .colour-chip,
+.range-door-colour-section .colour-option.selected .colour-chip,
+.range-door-colour-section .colour-option.is-selected .colour-chip {
+  box-shadow:0 0 0 2px #fff, 0 0 0 3px #242424 !important;
+}
+
+/* Remove any legacy dots / ticks / pseudo elements */
+.range-product-panel .colour-option::before,
+.range-product-panel .colour-option::after,
+.range-door-copy .colour-option::before,
+.range-door-copy .colour-option::after,
+.range-door-colour-section .colour-option::before,
+.range-door-colour-section .colour-option::after,
+.colour-option::before,
+.colour-option::after {
+  content:none !important;
+  display:none !important;
+}
+
+/* Remove stray text labels like Primed/Sanded above the selector */
+.range-colour-head-clean + *:not(.colour-grid) {
+  margin-top:0 !important;
+}
+
+/* Keep heading spacing consistent */
+.range-colour-head-clean {
+  margin-bottom:16px !important;
+}
+.range-colour-head-clean h3 {
+  font-size:28px !important;
+  font-weight:300 !important;
+}
+
+/* On small screens, still horizontal and wrapping rather than one-per-row */
+@media (max-width:700px) {
+  .range-product-panel .colour-grid,
+  .range-door-copy .colour-grid,
+  .range-door-colour-section .colour-grid,
+  .colour-grid {
+    gap:12px 16px !important;
+  }
+
+  .range-product-panel .colour-option,
+  .range-door-copy .colour-option,
+  .range-door-colour-section .colour-option,
+  .colour-grid > .colour-option {
+    font-size:13px !important;
+  }
+
+  .range-product-panel .colour-chip,
+  .range-door-copy .colour-chip,
+  .range-door-colour-section .colour-chip,
+  .colour-option .colour-chip {
+    width:32px !important;
+    height:32px !important;
+    min-width:32px !important;
+    min-height:32px !important;
+    max-width:32px !important;
+    max-height:32px !important;
+    flex-basis:32px !important;
+  }
+}
+
+
+/* V77 — clean Porcelain swatch across every range */
+.colour-option[data-colour-name="Porcelain"] .colour-chip{
+  background:#F2EEE4 !important;
+  background-image:none !important;
+  background-size:auto !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+  border:1px solid rgba(0,0,0,.14) !important;
+}

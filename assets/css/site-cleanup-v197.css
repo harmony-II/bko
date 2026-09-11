@@ -1,0 +1,138 @@
+
+/* =========================================================
+   v197 FINAL SITE CLEANUP
+   Keeps the existing design language, removes visual noise,
+   and standardises spacing / controls across the website.
+   ========================================================= */
+
+:root{
+  --bko-ink:#262b27;
+  --bko-green:#34483c;
+  --bko-muted:#767b75;
+  --bko-line:#e3e4df;
+  --bko-soft:#fafaf7;
+  --bko-page-width:1240px;
+}
+
+/* General polish */
+html{scroll-behavior:smooth}
+body{
+  color:var(--bko-ink);
+  background:#fff;
+}
+
+main{
+  min-width:0;
+}
+
+h1,h2,h3,h4{
+  text-wrap:balance;
+}
+
+p{
+  text-wrap:pretty;
+}
+
+button,
+.btn,
+input,
+select,
+textarea{
+  font-family:inherit;
+}
+
+button,
+.btn{
+  transition:background-color .15s ease,border-color .15s ease,color .15s ease,opacity .15s ease;
+}
+
+/* Keep controls clean and architectural rather than overly rounded */
+body:not(.planner-page-v197) button:not(.menu-toggle):not(.config-range-colour-dot),
+body:not(.planner-page-v197) .btn,
+body:not(.planner-page-v197) input,
+body:not(.planner-page-v197) select,
+body:not(.planner-page-v197) textarea{
+  border-radius:0;
+}
+
+/* Consistent content measure */
+.container{
+  width:min(calc(100% - 64px),var(--bko-page-width));
+  max-width:var(--bko-page-width);
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Standard section rhythm without interfering with specialised galleries */
+main > section:not(.range-hero):not(.range-gallery):not(.planner-centre):not(.doors-page-hero){
+  scroll-margin-top:170px;
+}
+
+/* Catalogue / shop cards */
+.product-card,
+.catalogue-card,
+.cabinet-card,
+.collection-card,
+.category-card{
+  border-color:var(--bko-line);
+  box-shadow:none;
+}
+
+.product-card:hover,
+.catalogue-card:hover,
+.cabinet-card:hover,
+.collection-card:hover,
+.category-card:hover{
+  border-color:#cbd0ca;
+}
+
+/* Shared subtle colour */
+.eyebrow,
+.kicker,
+[class*="eyebrow"],
+[class*="kicker"]{
+  color:#68776d;
+}
+
+/* Inputs */
+input,
+select,
+textarea{
+  border-color:#d8dad5;
+  background:#fff;
+  color:var(--bko-ink);
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  outline:1px solid var(--bko-green);
+  outline-offset:0;
+  border-color:var(--bko-green);
+}
+
+/* Footer polish */
+.site-footer{
+  border-top:1px solid var(--bko-line);
+}
+.site-footer h4{
+  font-weight:500;
+}
+.site-footer a{
+  color:#5f655f;
+}
+.site-footer a:hover{
+  color:var(--bko-green);
+}
+
+/* Remove accidental heavy shadows / decorative noise from shop imagery */
+[class*="card"] img{
+  box-shadow:none;
+}
+
+/* Responsive shared width */
+@media(max-width:760px){
+  .container{
+    width:min(calc(100% - 28px),var(--bko-page-width));
+  }
+}

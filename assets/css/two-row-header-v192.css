@@ -1,0 +1,93 @@
+
+/* v192 — two-row desktop header:
+   logo + login/basket on top row, direct navigation underneath.
+   Announcement bar made thicker. */
+
+/* Thicker black announcement / delivery bar */
+.announcement-bar,
+.top-bar,
+.delivery-bar,
+.site-announcement,
+.promo-bar {
+  min-height:38px !important;
+  height:38px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  line-height:38px !important;
+}
+
+/* Desktop header becomes two clean rows */
+@media (min-width:761px) {
+  .site-header .header-inner{
+    height:auto !important;
+    min-height:112px !important;
+    display:grid !important;
+    grid-template-columns:auto 1fr auto !important;
+    grid-template-rows:64px 48px !important;
+    column-gap:20px !important;
+    row-gap:0 !important;
+    align-items:center !important;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+  }
+
+  .site-header .brand{
+    grid-column:1 !important;
+    grid-row:1 !important;
+    align-self:center !important;
+  }
+
+  .site-header .header-actions{
+    grid-column:3 !important;
+    grid-row:1 !important;
+    justify-self:end !important;
+    align-self:center !important;
+  }
+
+  .site-header .nav-direct-v191{
+    grid-column:1 / 4 !important;
+    grid-row:2 !important;
+    width:100% !important;
+    height:48px !important;
+    min-width:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:clamp(18px,2.05vw,34px) !important;
+    border-top:1px solid #ecece8 !important;
+    white-space:nowrap !important;
+  }
+
+  .site-header .nav-direct-v191 > a{
+    height:48px !important;
+    display:flex !important;
+    align-items:center !important;
+    font-size:11px !important;
+    line-height:1 !important;
+    padding:0 !important;
+  }
+}
+
+/* Keep it neat at narrower desktop widths */
+@media (max-width:1220px) and (min-width:761px) {
+  .site-header .nav-direct-v191{
+    gap:12px !important;
+  }
+  .site-header .nav-direct-v191 > a{
+    font-size:10px !important;
+  }
+}
+
+/* Mobile retains existing menu behaviour */
+@media (max-width:760px) {
+  .announcement-bar,
+  .top-bar,
+  .delivery-bar,
+  .site-announcement,
+  .promo-bar{
+    min-height:34px !important;
+    height:34px !important;
+    line-height:34px !important;
+  }
+}

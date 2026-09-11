@@ -1,0 +1,9 @@
+
+html, body {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+body::before {
+  content: none !important;
+  display: none !important;
+}

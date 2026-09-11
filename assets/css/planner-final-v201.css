@@ -1,0 +1,38 @@
+
+/* v201 planner restoration — preserve exact mm geometry and restore full UI */
+@media (min-width:761px){
+  .site-header .menu-toggle{display:none!important;}
+  .top-strip span{margin:0 8px!important;}
+  .planner-topbar-v201{
+    height:64px!important; min-height:64px!important; padding:0 24px!important;
+    display:flex!important; align-items:center!important; justify-content:space-between!important;
+    border-bottom:1px solid #e3e4df!important; background:#fff!important;
+    position:relative!important; z-index:2!important;
+  }
+  .planner-topbar-v201 .project-title h1{margin:0!important;font-size:18px!important;font-weight:500!important;}
+  .planner-topbar-v201 .save-status{margin-top:3px!important;font-size:10px!important;color:#777d77!important;}
+  .planner-topbar-v201 .view-toggle{display:inline-flex!important;gap:0!important;padding:0!important;background:#fff!important;border:1px solid #d9dbd6!important;border-radius:0!important;}
+  .planner-topbar-v201 .view-toggle button{height:38px!important;padding:0 18px!important;border:0!important;border-radius:0!important;background:#fff!important;color:#4b514c!important;font-size:11px!important;font-weight:500!important;box-shadow:none!important;}
+  .planner-topbar-v201 .view-toggle button+button{border-left:1px solid #d9dbd6!important;}
+  .planner-topbar-v201 .view-toggle button.active{background:#34483c!important;color:#fff!important;}
+  main.planner-layout{
+    height:calc(100vh - 222px)!important; /* 30 strip + 128 header + 64 planner bar */
+    min-height:560px!important;
+    margin:0!important; width:100%!important; max-width:none!important;
+    grid-template-columns:310px minmax(0,1fr) 320px!important;
+    position:relative!important; z-index:1!important;
+  }
+  main.planner-layout>.product-sidebar,
+  main.planner-layout>.planner-centre,
+  main.planner-layout>.summary-sidebar{margin:0!important;transform:none!important;top:auto!important;}
+  main.planner-layout .sidebar-section:first-child,
+  main.planner-layout .summary-section:first-child{margin-top:0!important;}
+  .planner-centre{min-width:0!important;min-height:0!important;height:100%!important;}
+  #twoDView,#threeDView,.room-wrapper{width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;}
+  #twoDView{padding:76px 44px 42px!important;box-sizing:border-box!important;}
+  #roomCanvas{flex:0 0 auto!important;}
+}
+@media(max-width:1120px) and (min-width:761px){
+  main.planner-layout{grid-template-columns:270px minmax(0,1fr)!important;}
+  .summary-sidebar{display:none!important;}
+}

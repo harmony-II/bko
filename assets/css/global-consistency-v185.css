@@ -1,0 +1,258 @@
+
+/* v185 — GLOBAL PAGE CONSISTENCY
+   Shared header, navigation, hero rhythm and footer dimensions are locked here.
+   This file loads last on every HTML page. */
+
+:root{
+  --bko-top-strip-h:30px;
+  --bko-header-h:92px;
+  --bko-header-logo-h:56px;
+  --bko-nav-font:13px;
+  --bko-page-hero-min-h:300px;
+  --bko-page-hero-pad-y:58px;
+  --bko-page-hero-title:42px;
+  --bko-page-hero-copy:14px;
+  --bko-footer-pad-top:52px;
+  --bko-footer-pad-bottom:28px;
+  --bko-footer-bottom-h:54px;
+  --bko-container-max:1240px;
+}
+
+/* Universal sizing */
+*,*::before,*::after{box-sizing:border-box}
+
+/* Top strip */
+.top-strip{
+  height:var(--bko-top-strip-h)!important;
+  min-height:var(--bko-top-strip-h)!important;
+  max-height:var(--bko-top-strip-h)!important;
+  padding:0 20px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  line-height:1!important;
+  overflow:hidden!important;
+}
+
+/* Header */
+.site-header{
+  height:var(--bko-header-h)!important;
+  min-height:var(--bko-header-h)!important;
+  max-height:var(--bko-header-h)!important;
+}
+
+.site-header .header-inner{
+  width:min(calc(100% - 40px),var(--bko-container-max))!important;
+  max-width:var(--bko-container-max)!important;
+  height:100%!important;
+  min-height:100%!important;
+  margin:0 auto!important;
+  padding-top:0!important;
+  padding-bottom:0!important;
+  display:flex!important;
+  align-items:center!important;
+}
+
+.site-header .brand{
+  display:flex!important;
+  align-items:center!important;
+  height:100%!important;
+}
+
+.site-header .brand img{
+  display:block!important;
+  width:auto!important;
+  height:var(--bko-header-logo-h)!important;
+  max-height:var(--bko-header-logo-h)!important;
+  object-fit:contain!important;
+}
+
+.site-header .nav{
+  height:100%!important;
+  align-items:center!important;
+}
+
+.site-header .nav>a,
+.site-header .nav-group>a{
+  font-size:var(--bko-nav-font)!important;
+  line-height:1.2!important;
+}
+
+.site-header .header-actions{
+  height:100%!important;
+  display:flex!important;
+  align-items:center!important;
+}
+
+/* Shared hero geometry.
+   Apply to all recognised page hero classes, but not range-page kitchen image heroes,
+   which are product imagery rather than the site-wide title hero. */
+.page-hero,
+.shop-hero,
+.catalogue-hero,
+.collection-hero,
+.help-hero,
+.delivery-hero,
+.contact-hero,
+.trade-hero,
+.account-hero,
+.login-hero,
+.register-hero,
+.builder-hero,
+[class~="page-hero"],
+[class~="shop-hero"]{
+  min-height:var(--bko-page-hero-min-h)!important;
+  padding-top:var(--bko-page-hero-pad-y)!important;
+  padding-bottom:var(--bko-page-hero-pad-y)!important;
+  display:flex!important;
+  align-items:center!important;
+}
+
+.page-hero>.container,
+.shop-hero>.container,
+.catalogue-hero>.container,
+.collection-hero>.container,
+.help-hero>.container,
+.delivery-hero>.container,
+.contact-hero>.container,
+.trade-hero>.container,
+.account-hero>.container,
+.login-hero>.container,
+.register-hero>.container,
+.builder-hero>.container{
+  width:min(calc(100% - 40px),var(--bko-container-max))!important;
+  max-width:var(--bko-container-max)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+
+.page-hero h1,
+.shop-hero h1,
+.catalogue-hero h1,
+.collection-hero h1,
+.help-hero h1,
+.delivery-hero h1,
+.contact-hero h1,
+.trade-hero h1,
+.account-hero h1,
+.login-hero h1,
+.register-hero h1,
+.builder-hero h1{
+  margin-top:0!important;
+  margin-bottom:14px!important;
+  font-size:var(--bko-page-hero-title)!important;
+  line-height:1.08!important;
+}
+
+.page-hero p,
+.shop-hero p,
+.catalogue-hero p,
+.collection-hero p,
+.help-hero p,
+.delivery-hero p,
+.contact-hero p,
+.trade-hero p,
+.account-hero p,
+.login-hero p,
+.register-hero p,
+.builder-hero p{
+  margin-top:0!important;
+  margin-bottom:0!important;
+  font-size:var(--bko-page-hero-copy)!important;
+  line-height:1.55!important;
+}
+
+/* Footer — exact same shell everywhere */
+.site-footer{
+  margin-top:0!important;
+  padding:var(--bko-footer-pad-top) 0 0!important;
+}
+
+.site-footer .footer-grid{
+  width:min(calc(100% - 40px),var(--bko-container-max))!important;
+  max-width:var(--bko-container-max)!important;
+  min-height:210px!important;
+  margin:0 auto!important;
+  padding-top:0!important;
+  padding-bottom:var(--bko-footer-pad-bottom)!important;
+  display:grid!important;
+  grid-template-columns:1.35fr repeat(3,1fr)!important;
+  gap:44px!important;
+  align-items:start!important;
+}
+
+.site-footer .footer-brand{
+  display:inline-flex!important;
+  align-items:center!important;
+  min-height:60px!important;
+}
+
+.site-footer .footer-brand img{
+  display:block!important;
+  width:auto!important;
+  height:56px!important;
+  max-height:56px!important;
+  object-fit:contain!important;
+}
+
+.site-footer h4{
+  margin:0 0 14px!important;
+  line-height:1.2!important;
+}
+
+.site-footer a{
+  line-height:1.55!important;
+}
+
+.site-footer .footer-bottom{
+  width:min(calc(100% - 40px),var(--bko-container-max))!important;
+  max-width:var(--bko-container-max)!important;
+  height:var(--bko-footer-bottom-h)!important;
+  min-height:var(--bko-footer-bottom-h)!important;
+  margin:0 auto!important;
+  padding:0!important;
+  display:flex!important;
+  align-items:center!important;
+}
+
+/* Prevent page-specific styles from changing common header/footer logo dimensions */
+header.site-header img,
+footer.site-footer img{
+  transform:none!important;
+}
+
+/* Mobile uses one shared set of dimensions too */
+@media(max-width:760px){
+  :root{
+    --bko-header-h:78px;
+    --bko-header-logo-h:44px;
+    --bko-page-hero-min-h:235px;
+    --bko-page-hero-pad-y:42px;
+    --bko-page-hero-title:34px;
+    --bko-footer-pad-top:40px;
+  }
+
+  .site-header .header-inner,
+  .site-footer .footer-grid,
+  .site-footer .footer-bottom,
+  .page-hero>.container,
+  .shop-hero>.container,
+  .catalogue-hero>.container,
+  .collection-hero>.container,
+  .help-hero>.container,
+  .delivery-hero>.container,
+  .contact-hero>.container,
+  .trade-hero>.container,
+  .account-hero>.container,
+  .login-hero>.container,
+  .register-hero>.container,
+  .builder-hero>.container{
+    width:min(calc(100% - 28px),var(--bko-container-max))!important;
+  }
+
+  .site-footer .footer-grid{
+    min-height:0!important;
+    grid-template-columns:1fr!important;
+    gap:28px!important;
+  }
+}

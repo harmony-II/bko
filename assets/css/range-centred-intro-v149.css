@@ -1,0 +1,78 @@
+
+/* v149 — centred range introduction across all range pages */
+
+.range-intro-strip{
+  padding:34px 0 32px !important;
+  margin:0 !important;
+}
+
+.range-intro-grid{
+  display:block !important;
+  text-align:center !important;
+}
+
+.range-intro-copy{
+  display:block !important;
+  max-width:920px !important;
+  margin:0 auto !important;
+  padding:0 !important;
+  text-align:center !important;
+}
+
+.range-intro-copy .eyebrow{
+  display:block !important;
+  margin:0 0 10px !important;
+  text-align:center !important;
+  line-height:1.2 !important;
+  letter-spacing:.18em !important;
+}
+
+.range-intro-copy h2{
+  display:block !important;
+  margin:0 0 14px !important;
+  text-align:center !important;
+  line-height:1.04 !important;
+}
+
+.range-intro-copy p{
+  display:block !important;
+  margin:0 auto !important;
+  max-width:860px !important;
+  text-align:center !important;
+  line-height:1.55 !important;
+  padding:0 !important;
+}
+
+/* Keep the following section close so the page does not get longer */
+.range-door-colour-section{
+  padding-top:34px !important;
+  margin-top:0 !important;
+}
+
+@media(max-width:760px){
+  .range-intro-strip{
+    padding:26px 0 24px !important;
+  }
+
+  .range-intro-copy{
+    max-width:92% !important;
+  }
+
+  .range-intro-copy h2{
+    margin-bottom:12px !important;
+  }
+
+  .range-door-colour-section{
+    padding-top:28px !important;
+  }
+}
+
+
+/* v150 — keep desktop range introduction descriptions to two lines */
+@media(min-width:900px){
+  .range-intro-copy p{
+    max-width:1120px !important;
+    width:100% !important;
+    line-height:1.55 !important;
+  }
+}

@@ -1,0 +1,172 @@
+
+/* v195 — clean premium two-tier header */
+
+@media (min-width:761px){
+
+  /* Header shell */
+  .site-header{
+    background:#fff !important;
+    border-bottom:0 !important;
+  }
+
+  .site-header .header-inner{
+    position:relative !important;
+    display:grid !important;
+    grid-template-columns:auto 1fr auto !important;
+    grid-template-rows:66px 46px !important;
+    align-items:center !important;
+    column-gap:24px !important;
+    row-gap:0 !important;
+    min-height:112px !important;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+  }
+
+  /* Logo */
+  .site-header .brand{
+    grid-column:1 !important;
+    grid-row:1 !important;
+    align-self:center !important;
+  }
+
+  .site-header .brand img{
+    height:36px !important;
+    max-height:36px !important;
+  }
+
+  /* Top-right actions */
+  .site-header .header-actions{
+    grid-column:3 !important;
+    grid-row:1 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    gap:8px !important;
+    align-self:center !important;
+  }
+
+  .site-header .header-actions .btn,
+  .site-header .header-actions .design-kitchen-top-v194{
+    height:38px !important;
+    min-height:38px !important;
+    padding:0 16px !important;
+    margin:0 !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    box-sizing:border-box !important;
+    border-radius:0 !important;
+    font-size:10px !important;
+    line-height:1 !important;
+    letter-spacing:.02em !important;
+    text-decoration:none !important;
+    white-space:nowrap !important;
+  }
+
+  .site-header .header-actions .design-kitchen-top-v194{
+    order:-1 !important;
+    color:#fff !important;
+    background:#34483c !important;
+    border:1px solid #34483c !important;
+    font-weight:500 !important;
+  }
+
+  .site-header .header-actions .design-kitchen-top-v194:hover{
+    background:#293b31 !important;
+  }
+
+  .site-header .header-actions .login-link{
+    background:#fff !important;
+    color:#34483c !important;
+    border:1px solid #cfd3ce !important;
+  }
+
+  .site-header .header-actions .basket-link{
+    background:#34483c !important;
+    border:1px solid #34483c !important;
+    color:#fff !important;
+  }
+
+  /* Lower navigation: one continuous strip */
+  .site-header .nav-direct-v191{
+    grid-column:1 / 4 !important;
+    grid-row:2 !important;
+    width:100% !important;
+    height:46px !important;
+    min-height:46px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:0 !important;
+    padding:0 !important;
+    margin:0 !important;
+    border-top:1px solid #ecece8 !important;
+    border-bottom:1px solid #e5e5e1 !important;
+    background:#fff !important;
+    white-space:nowrap !important;
+  }
+
+  .site-header .nav-direct-v191 > a{
+    position:relative !important;
+    height:46px !important;
+    min-height:46px !important;
+    padding:0 18px !important;
+    margin:0 !important;
+    border:0 !important;
+    background:transparent !important;
+    color:#333833 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    box-sizing:border-box !important;
+    font-size:10.5px !important;
+    line-height:1 !important;
+    font-weight:400 !important;
+    text-decoration:none !important;
+    border-radius:0 !important;
+  }
+
+  /* subtle separators */
+  .site-header .nav-direct-v191 > a + a::before{
+    content:"" !important;
+    position:absolute !important;
+    left:0 !important;
+    top:14px !important;
+    width:1px !important;
+    height:18px !important;
+    background:#e4e5e1 !important;
+  }
+
+  .site-header .nav-direct-v191 > a:hover{
+    color:#34483c !important;
+    background:#fafaf8 !important;
+  }
+
+  .site-header .nav-direct-v191 > a[aria-current="page"]{
+    color:#34483c !important;
+    font-weight:500 !important;
+    background:#fafaf8 !important;
+  }
+
+  /* Design your kitchen should NOT remain in the lower nav */
+  .site-header .nav-direct-v191 > a.design-kitchen-top-v194,
+  .site-header .nav-direct-v191 > a[href*="builder"]{
+    display:none !important;
+  }
+}
+
+/* Slight compression on narrower desktop widths */
+@media (max-width:1180px) and (min-width:761px){
+  .site-header .nav-direct-v191 > a{
+    padding-left:12px !important;
+    padding-right:12px !important;
+    font-size:9.5px !important;
+  }
+
+  .site-header .header-actions .btn,
+  .site-header .header-actions .design-kitchen-top-v194{
+    padding-left:12px !important;
+    padding-right:12px !important;
+    font-size:9.5px !important;
+  }
+}

@@ -1,0 +1,101 @@
+
+/* v191 — permanent direct top-level shop navigation, no dropdowns */
+
+.site-header .header-inner{
+  gap:20px !important;
+}
+
+/* Give navigation the remaining horizontal space */
+.site-header .nav-direct-v191{
+  flex:1 1 auto !important;
+  min-width:0 !important;
+  height:100% !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:clamp(10px,1.15vw,20px) !important;
+  white-space:nowrap !important;
+}
+
+.site-header .nav-direct-v191 > a{
+  display:flex !important;
+  align-items:center !important;
+  height:100% !important;
+  padding:0 !important;
+  margin:0 !important;
+  font-size:11px !important;
+  line-height:1 !important;
+  font-weight:400 !important;
+  letter-spacing:-.01em !important;
+  color:inherit !important;
+  text-decoration:none !important;
+}
+
+.site-header .nav-direct-v191 > a:hover{
+  color:#34483c !important;
+}
+
+/* Keep logo/actions fixed so every page remains identical */
+.site-header .brand{
+  flex:0 0 auto !important;
+}
+
+.site-header .header-actions{
+  flex:0 0 auto !important;
+  gap:8px !important;
+}
+
+.site-header .header-actions .btn{
+  padding-left:14px !important;
+  padding-right:14px !important;
+}
+
+/* No legacy dropdown can render */
+.site-header .nav-group,
+.site-header .dropdown{
+  display:none !important;
+}
+
+/* Slight tightening on medium desktop widths */
+@media(max-width:1220px) and (min-width:761px){
+  .site-header .header-inner{
+    gap:12px !important;
+  }
+  .site-header .nav-direct-v191{
+    gap:8px !important;
+  }
+  .site-header .nav-direct-v191 > a{
+    font-size:10px !important;
+  }
+  .site-header .header-actions .btn{
+    padding-left:10px !important;
+    padding-right:10px !important;
+  }
+}
+
+/* Mobile remains the normal opened menu, now as direct links */
+@media(max-width:760px){
+  .site-header .nav-direct-v191{
+    display:none !important;
+    height:auto !important;
+    white-space:normal !important;
+  }
+
+  .site-header .nav-direct-v191.open,
+  .site-header .nav-direct-v191.is-open,
+  .site-header .nav-direct-v191[data-open="true"]{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    justify-content:flex-start !important;
+    gap:0 !important;
+  }
+
+  .site-header .nav-direct-v191 > a{
+    width:100% !important;
+    height:auto !important;
+    min-height:44px !important;
+    padding:12px 18px !important;
+    font-size:13px !important;
+  }
+}
