@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+<title id="title">Caple product image placeholder</title>
+<desc id="desc">Placeholder for a Caple product image</desc>
+<rect width="800" height="520" fill="#e8e4d9"/>
+<rect x="28" y="28" width="744" height="464" fill="none" stroke="#c5c0b2" stroke-width="2"/>
+<text x="400" y="245" fill="#26332c" font-family="Montserrat, Arial, sans-serif" font-size="34" text-anchor="middle">CAPLE</text>
+<text x="400" y="285" fill="#68716a" font-family="Montserrat, Arial, sans-serif" font-size="18" text-anchor="middle">PRODUCT IMAGE TO BE ADDED</text>
+</svg>

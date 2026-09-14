@@ -71,7 +71,6 @@ m.innerHTML=`<main>
 <div class="range-action-row-clean range-action-row-after-spec">
   <a class="btn red" href="doors.html?range=${encodeURIComponent(d.slug)}">Shop this collection</a>
   <a class="btn" href="catalogue.html?range=${encodeURIComponent(d.slug)}">Shop cabinets</a>
-  <a class="btn ghost" href="planner.html?range=${encodeURIComponent(d.slug)}">Open planner</a>
 </div>
 </div></section>
 <section class="section range-shop-section"><div class="container"><div class="section-head"><div><h2>Shop cabinets for this collection</h2><p>Choose the cabinet type you need and continue building your kitchen.</p></div></div><div class="icon-categories">${[['base','Base units'],['drawer','Drawer units'],['wall','Wall units'],['corner','Corner units'],['tall','Tall units'],['housing','Housings']].map(([c,l])=>`<a class="category-tile" href="catalogue.html?range=${encodeURIComponent(d.slug)}&category=${c}"><img src="assets/images/units/${c}.svg" alt="${l}"><b>${l}</b></a>`).join('')}</div></div></section>

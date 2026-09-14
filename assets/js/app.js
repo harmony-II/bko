@@ -133,8 +133,6 @@ const BKO = {
       ['worktops.html','Worktops','worktops countertops'],
       ['sinks-taps.html','Sinks and taps','sinks taps kitchen'],
       ['appliances.html','Appliances','ovens appliances kitchen'],
-      ['builder.html','Design your kitchen','builder design kitchen'],
-      ['planner.html','Kitchen planner','planner layout kitchen'],
       ['delivery.html','Delivery','delivery lead times nationwide'],
       ['help.html','Help centre','help faqs support'],
       ['contact.html','Contact','contact support'],
@@ -577,4 +575,17 @@ const BKO = {
     this.initHeroWatermark();
   }
 };
-document.addEventListener('DOMContentLoaded',()=>BKO.init());
+document.addEventListener('DOMContentLoaded',()=>{
+  BKO.init();
+  document.querySelectorAll('.nav-direct-v191').forEach(nav=>{
+    const combined=nav.querySelector('a[href="sinks-taps.html"]');
+    if(!combined)return;
+    const sinks=document.createElement('a');
+    sinks.href='sinks.html';
+    sinks.textContent='Sinks';
+    const taps=document.createElement('a');
+    taps.href='taps.html';
+    taps.textContent='Taps';
+    combined.replaceWith(sinks,taps);
+  });
+});
